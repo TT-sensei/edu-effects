@@ -1,0 +1,44 @@
+/*
+ * edu-decorations.css
+ * Backgrounds, lines, frames, and visual accents for site-specific design.
+ * Use a decoration class on a wrapper; combine with a tone class.
+ */
+
+/* Base surfaces ------------------------------------------------------- */
+.deco-surface { position: relative; isolation: isolate; overflow: hidden; }
+.deco-grid { background-image: linear-gradient(var(--deco-line, rgb(37 99 235 / 10%)) 1px, transparent 1px), linear-gradient(90deg, var(--deco-line, rgb(37 99 235 / 10%)) 1px, transparent 1px); background-size: 24px 24px; }
+.deco-grid-fine { background-size: 12px 12px; }
+.deco-dots { background-image: radial-gradient(var(--deco-dot, rgb(37 99 235 / 24%)) 1.2px, transparent 1.2px); background-size: 16px 16px; }
+.deco-halftone { background-image: radial-gradient(var(--deco-dot, rgb(37 99 235 / 24%)) 1.6px, transparent 1.6px); background-size: 9px 9px; }
+.deco-wave { background-image: radial-gradient(ellipse at 50% -20%, transparent 60%, var(--deco-line, rgb(37 99 235 / 12%)) 61%, transparent 63%); background-size: 100% 48px; }
+.deco-circuit { background-image: linear-gradient(90deg, var(--deco-line, rgb(37 99 235 / 10%)) 1px, transparent 1px), linear-gradient(var(--deco-line, rgb(37 99 235 / 10%)) 1px, transparent 1px); background-size: 48px 48px; }
+.deco-circuit::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 24px 24px, var(--deco-accent, #2563eb) 0 3px, transparent 3.5px); background-size: 48px 48px; opacity: .4; pointer-events: none; }
+.deco-rays::before { content: ""; position: absolute; inset: -60%; background: repeating-conic-gradient(from 0deg, var(--deco-line, rgb(37 99 235 / 11%)) 0deg 3deg, transparent 3deg 12deg); pointer-events: none; }
+.deco-sparkles::before { content: "✦  ✧   ✦     ✧"; position: absolute; inset: 14px; color: var(--deco-accent, #d79b38); font-size: 1.4rem; letter-spacing: .7em; opacity: .55; pointer-events: none; }
+.deco-sketch { border: 2px solid var(--deco-ink, #2f2a27); border-radius: 4px 9px 5px 7px; box-shadow: 3px 3px 0 var(--deco-ink, #2f2a27); transform: rotate(-.3deg); }
+.deco-tape::before, .deco-tape::after { content: ""; position: absolute; z-index: 2; width: 76px; height: 22px; background: var(--deco-tape-color, rgb(245 212 76 / 72%)); opacity: .78; }
+.deco-tape::before { top: 8px; left: 18px; transform: rotate(-5deg); }
+.deco-tape::after { top: 8px; right: 18px; transform: rotate(5deg); }
+.deco-frame { border: 1px solid var(--deco-line, #d6dbe3); box-shadow: inset 0 0 0 6px rgb(255 255 255 / 34%), inset 0 0 0 7px var(--deco-line, #d6dbe3); }
+.deco-divider { display: flex; align-items: center; gap: 12px; color: var(--deco-muted, #667085); }
+.deco-divider::before, .deco-divider::after { content: ""; flex: 1; height: 1px; background: var(--deco-line, #d6dbe3); }
+.deco-divider-dots::before, .deco-divider-dots::after { background: repeating-linear-gradient(90deg, var(--deco-line, #d6dbe3) 0 3px, transparent 3px 7px); }
+.deco-bubble { position: relative; border: 1px solid var(--deco-line, #d6dbe3); border-radius: 18px 18px 18px 4px; }
+.deco-bubble::after { content: ""; position: absolute; left: 22px; bottom: -8px; width: 14px; height: 14px; border-right: 1px solid var(--deco-line, #d6dbe3); border-bottom: 1px solid var(--deco-line, #d6dbe3); background: inherit; transform: rotate(45deg); }
+.deco-shape-circle::before, .deco-shape-square::before, .deco-shape-blob::before { content: ""; position: absolute; z-index: -1; pointer-events: none; }
+.deco-shape-circle::before { width: 180px; height: 180px; right: -50px; top: -55px; border-radius: 50%; background: var(--deco-shape, rgb(37 99 235 / 10%)); }
+.deco-shape-square::before { width: 130px; height: 130px; right: -35px; top: -35px; border: 14px solid var(--deco-shape, rgb(37 99 235 / 11%)); transform: rotate(18deg); }
+.deco-shape-blob::before { width: 210px; height: 140px; right: -70px; top: -55px; border-radius: 42% 58% 60% 40%; background: var(--deco-shape, rgb(37 99 235 / 10%)); transform: rotate(-15deg); }
+
+/* Tones ---------------------------------------------------------------- */
+.deco-pop { --deco-line: rgb(220 113 60 / 22%); --deco-dot: rgb(220 113 60 / 34%); --deco-accent: #dc713c; --deco-shape: rgb(245 212 76 / 24%); --deco-tape-color: rgb(245 212 76 / 76%); }
+.deco-science { --deco-line: rgb(23 125 105 / 18%); --deco-dot: rgb(23 125 105 / 32%); --deco-accent: #177d69; --deco-shape: rgb(94 234 212 / 18%); }
+.deco-digital { --deco-line: rgb(37 99 235 / 18%); --deco-dot: rgb(96 165 250 / 36%); --deco-accent: #2563eb; --deco-shape: rgb(124 58 237 / 13%); }
+.deco-note { --deco-line: #dfd1c4; --deco-dot: rgb(169 95 67 / 26%); --deco-accent: #a95f43; --deco-shape: rgb(169 95 67 / 10%); --deco-tape-color: rgb(245 212 76 / 62%); background-color: #fffaf1; }
+.deco-retro { --deco-line: rgb(177 79 66 / 25%); --deco-dot: rgb(177 79 66 / 36%); --deco-accent: #b14f42; --deco-shape: rgb(215 155 56 / 18%); }
+.deco-fantasy { --deco-line: rgb(124 58 237 / 18%); --deco-dot: rgb(167 139 250 / 34%); --deco-accent: #7c3aed; --deco-shape: rgb(236 72 153 / 13%); }
+.deco-minimal { --deco-line: rgb(100 116 139 / 15%); --deco-dot: rgb(100 116 139 / 24%); --deco-accent: #64748b; --deco-shape: rgb(100 116 139 / 8%); }
+
+@media (prefers-reduced-motion: reduce) {
+  .deco-sketch, .deco-tape { transform: none; }
+}
