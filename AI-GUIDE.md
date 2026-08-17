@@ -34,6 +34,8 @@
 | 紙面、ノート、黒板の雰囲気 | edu-editorial.css |
 | 暗記シート、並べ替え、ヒント、花マル | edu-interactive.css |
 | 学習中の状態演出 | edu-effects-extra.css |
+| 強いインパクト、波紋、衝撃波、解除演出 | edu-effects-advanced.css |
+| 拡張ボタン、問題UI、結果、ゲームUI | edu-ui-variants.css |
 | 正解、達成、バッジ、コンボ、カード演出 | edu-effects-library.css |
 | 背景、枠、線、装飾 | edu-decorations.css |
 | 紙吹雪などの任意ヘルパー | js/edu-effects.js |
