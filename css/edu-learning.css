@@ -122,3 +122,41 @@
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.04); }
 }
+
+
+/* Timer visual variations --------------------------------------------- */
+.edu-timer-minimal {
+  border: 0; padding: 2px 4px; background: transparent;
+}
+.edu-timer-minimal .edu-timer-value { font-size: 1.6rem; letter-spacing: -.03em; }
+.edu-timer-minimal .edu-timer-icon { display: none; }
+
+.edu-timer-outline {
+  border: 1.5px solid var(--edu-primary); background: transparent;
+}
+.edu-timer-outline .edu-timer-value { color: var(--edu-primary-dark); }
+.edu-timer-outline.edu-timer-warning { border-color: var(--edu-warning); }
+.edu-timer-outline.edu-timer-warning .edu-timer-value { color: var(--edu-warning); }
+.edu-timer-outline.edu-timer-danger { border-color: var(--edu-danger); }
+.edu-timer-outline.edu-timer-danger .edu-timer-value { color: var(--edu-danger); }
+
+.edu-timer-gradient {
+  border: 0; color: #fff; background: linear-gradient(135deg, var(--edu-primary), #7c3aed);
+  box-shadow: var(--edu-shadow-sm);
+}
+.edu-timer-gradient .edu-timer-value,
+.edu-timer-gradient .edu-timer-unit,
+.edu-timer-gradient .edu-timer-icon { color: #fff; }
+
+.edu-timer-dots {
+  display: inline-flex; align-items: center; gap: 5px; padding: 4px 2px;
+}
+.edu-timer-dots .edu-timer-dot {
+  width: 9px; height: 9px; border-radius: 50%; background: var(--edu-line);
+  transition: background 200ms ease, transform 200ms ease;
+}
+.edu-timer-dots .edu-timer-dot.is-lit { background: var(--edu-primary); }
+.edu-timer-dots.edu-timer-warning .edu-timer-dot.is-lit { background: var(--edu-warning); }
+.edu-timer-dots.edu-timer-danger .edu-timer-dot.is-lit {
+  background: var(--edu-danger); transform: scale(1.15);
+}
