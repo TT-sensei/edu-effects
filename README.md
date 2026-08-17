@@ -148,3 +148,25 @@ edu-interactive.cssを追加すると、次の部品を使えます。
 ~~~
 
 edu-maskのクリック動作やedu-dropzoneの並べ替え処理は、教材側のJavaScriptで追加できます。
+
+
+## 学習用エフェクト
+
+edu-effects-extra.cssを追加すると、学習中の状態変化を短いアニメーションで表現できます。
+
+- edu-effect-correct：正解
+- edu-effect-wrong：不正解・再挑戦
+- edu-effect-combo：連続正解
+- edu-effect-stamp：合格印
+- edu-effect-unlock：単元解放
+- edu-effect-slide-up：結果やカードの登場
+- edu-effect-focus：現在の問題の強調
+- edu-effect-highlight：重要語句の強調
+- edu-effect-complete：単元完了
+- edu-effect-paper-in：紙面風の登場
+
+~~~html
+<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-effects-extra.css">
+~~~
+
+状態が変わるタイミングでクラスを追加し、終了後に外すか、同じ要素を作り直して再生します。reduced-motionにも対応しています。
