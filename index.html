@@ -103,7 +103,11 @@
     .ref-expanded-heading p { margin: 3px 0 0; color: var(--edu-muted); font-size: .84rem; }
     .ref-ui-demo { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; min-height: 82px; padding: 12px 0; }
     .ref-expanded-group .edu-card > code { color: var(--edu-primary-dark); font: 700 .76rem ui-monospace, monospace; }
-    .ref-footer { margin-top: 58px; padding: 28px 0; border-top: 1px solid var(--edu-line); color: var(--edu-muted); font-size: .85rem; }
+    .ref-theme-catalog article { min-height: 140px; }
+    .ref-theme-catalog article h3 { margin-top: 24px; }
+    .ref-theme-catalog article p { color: currentColor; opacity: .78; }
+    .ref-theme-catalog article code { font: 700 .74rem ui-monospace, monospace; }
+    .ref-footer { margin-top: 58px; } padding: 28px 0; border-top: 1px solid var(--edu-line); color: var(--edu-muted); font-size: .85rem; }
     .ref-footer a { color: var(--edu-primary-dark); }
     @media (max-width: 720px) {
       .ref-hero { padding: 40px 0 32px; }
@@ -946,6 +950,21 @@
         </div>
       </section>
 
+        <div class="ref-section-head ref-subhead">
+          <h3>3. 教材ごとの背景テーマ</h3>
+          <p>Decorationを組み合わせなくても、まずテーマを1つ置いて雰囲気を作れます。</p>
+        </div>
+        <div class="edu-grid edu-grid-3 ref-theme-catalog">
+          <article class="edu-card edu-card-pad deco-theme-science" data-catalog-card><h3>理科</h3><p>観察・実験・自然</p><code>deco-theme-science</code></article>
+          <article class="edu-card edu-card-pad deco-theme-space" data-catalog-card><h3>宇宙</h3><p>天体・探究・コレクション</p><code>deco-theme-space</code></article>
+          <article class="edu-card edu-card-pad deco-theme-digital" data-catalog-card><h3>デジタル</h3><p>情報・データ・プログラミング</p><code>deco-theme-digital</code></article>
+          <article class="edu-card edu-card-pad deco-theme-japanese" data-catalog-card><h3>和風</h3><p>社会・歴史・文化</p><code>deco-theme-japanese</code></article>
+          <article class="edu-card edu-card-pad deco-theme-note" data-catalog-card><h3>ノート</h3><p>記録・振り返り・説明</p><code>deco-theme-note</code></article>
+          <article class="edu-card edu-card-pad deco-theme-chalk" data-catalog-card><h3>黒板</h3><p>授業・板書・発表</p><code>deco-theme-chalk</code></article>
+          <article class="edu-card edu-card-pad deco-theme-arcade" data-catalog-card><h3>レトロゲーム</h3><p>ステージ・スコア・挑戦</p><code>deco-theme-arcade</code></article>
+          <article class="edu-card edu-card-pad deco-theme-pop" data-catalog-card><h3>ポップ</h3><p>低学年・導入・達成</p><code>deco-theme-pop</code></article>
+          <article class="edu-card edu-card-pad deco-theme-fantasy" data-catalog-card><h3>ファンタジー</h3><p>報酬・冒険・図鑑</p><code>deco-theme-fantasy</code></article>
+        </div>
       <section id="reference" class="edu-container ref-section">
         <div class="ref-section-head">
           <h2>クラス一覧</h2>
