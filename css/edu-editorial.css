@@ -182,3 +182,12 @@
   height: 1px;
   background: var(--edu-line);
 }
+
+
+.edu-style-editorial .edu-btn-gradient { background: var(--edu-primary); }
+.edu-style-editorial .edu-score { border-radius: 10px; background: var(--edu-primary); }
+.edu-style-editorial .edu-reward {
+  border-color: #d8c9bb;
+  border-radius: 10px;
+  background: #fffaf1;
+}
