@@ -71,6 +71,7 @@
         <a href="#variations">バリエーション</a>
         <a href="#learning">学習画面</a>
         <a href="#timers">タイマー</a>
+        <a href="#timer-variants">タイマー別案</a>
         <a href="#reference">クラス一覧</a>
       </div>
     </nav>
@@ -262,6 +263,60 @@
             <h3 class="edu-card-title">ダークカード</h3>
             <p class="edu-card-meta">結果画面や集中モードに。</p>
             <span class="edu-badge edu-badge-primary" style="margin-top:16px">.edu-card-dark</span>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="timer-variants" class="edu-container ref-section">
+        <div class="ref-section-head">
+          <h2>タイマーの別デザイン</h2>
+          <p>同じタイマーでも、教材の雰囲気に合わせて見た目を変えられます。</p>
+        </div>
+        <div class="edu-grid edu-grid-2">
+          <div class="edu-card edu-card-pad">
+            <div class="edu-row-between"><h3 class="edu-card-title">ミニマル</h3><span class="edu-badge edu-badge-neutral">数字だけ</span></div>
+            <span class="edu-timer edu-timer-minimal" style="margin-top:18px"><span class="edu-timer-value">00:15</span></span>
+            <div class="ref-code" style="margin-top:18px">
+              <button class="ref-copy" data-copy-text='<span class="edu-timer edu-timer-minimal"><span class="edu-timer-value">00:15</span></span>'>コピー</button>
+              <pre>&lt;span class="edu-timer edu-timer-minimal"&gt;
+  &lt;span class="edu-timer-value"&gt;00:15&lt;/span&gt;
+&lt;/span&gt;</pre>
+            </div>
+          </div>
+          <div class="edu-card edu-card-pad">
+            <div class="edu-row-between"><h3 class="edu-card-title">アウトライン</h3><span class="edu-badge edu-badge-primary">線だけ</span></div>
+            <span class="edu-timer edu-timer-outline edu-timer-warning" style="margin-top:18px"><span class="edu-timer-icon">⏱</span><span class="edu-timer-value">00:15</span></span>
+            <div class="ref-code" style="margin-top:18px">
+              <button class="ref-copy" data-copy-text='<span class="edu-timer edu-timer-outline edu-timer-warning"><span class="edu-timer-value">00:15</span></span>'>コピー</button>
+              <pre>&lt;span class="edu-timer edu-timer-outline edu-timer-warning"&gt;
+  ...
+&lt;/span&gt;</pre>
+            </div>
+          </div>
+          <div class="edu-card edu-card-pad">
+            <div class="edu-row-between"><h3 class="edu-card-title">グラデーション</h3><span class="edu-badge edu-badge-primary">強調</span></div>
+            <span class="edu-timer edu-timer-gradient" style="margin-top:18px"><span class="edu-timer-icon">⏱</span><span class="edu-timer-value">00:15</span></span>
+            <div class="ref-code" style="margin-top:18px">
+              <button class="ref-copy" data-copy-text='<span class="edu-timer edu-timer-gradient"><span class="edu-timer-value">00:15</span></span>'>コピー</button>
+              <pre>&lt;span class="edu-timer edu-timer-gradient"&gt;
+  ...
+&lt;/span&gt;</pre>
+            </div>
+          </div>
+          <div class="edu-card edu-card-pad">
+            <div class="edu-row-between"><h3 class="edu-card-title">ドット式</h3><span class="edu-badge edu-badge-success">残り5</span></div>
+            <div class="edu-timer-dots edu-timer-warning" style="margin-top:22px">
+              <span class="edu-timer-dot is-lit"></span><span class="edu-timer-dot is-lit"></span>
+              <span class="edu-timer-dot is-lit"></span><span class="edu-timer-dot"></span><span class="edu-timer-dot"></span>
+            </div>
+            <div class="ref-code" style="margin-top:18px">
+              <button class="ref-copy" data-copy-text='<div class="edu-timer-dots edu-timer-warning"><span class="edu-timer-dot is-lit"></span><span class="edu-timer-dot"></span></div>'>コピー</button>
+              <pre>&lt;div class="edu-timer-dots edu-timer-warning"&gt;
+  &lt;span class="edu-timer-dot is-lit"&gt;&lt;/span&gt;
+  &lt;span class="edu-timer-dot"&gt;&lt;/span&gt;
+&lt;/div&gt;</pre>
+            </div>
           </div>
         </div>
       </section>
