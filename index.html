@@ -72,6 +72,27 @@
     .ref-catalog-card-hidden { display: none !important; }
     @media (max-width: 960px) { .ref-finder { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
     @media (max-width: 720px) { .ref-finder { grid-template-columns: 1fr; } .ref-search-row { align-items: flex-start; flex-direction: column; } .ref-search input { width: 100%; } }
+    .ref-decoration-explainer { display: grid; gap: 12px; grid-template-columns: minmax(0, .75fr) minmax(0, 1.25fr); align-items: center; margin-bottom: 28px; padding: 18px; border: 1px solid var(--edu-line); border-left: 4px solid #177d69; border-radius: 10px; background: #f5fbf8; }
+    .ref-decoration-explainer strong, .ref-decoration-explainer span { display: block; }
+    .ref-decoration-explainer span { margin-top: 5px; color: var(--edu-muted); font-size: .84rem; }
+    .ref-decoration-explainer code, .ref-decoration-examples code { padding: 10px 12px; border-radius: 7px; color: #334155; background: #fff; font: .78rem/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; overflow-wrap: anywhere; }
+    .ref-subhead { margin-top: 30px; margin-bottom: 14px; }
+    .ref-subhead h3 { margin: 0; font-size: 1.15rem; }
+    .ref-subhead p { margin: 4px 0 0; }
+    .ref-deco-swatch { height: 82px; margin: 14px 0 12px; border: 1px solid var(--edu-line); border-radius: 8px; background-color: #fff; }
+    .ref-deco-frame-sample { box-shadow: inset 0 0 0 7px rgb(255 255 255 / 30%); }
+    .ref-deco-divider-sample { margin: 28px 4px 26px; }
+    .ref-copy-inline { position: static; min-height: 40px; margin-top: 10px; color: var(--edu-ink); border: 1px solid var(--edu-line); border-radius: 8px; background: var(--edu-surface); font-size: .76rem; }
+    .ref-copy-inline:hover { background: var(--edu-line); }
+    .ref-tone-list { display: grid; gap: 10px; grid-template-columns: repeat(7, minmax(0, 1fr)); }
+    .ref-tone { display: grid; min-height: 72px; align-content: center; padding: 10px; border: 1px solid var(--deco-line); border-top: 4px solid var(--deco-accent); border-radius: 8px; background: var(--deco-shape, #fff); }
+    .ref-tone b { font-size: .72rem; }
+    .ref-tone small { margin-top: 3px; color: var(--edu-muted); font-size: .72rem; }
+    .ref-decoration-examples { display: grid; gap: 10px; margin-top: 18px; }
+    .ref-decoration-examples div { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px; border: 1px solid var(--edu-line); border-radius: 8px; background: var(--edu-surface); }
+    .ref-decoration-examples span { font-size: .84rem; font-weight: 800; }
+    @media (max-width: 960px) { .ref-tone-list { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+    @media (max-width: 720px) { .ref-decoration-explainer { grid-template-columns: 1fr; } .ref-tone-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } .ref-decoration-examples div { align-items: flex-start; flex-direction: column; } }
     .ref-footer { margin-top: 58px; padding: 28px 0; border-top: 1px solid var(--edu-line); color: var(--edu-muted); font-size: .85rem; }
     .ref-footer a { color: var(--edu-primary-dark); }
     @media (max-width: 720px) {
@@ -762,17 +783,79 @@
       <section id="decorations" class="edu-container ref-section">
         <div class="ref-section-head">
           <h2>Decoration素材集</h2>
-          <p>完成UIではなく、サイトごとの雰囲気を作る背景・線・枠・装飾です。</p>
+          <p>Decorationは、カードやボタンではなく「背景・線・枠」に足す材料です。</p>
         </div>
-        <div class="edu-grid edu-grid-2 ref-decoration-catalog">
-          <div class="edu-card edu-card-pad" data-catalog-card deco-surface deco-grid deco-science" style="min-height:130px"><span class="edu-badge edu-badge-success">SCIENCE</span><h3 class="edu-card-title" style="margin-top:18px">方眼 / 回路</h3><p class="edu-card-meta">deco-grid · deco-circuit</p></div>
-          <div class="edu-card edu-card-pad" data-catalog-card deco-surface deco-dots deco-digital" style="min-height:130px"><span class="edu-badge edu-badge-primary">DIGITAL</span><h3 class="edu-card-title" style="margin-top:18px">ドット / ハーフトーン</h3><p class="edu-card-meta">deco-dots · deco-halftone</p></div>
-          <div class="edu-card edu-card-pad" data-catalog-card deco-surface deco-rays deco-pop" style="min-height:130px"><span class="edu-badge edu-badge-warning">POP</span><h3 class="edu-card-title" style="margin-top:18px">集中線 / キラキラ</h3><p class="edu-card-meta">deco-rays · deco-sparkles</p></div>
-          <div class="edu-card edu-card-pad" data-catalog-card deco-surface deco-note deco-tape deco-frame" style="min-height:130px"><span class="edu-badge edu-badge-neutral">NOTE</span><h3 class="edu-card-title" style="margin-top:18px">紙 / テープ / 枠</h3><p class="edu-card-meta">deco-note · deco-tape · deco-frame</p></div>
-          <div class="edu-card edu-card-pad" data-catalog-card deco-surface deco-retro deco-wave" style="min-height:130px"><span class="edu-badge edu-badge-danger">RETRO</span><h3 class="edu-card-title" style="margin-top:18px">波 / レトロ</h3><p class="edu-card-meta">deco-wave · deco-retro</p></div>
-          <div class="edu-card edu-card-pad" data-catalog-card deco-surface deco-fantasy deco-shape-circle" style="min-height:130px"><span class="edu-badge edu-badge-primary">FANTASY</span><h3 class="edu-card-title" style="margin-top:18px">幾何学シェイプ</h3><p class="edu-card-meta">deco-shape-circle · deco-sparkles</p></div>
-          <div class="edu-card edu-card-pad" data-catalog-card deco-surface deco-minimal deco-divider" style="min-height:100px"><span class="edu-badge edu-badge-neutral">MINIMAL</span><h3 class="edu-card-title">区切り線</h3></div>
-          <div class="edu-card edu-card-pad" data-catalog-card deco-surface deco-sketch deco-note" style="min-height:100px"><span class="edu-badge edu-badge-warning">SKETCH</span><h3 class="edu-card-title" style="margin-top:18px">手描き線</h3></div>
+        <div class="ref-decoration-explainer">
+          <div><strong>使い方は2段階</strong><span>① 装飾を1つ選ぶ　② 親の要素にクラスを追加する</span></div>
+          <code>&lt;section class="deco-surface deco-science-grid"&gt;...&lt;/section&gt;</code>
+        </div>
+        <div class="ref-section-head ref-subhead">
+          <h3>1. 装飾の種類</h3>
+          <p>まずは「何を置くか」を選びます。色や雰囲気は後から組み合わせます。</p>
+        </div>
+        <div class="edu-grid edu-grid-3 ref-decoration-catalog">
+          <article class="edu-card edu-card-pad" data-catalog-card>
+            <h3 class="edu-card-title">方眼</h3><div class="ref-deco-swatch deco-surface deco-grid deco-science"></div>
+            <p class="edu-card-meta"><code>deco-grid</code> · 研究、設計、整理</p><button class="ref-copy ref-copy-inline" data-copy-text='<div class="deco-surface deco-grid">...</div>'>コードをコピー</button>
+          </article>
+          <article class="edu-card edu-card-pad" data-catalog-card>
+            <h3 class="edu-card-title">ドット</h3><div class="ref-deco-swatch deco-surface deco-dots deco-digital"></div>
+            <p class="edu-card-meta"><code>deco-dots</code> · 軽い背景、データ</p><button class="ref-copy ref-copy-inline" data-copy-text='<div class="deco-surface deco-dots">...</div>'>コードをコピー</button>
+          </article>
+          <article class="edu-card edu-card-pad" data-catalog-card>
+            <h3 class="edu-card-title">ハーフトーン</h3><div class="ref-deco-swatch deco-surface deco-halftone deco-retro"></div>
+            <p class="edu-card-meta"><code>deco-halftone</code> · 印刷、ゲーム風</p><button class="ref-copy ref-copy-inline" data-copy-text='<div class="deco-surface deco-halftone">...</div>'>コードをコピー</button>
+          </article>
+          <article class="edu-card edu-card-pad" data-catalog-card>
+            <h3 class="edu-card-title">波</h3><div class="ref-deco-swatch deco-surface deco-wave deco-retro"></div>
+            <p class="edu-card-meta"><code>deco-wave</code> · 区切り、流れ、歴史</p><button class="ref-copy ref-copy-inline" data-copy-text='<div class="deco-surface deco-wave">...</div>'>コードをコピー</button>
+          </article>
+          <article class="edu-card edu-card-pad" data-catalog-card>
+            <h3 class="edu-card-title">回路</h3><div class="ref-deco-swatch deco-surface deco-circuit deco-science"></div>
+            <p class="edu-card-meta"><code>deco-circuit</code> · 理科、情報、仕組み</p><button class="ref-copy ref-copy-inline" data-copy-text='<div class="deco-surface deco-circuit">...</div>'>コードをコピー</button>
+          </article>
+          <article class="edu-card edu-card-pad" data-catalog-card>
+            <h3 class="edu-card-title">集中線</h3><div class="ref-deco-swatch deco-surface deco-rays deco-pop"></div>
+            <p class="edu-card-meta"><code>deco-rays</code> · スタート、達成</p><button class="ref-copy ref-copy-inline" data-copy-text='<div class="deco-surface deco-rays">...</div>'>コードをコピー</button>
+          </article>
+          <article class="edu-card edu-card-pad" data-catalog-card>
+            <h3 class="edu-card-title">キラキラ</h3><div class="ref-deco-swatch deco-surface deco-sparkles deco-fantasy"></div>
+            <p class="edu-card-meta"><code>deco-sparkles</code> · 報酬、特別感</p><button class="ref-copy ref-copy-inline" data-copy-text='<div class="deco-surface deco-sparkles">...</div>'>コードをコピー</button>
+          </article>
+          <article class="edu-card edu-card-pad" data-catalog-card>
+            <h3 class="edu-card-title">手描き線</h3><div class="ref-deco-swatch deco-surface deco-sketch deco-note"></div>
+            <p class="edu-card-meta"><code>deco-sketch</code> · ノート、記録</p><button class="ref-copy ref-copy-inline" data-copy-text='<div class="deco-surface deco-sketch">...</div>'>コードをコピー</button>
+          </article>
+          <article class="edu-card edu-card-pad" data-catalog-card>
+            <h3 class="edu-card-title">枠・吹き出し</h3><div class="ref-deco-swatch ref-deco-frame-sample deco-surface deco-frame deco-note"></div>
+            <p class="edu-card-meta"><code>deco-frame</code> · <code>deco-bubble</code></p><button class="ref-copy ref-copy-inline" data-copy-text='<div class="deco-surface deco-frame">...</div>'>コードをコピー</button>
+          </article>
+          <article class="edu-card edu-card-pad" data-catalog-card>
+            <h3 class="edu-card-title">区切り線</h3><div class="ref-deco-divider-sample deco-divider deco-minimal"><span>SECTION</span></div>
+            <p class="edu-card-meta"><code>deco-divider</code> · 説明、章立て</p><button class="ref-copy ref-copy-inline" data-copy-text='<div class="deco-divider deco-minimal"><span>SECTION</span></div>'>コードをコピー</button>
+          </article>
+          <article class="edu-card edu-card-pad" data-catalog-card>
+            <h3 class="edu-card-title">幾何学シェイプ</h3><div class="ref-deco-swatch deco-surface deco-shape-circle deco-fantasy"></div>
+            <p class="edu-card-meta"><code>deco-shape-circle</code> · 背景の余白</p><button class="ref-copy ref-copy-inline" data-copy-text='<div class="deco-surface deco-shape-circle">...</div>'>コードをコピー</button>
+          </article>
+        </div>
+        <div class="ref-section-head ref-subhead">
+          <h3>2. テイストを選ぶ</h3>
+          <p>テイストは色と雰囲気の設定です。装飾クラスと一緒に使います。</p>
+        </div>
+        <div class="ref-tone-list">
+          <span class="ref-tone deco-pop"><b>POP</b><small>明るく元気</small></span>
+          <span class="ref-tone deco-science"><b>SCIENCE</b><small>理科・実験</small></span>
+          <span class="ref-tone deco-digital"><b>DIGITAL</b><small>情報・データ</small></span>
+          <span class="ref-tone deco-note"><b>NOTE</b><small>紙・記録</small></span>
+          <span class="ref-tone deco-retro"><b>RETRO</b><small>歴史・ゲーム</small></span>
+          <span class="ref-tone deco-fantasy"><b>FANTASY</b><small>報酬・冒険</small></span>
+          <span class="ref-tone deco-minimal"><b>MINIMAL</b><small>説明・管理</small></span>
+        </div>
+        <div class="ref-decoration-examples">
+          <div><span>理科の記録</span><code>deco-surface deco-science-grid</code></div>
+          <div><span>ノート風の振り返り</span><code>deco-surface deco-note-paper deco-tape</code></div>
+          <div><span>報酬画面の背景</span><code>deco-surface deco-fantasy-shapes deco-sparkles</code></div>
         </div>
       </section>
 
