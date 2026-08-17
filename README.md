@@ -36,3 +36,45 @@ TT-senseiの教材サイトで共通利用する、落ち着いたUI用CSS素材
 ## ライセンス
 
 TT-senseiの教材サイトで自由に利用するための共通素材です。
+
+
+## 追加CSS
+
+基本CSSに加えて、必要な用途だけ読み込めます。
+
+~~~html
+<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-variants.css">
+<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-learning.css">
+<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-motion.css">
+~~~
+
+### edu-variants.css
+
+テーマを親要素に付けるだけで色の雰囲気を変更できます。
+
+- \`.edu-theme-soft\`：やわらかい青紫
+- \`.edu-theme-warm\`：落ち着いた暖色
+- \`.edu-theme-nature\`：自然・理科向け
+- \`.edu-theme-night\`：夜間・集中モード
+
+部品のバリエーションもあります。
+
+- ボタン：\`.edu-btn-outline\` \`.edu-btn-ghost\` \`.edu-btn-gradient\` \`.edu-btn-lg\` \`.edu-btn-sm\`
+- カード：\`.edu-card-flat\` \`.edu-card-highlight\` \`.edu-card-dark\` \`.edu-card-accent\`
+- 選択肢：\`.edu-choice-compact\` \`.edu-choice-large\` \`.edu-choice-numbered\`
+- 進捗：\`.edu-progress-thin\` \`.edu-progress-tall\` \`.edu-progress-segmented\` \`.edu-progress-ring\`
+
+### edu-learning.css
+
+- 問題画面：\`.edu-question\` \`.edu-answer-grid\`
+- 結果画面：\`.edu-stat\` \`.edu-score\`
+- 手順表示：\`.edu-stepper\`
+- テンキー：\`.edu-keypad\` \`.edu-key\`
+- 考察・比較：\`.edu-note\` \`.edu-comparison\`
+- 履歴・予定：\`.edu-timeline\`
+- 読み込み中：\`.edu-skeleton\`
+
+### edu-motion.css
+
+\`.edu-enter\`、\`.edu-count-up\`、\`.edu-soft-glow\`、\`.edu-float\`、\`.edu-success-burst\`、\`.edu-wrong-shake\` など、控えめな演出を追加できます。
+
