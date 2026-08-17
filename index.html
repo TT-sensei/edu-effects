@@ -52,6 +52,23 @@
     .edu-style-editorial .ref-code { border-radius: 8px; }
     .edu-style-editorial .ref-copy { border-radius: 5px; }
     .edu-style-editorial .ref-nav { background: #fffdf9; }
+
+    .ref-directory { display: grid; gap: 12px; grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .ref-file { display: flex; min-height: 100%; flex-direction: column; padding: 18px; border: 1px solid var(--edu-line); border-radius: 8px; background: var(--edu-surface); }
+    .ref-file-name { margin: 13px 0 6px; font: 800 .9rem ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; overflow-wrap: anywhere; }
+    .ref-file-desc { margin: 0; color: var(--edu-muted); font-size: .82rem; line-height: 1.55; }
+    .ref-file .edu-btn { margin-top: auto; padding-top: 8px; }
+    .ref-file-core { border-top: 4px solid #6478d8; }
+    .ref-file-theme { border-top: 4px solid #a95f43; }
+    .ref-file-learning { border-top: 4px solid #177d69; }
+    .ref-file-motion { border-top: 4px solid #7c3aed; }
+    .ref-file-feedback { border-top: 4px solid #d79b38; }
+    .ref-quick { display: grid; gap: 10px; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 16px; }
+    .ref-quick-item { padding: 13px 15px; border-left: 3px solid var(--edu-primary); background: rgb(255 253 249 / 76%); }
+    .ref-quick-item strong { display: block; font-size: .86rem; }
+    .ref-quick-item span { color: var(--edu-muted); font-size: .78rem; }
+    @media (max-width: 960px) { .ref-directory { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+    @media (max-width: 720px) { .ref-directory, .ref-quick { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -59,13 +76,14 @@
     <header class="edu-header">
       <div class="edu-container edu-header-inner">
         <a class="edu-brand" href="#">edu-effects<small>EDUCATION UI CSS</small></a>
-        <span class="edu-badge edu-badge-primary">v1 · no framework</span>
+        <span class="edu-badge edu-badge-primary">5 CSS FILES · COPY READY</span>
       </div>
     </header>
 
     <nav class="ref-nav" aria-label="ページ内メニュー">
       <div class="edu-container ref-nav-inner">
         <a href="#start">はじめ方</a>
+        <a href="#directory">素材一覧</a>
         <a href="#components">コンポーネント</a>
         <a href="#feedback">学習フィードバック</a>
         <a href="#variations">バリエーション</a>
@@ -105,6 +123,51 @@
             <span class="ref-token">--edu-shadow-sm</span>
             <span class="edu-help">CSS変数でサイトに合わせて調整できます。</span>
           </div>
+        </div>
+      </section>
+
+
+      <section id="directory" class="edu-container ref-section">
+        <div class="ref-section-head">
+          <h2>素材一覧</h2>
+          <p>迷ったら、まず基本CSS。必要な目的のファイルだけ追加してください。</p>
+        </div>
+        <div class="ref-directory">
+          <article class="ref-file ref-file-core">
+            <span class="edu-badge edu-badge-primary">BASE</span>
+            <h3 class="ref-file-name">edu-effects.css</h3>
+            <p class="ref-file-desc">カード、ボタン、タブ、フォーム、状態表示、進捗などの基本UI。</p>
+            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="css/edu-effects.css">'>読み込みをコピー</button>
+          </article>
+          <article class="ref-file ref-file-theme">
+            <span class="edu-badge edu-badge-warning">STYLE</span>
+            <h3 class="ref-file-name">edu-variants.css</h3>
+            <p class="ref-file-desc">ソフト、暖色、自然、ナイト。ボタンやカードの見た目違い。</p>
+            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="css/edu-variants.css">'>読み込みをコピー</button>
+          </article>
+          <article class="ref-file ref-file-learning">
+            <span class="edu-badge edu-badge-success">LEARNING</span>
+            <h3 class="ref-file-name">edu-learning.css</h3>
+            <p class="ref-file-desc">問題画面、結果、テンキー、タイマー、比較、記述欄。</p>
+            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="css/edu-learning.css">'>読み込みをコピー</button>
+          </article>
+          <article class="ref-file ref-file-motion">
+            <span class="edu-badge edu-badge-primary">MOTION</span>
+            <h3 class="ref-file-name">edu-motion.css</h3>
+            <p class="ref-file-desc">入場、正解、不正解、集中などの控えめな動き。</p>
+            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="css/edu-motion.css">'>読み込みをコピー</button>
+          </article>
+          <article class="ref-file ref-file-feedback">
+            <span class="edu-badge edu-badge-warning">EDITORIAL</span>
+            <h3 class="ref-file-name">edu-editorial.css</h3>
+            <p class="ref-file-desc">紙、ノート、黒板。AIっぽさを抑えた落ち着いた教材風。</p>
+            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="css/edu-editorial.css">'>読み込みをコピー</button>
+          </article>
+        </div>
+        <div class="ref-quick">
+          <div class="ref-quick-item"><strong>通常の教材</strong><span>effects + learning</span></div>
+          <div class="ref-quick-item"><strong>落ち着いた教材</strong><span>effects + editorial + learning</span></div>
+          <div class="ref-quick-item"><strong>ゲーム寄りの教材</strong><span>effects + variants + feedback + motion</span></div>
         </div>
       </section>
 
