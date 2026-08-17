@@ -125,3 +125,26 @@ edu-learning.cssには3種類のタイマーがあります。
 - edu-timer-dots：残り時間や残り問題数を粒で表示
 
 edu-timer-dotsは、子要素のedu-timer-dotにis-litを付け外しして表示を更新します。
+
+
+## インタラクティブ学習パーツ
+
+edu-interactive.cssを追加すると、次の部品を使えます。
+
+- edu-mask / edu-blank：暗記シート・穴埋め
+- edu-dropzone / edu-sort-item：並べ替え・ドラッグ枠
+- edu-streak：連続正解・継続記録
+- edu-stamp-card / edu-stamp：スタンプカード
+- edu-hint / edu-accordion：折りたたみヒント
+- edu-marker：重要語句のマーカー
+- edu-ruby：ルビの行間調整
+- edu-mark-flower：花マル採点
+- edu-speech-bubble：先生のアドバイス
+
+読み込み：
+
+~~~html
+<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-interactive.css">
+~~~
+
+edu-maskのクリック動作やedu-dropzoneの並べ替え処理は、教材側のJavaScriptで追加できます。
