@@ -7,6 +7,9 @@
   <meta name="description" content="TT-senseiの教材サイトで使える、再利用可能なCSS UI素材のリファレンス。">
   <link rel="stylesheet" href="css/edu-effects.css">
   <link rel="stylesheet" href="css/edu-feedback.css">
+  <link rel="stylesheet" href="css/edu-variants.css">
+  <link rel="stylesheet" href="css/edu-learning.css">
+  <link rel="stylesheet" href="css/edu-motion.css">
   <style>
     :root { --ref-purple: #5b4bdb; --ref-purple-soft: #f2f0ff; }
     .ref-hero { padding: 58px 0 42px; background: linear-gradient(135deg, #f8fbff 0%, #eef5ff 58%, #f2f0ff 100%); border-bottom: 1px solid var(--edu-line); }
@@ -56,6 +59,8 @@
         <a href="#start">はじめ方</a>
         <a href="#components">コンポーネント</a>
         <a href="#feedback">学習フィードバック</a>
+        <a href="#variations">バリエーション</a>
+        <a href="#learning">学習画面</a>
         <a href="#reference">クラス一覧</a>
       </div>
     </nav>
@@ -200,6 +205,100 @@
           <div class="edu-reward"><div><div class="edu-reward-icon edu-pop">✓</div><div class="edu-reward-title">正解！</div><div class="edu-reward-text">次の問題へ進もう</div></div></div>
           <div class="edu-card edu-card-pad edu-answer-pop"><span class="edu-badge edu-badge-success">ANSWERED</span><h3 class="edu-card-title" style="margin-top:12px">答えを記録しました</h3><p class="edu-card-meta">edu-answer-pop</p></div>
           <div class="edu-card edu-card-pad edu-pulse"><span class="edu-badge edu-badge-primary">NEXT</span><h3 class="edu-card-title" style="margin-top:12px">次の挑戦へ</h3><p class="edu-card-meta">edu-pulse</p></div>
+        </div>
+      </section>
+
+
+      <section id="variations" class="edu-container ref-section">
+        <div class="ref-section-head">
+          <h2>バリエーション</h2>
+          <p>テーマや修飾クラスを組み合わせて、教材の雰囲気を変えられます。</p>
+        </div>
+        <div class="edu-grid edu-grid-3">
+          <div class="edu-card edu-card-pad edu-theme-soft">
+            <span class="edu-badge edu-badge-primary">SOFT</span>
+            <h3 class="edu-card-title" style="margin-top:12px">やわらかい青</h3>
+            <p class="edu-card-meta">.edu-theme-soft</p>
+            <button class="edu-btn edu-btn-primary edu-btn-block" style="margin-top:16px">選ぶ</button>
+          </div>
+          <div class="edu-card edu-card-pad edu-theme-warm">
+            <span class="edu-badge edu-badge-warning">WARM</span>
+            <h3 class="edu-card-title" style="margin-top:12px">あたたかい教材</h3>
+            <p class="edu-card-meta">.edu-theme-warm</p>
+            <button class="edu-btn edu-btn-primary edu-btn-block" style="margin-top:16px">選ぶ</button>
+          </div>
+          <div class="edu-card edu-card-pad edu-theme-nature">
+            <span class="edu-badge edu-badge-success">NATURE</span>
+            <h3 class="edu-card-title" style="margin-top:12px">自然・理科向け</h3>
+            <p class="edu-card-meta">.edu-theme-nature</p>
+            <button class="edu-btn edu-btn-primary edu-btn-block" style="margin-top:16px">選ぶ</button>
+          </div>
+          <div class="edu-card edu-card-pad edu-theme-night">
+            <span class="edu-badge edu-badge-primary">NIGHT</span>
+            <h3 class="edu-card-title" style="margin-top:12px">夜間・集中モード</h3>
+            <p class="edu-card-meta">.edu-theme-night</p>
+            <button class="edu-btn edu-btn-primary edu-btn-block" style="margin-top:16px">選ぶ</button>
+          </div>
+          <div class="edu-card edu-card-pad">
+            <h3 class="edu-card-title">ボタンの別案</h3>
+            <p class="edu-card-meta">アウトライン、ゴースト、グラデーション。</p>
+            <div class="edu-row" style="margin-top:16px">
+              <button class="edu-btn edu-btn-outline">枠線</button>
+              <button class="edu-btn edu-btn-ghost">静か</button>
+              <button class="edu-btn edu-btn-gradient">強調</button>
+            </div>
+          </div>
+          <div class="edu-card edu-card-pad edu-card-dark">
+            <h3 class="edu-card-title">ダークカード</h3>
+            <p class="edu-card-meta">結果画面や集中モードに。</p>
+            <span class="edu-badge edu-badge-primary" style="margin-top:16px">.edu-card-dark</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="learning" class="edu-container ref-section">
+        <div class="ref-section-head">
+          <h2>学習画面パーツ</h2>
+          <p>クイズ、ドリル、結果、ダッシュボードで使えるパターンです。</p>
+        </div>
+        <div class="edu-grid edu-grid-2">
+          <div class="edu-question">
+            <div class="edu-question-head"><span class="edu-question-number"><strong>03</strong> QUESTION</span><span class="edu-badge edu-badge-warning">あと4問</span></div>
+            <h3 class="edu-question-text">水が蒸発するとき、どこへ移動したと考えられますか。</h3>
+            <div class="edu-answer-grid">
+              <button class="edu-choice edu-choice-numbered" data-number="A">空気中</button>
+              <button class="edu-choice edu-choice-numbered is-selected" data-number="B">土の中</button>
+              <button class="edu-choice edu-choice-numbered" data-number="C">水の中</button>
+            </div>
+          </div>
+          <div class="edu-card edu-card-pad">
+            <div class="edu-row-between"><h3 class="edu-card-title">結果カード</h3><span class="edu-badge edu-badge-success">RESULT</span></div>
+            <div class="edu-grid edu-grid-2" style="margin-top:16px">
+              <div class="edu-stat edu-stat-primary"><div class="edu-stat-label">SCORE</div><div class="edu-stat-value">86</div><div class="edu-stat-note">前回より +12</div></div>
+              <div class="edu-stat edu-stat-success"><div class="edu-stat-label">正答率</div><div class="edu-stat-value">8/10</div><div class="edu-stat-note">よくできました</div></div>
+            </div>
+            <div class="edu-stepper" style="margin-top:24px">
+              <div class="edu-step is-done">準備</div><div class="edu-step is-current">挑戦</div><div class="edu-step">まとめ</div>
+            </div>
+          </div>
+          <div class="edu-card edu-card-pad">
+            <div class="edu-row-between"><h3 class="edu-card-title">テンキー</h3><span class="edu-badge edu-badge-neutral">算数</span></div>
+            <div class="edu-keypad" style="margin-top:18px">
+              <button class="edu-key">7</button><button class="edu-key">8</button><button class="edu-key">9</button>
+              <button class="edu-key">4</button><button class="edu-key">5</button><button class="edu-key">6</button>
+              <button class="edu-key">1</button><button class="edu-key">2</button><button class="edu-key">3</button>
+              <button class="edu-key edu-key-wide">0</button><button class="edu-key edu-key-action">決定</button>
+            </div>
+          </div>
+          <div class="edu-card edu-card-pad">
+            <div class="edu-row-between"><h3 class="edu-card-title">比較・考察</h3><span class="edu-badge edu-badge-primary">まとめ</span></div>
+            <div class="edu-comparison" style="margin-top:18px">
+              <div class="edu-comparison-item"><div class="edu-comparison-label">予想</div><strong>右へ動く</strong></div>
+              <div class="edu-comparison-divider">→</div>
+              <div class="edu-comparison-item"><div class="edu-comparison-label">結果</div><strong>左へ動いた</strong></div>
+            </div>
+            <div class="edu-note" style="margin-top:14px"><div class="edu-note-title">考えてみよう</div><p>予想と結果が違った理由を書こう。</p></div>
+          </div>
         </div>
       </section>
 
