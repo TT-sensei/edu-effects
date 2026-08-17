@@ -204,6 +204,8 @@ edu-decorations.cssは、完成UIではなくサイトごとの雰囲気を作�
 
 テイストは deco-pop、deco-science、deco-digital、deco-note、deco-retro、deco-fantasy、deco-minimal を組み合わせます。
 
+よく使う組み合わせには名前付きクラスもあります：deco-science-grid、deco-science-circuit、deco-digital-dots、deco-digital-halftone、deco-pop-rays、deco-note-paper、deco-fantasy-shapes、deco-minimal-divider。
+
 ~~~html
 <link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-decorations.css">
 ~~~
