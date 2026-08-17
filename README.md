@@ -213,3 +213,58 @@ edu-decorations.cssは、完成UIではなくサイトごとの雰囲気を作�
 ~~~html
 <link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-decorations.css">
 ~~~
+
+
+## 拡張UI素材集
+
+edu-ui-variants.cssには、基本UIから選べる見た目違いと用途別パーツを収録しています。
+
+- ボタン：edu-btn-3d / edu-btn-game / edu-btn-round / edu-btn-icon / edu-btn-xl
+- 問題：edu-answer-binary / edu-answer-card / edu-input-answer / edu-fill-blank / edu-sort-board
+- 結果：edu-rank-card / edu-stars / edu-xp / edu-record / edu-complete
+- ゲームUI：edu-game-hud / edu-hp / edu-boss / edu-stage / edu-lives / edu-mission / edu-combo-meter
+- カード：edu-card-textbook / edu-card-sticky / edu-card-chalk / edu-card-game / edu-card-research / edu-card-collection
+
+## Effects拡張
+
+edu-effects-advanced.cssには、基本Effectsと使い分ける追加演出があります。
+
+- effect-glint：光が走る
+- effect-impact：ドンと出る
+- effect-ripple：波紋
+- effect-screen-shake：画面振動
+- effect-stamp：スタンプ
+- effect-number-fly：数字・XPが飛ぶ
+- effect-unlock：アンロック表示
+- effect-check-draw：控えめなチェック
+
+## Decoration拡張
+
+edu-decorations-advanced.cssには、教材のテーマをはっきり分ける背景を収録しています。
+
+- deco-theme-science：理科・方眼
+- deco-theme-space：宇宙
+- deco-theme-digital：デジタル
+- deco-theme-japanese：和風
+- deco-theme-note：ノート
+- deco-theme-chalk：黒板
+- deco-theme-arcade：レトロゲーム
+- deco-theme-pop：ポップ
+- deco-theme-fantasy：ファンタジー
+
+必要なCSSだけ読み込みます。
+
+~~~html
+<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-ui-variants.css">
+<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-effects-advanced.css">
+<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-decorations-advanced.css">
+~~~
+
+### 採点マークの選び方
+
+従来のedu-mark-flowerは互換性のため残しています。普段の教材では、次の控えめなマークを推奨します。
+
+- edu-mark-check：チェック＋丸
+- edu-mark-circle：丸囲み
+- edu-mark-stamp：採点スタンプ
+- edu-mark-pencil：先生の手書きチェック風

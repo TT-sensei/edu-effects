@@ -1,0 +1,44 @@
+/*
+ * edu-effects-advanced.css
+ * Additional short, reusable effects for learning and game feedback.
+ */
+
+/* Small feedback ------------------------------------------------------ */
+.effect-glint { position: relative; overflow: hidden; }
+.effect-glint::after { content: ""; position: absolute; top: -80%; left: -45%; width: 22%; height: 240%; background: rgb(255 255 255 / 68%); transform: rotate(24deg); pointer-events: none; animation: effect-glint 700ms ease-out both; }
+.effect-impact { animation: effect-impact 360ms cubic-bezier(.2,.8,.2,1) both; }
+.effect-ripple { position: relative; }
+.effect-ripple::after { content: ""; position: absolute; inset: 50%; width: 10px; height: 10px; border: 2px solid currentColor; border-radius: 50%; transform: translate(-50%, -50%); opacity: 0; animation: effect-ripple 620ms ease-out both; pointer-events: none; }
+.effect-stamp { animation: effect-stamp 420ms cubic-bezier(.2,.8,.2,1) both; }
+.effect-number-fly { display: inline-block; animation: effect-number-fly 680ms cubic-bezier(.2,.8,.2,1) both; }
+.effect-screen-shake { animation: effect-screen-shake 360ms ease both; }
+.effect-screen-flash { position: relative; }
+.effect-screen-flash::after { content: ""; position: absolute; inset: 0; background: rgb(255 255 255 / 82%); opacity: 0; pointer-events: none; animation: effect-screen-flash 360ms ease-out both; }
+.effect-shockwave { position: relative; }
+.effect-shockwave::before, .effect-shockwave::after { content: ""; position: absolute; inset: 50%; border: 2px solid var(--edu-primary); border-radius: 50%; transform: translate(-50%, -50%) scale(.2); opacity: 0; pointer-events: none; animation: effect-shockwave 720ms ease-out both; }
+.effect-shockwave::after { animation-delay: 120ms; }
+.effect-unlock { position: relative; overflow: hidden; animation: effect-unlock 620ms cubic-bezier(.2,.8,.2,1) both; }
+.effect-unlock::before { content: "UNLOCKED"; position: absolute; right: 12px; top: 10px; padding: 4px 7px; border-radius: 4px; color: #fff; background: var(--edu-primary); font: 800 .62rem ui-monospace, monospace; letter-spacing: .08em; animation: effect-unlock-label 700ms ease-out both; }
+
+/* Decorative particles without JS ----------------------------------- */
+.effect-spark-burst { position: relative; }
+.effect-spark-burst::before { content: "✦  ·  ✧  ·  ✦"; position: absolute; inset: -20px; color: #d79b38; font-size: .95rem; letter-spacing: .9em; opacity: 0; pointer-events: none; animation: effect-spark-burst 720ms ease-out both; }
+.effect-check-draw::after { content: "✓"; display: inline-block; color: var(--edu-success); font-weight: 950; animation: effect-check-draw 440ms ease-out both; }
+
+/* Keyframes ----------------------------------------------------------- */
+@keyframes effect-glint { from { left: -45%; } to { left: 145%; } }
+@keyframes effect-impact { 0% { transform: scale(.78); opacity: .4; } 55% { transform: scale(1.08); opacity: 1; } 100% { transform: scale(1); } }
+@keyframes effect-ripple { 0% { width: 10px; height: 10px; opacity: .8; } 100% { width: 150px; height: 150px; opacity: 0; } }
+@keyframes effect-stamp { 0% { opacity: 0; transform: scale(1.5) rotate(-12deg); } 75% { opacity: 1; transform: scale(.94) rotate(3deg); } 100% { transform: scale(1) rotate(0); } }
+@keyframes effect-number-fly { from { opacity: 0; transform: translateY(18px) scale(.7); } 55% { opacity: 1; transform: translateY(-8px) scale(1.15); } to { transform: translateY(0) scale(1); } }
+@keyframes effect-screen-shake { 0%,100% { transform: translate(0); } 20% { transform: translate(-5px, 2px); } 40% { transform: translate(5px, -2px); } 60% { transform: translate(-3px, 1px); } 80% { transform: translate(3px, -1px); } }
+@keyframes effect-screen-flash { 0%,100% { opacity: 0; } 25% { opacity: 1; } }
+@keyframes effect-shockwave { 0% { opacity: .8; transform: translate(-50%, -50%) scale(.2); } 100% { opacity: 0; transform: translate(-50%, -50%) scale(12); } }
+@keyframes effect-unlock { from { opacity: .3; transform: translateY(8px) scale(.94); } 70% { opacity: 1; transform: translateY(-2px) scale(1.03); } to { transform: translateY(0) scale(1); } }
+@keyframes effect-unlock-label { from { opacity: 0; transform: translateX(8px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes effect-spark-burst { 0% { opacity: 0; transform: scale(.65) rotate(-8deg); } 45% { opacity: .9; transform: scale(1.1) rotate(3deg); } 100% { opacity: 0; transform: scale(1.25); } }
+@keyframes effect-check-draw { from { opacity: 0; transform: scale(.4) rotate(-16deg); } to { opacity: 1; transform: scale(1) rotate(0); } }
+
+@media (prefers-reduced-motion: reduce) {
+  [class*="effect-"]::before, [class*="effect-"]::after, [class*="effect-"] { animation: none !important; }
+}

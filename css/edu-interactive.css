@@ -140,3 +140,13 @@
 @keyframes edu-marker-draw { from { background-size: 0 100%; } to { background-size: 100% 100%; } }
 @keyframes edu-streak-flare { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.08) rotate(-4deg); } }
 @keyframes edu-mark-stamp { 0% { opacity: 0; transform: scale(1.6) rotate(-8deg); } 70% { transform: scale(.95) rotate(-8deg); } 100% { opacity: 1; transform: scale(1) rotate(-8deg); } }
+
+/* Mark alternatives --------------------------------------------------- */
+/* The original edu-mark-flower remains for compatibility. Use these quieter marks for most sites. */
+.edu-mark-check { display: inline-flex; align-items: center; gap: 8px; color: var(--edu-success, #487354); font-weight: 900; }
+.edu-mark-check::before { content: "✓"; display: grid; width: 30px; height: 30px; place-items: center; border: 2px solid currentColor; border-radius: 50%; }
+.edu-mark-circle { display: inline-grid; min-width: 76px; min-height: 42px; place-items: center; padding: 6px 12px; border: 2px solid var(--edu-success, #487354); border-radius: 50%; color: var(--edu-success, #487354); font-weight: 900; transform: rotate(-3deg); }
+.edu-mark-stamp { display: inline-grid; min-width: 86px; min-height: 46px; place-items: center; padding: 7px 12px; border: 2px solid #a95f43; border-radius: 5px; color: #a95f43; background: rgb(255 250 241 / 70%); font: 850 .82rem ui-monospace, monospace; letter-spacing: .08em; transform: rotate(-2deg); }
+.edu-mark-pencil { display: inline-flex; align-items: center; gap: 7px; color: #854833; font-weight: 800; }
+.edu-mark-pencil::before { content: "✓"; color: #a95f43; font-size: 1.25rem; }
+.edu-mark-check.is-animated, .edu-mark-circle.is-animated, .edu-mark-stamp.is-animated { animation: edu-mark-stamp 360ms cubic-bezier(.2,.8,.2,1) both; }

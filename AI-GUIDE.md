@@ -175,3 +175,25 @@ Decorationは完成した画面ではなく、背景や線を組み合わせる�
 5. それでも不足する場合だけ、新しいファイルとクラスを提案する。
 
 新しいクラスを作る場合は、用途が分かる名前、reduced-motion対応、タブレットでの確認、公開カタログへの見本追加をセットにします。
+
+
+## 拡張素材を選ぶとき
+
+基本セットで足りない場合は、edu-ui-variants.cssを追加します。
+
+- ボタンの雰囲気を変える：edu-btn-3d、edu-btn-game、edu-btn-round
+- ○×や入力問題：edu-answer-binary、edu-input-answer
+- 並べ替え：edu-sort-board、edu-sort-chip
+- 結果画面：edu-rank-card、edu-stars、edu-xp、edu-complete
+- ゲーム画面：edu-hp、edu-boss、edu-stage、edu-lives、edu-mission
+- 教材の種類を出す：edu-card-textbook、edu-card-research、edu-card-collection
+
+演出の選択例：
+
+- 低学年の正解：既存のedu-mark-checkまたはedu-mark-circle
+- 算数ゲームの正解：effect-impact、effect-number-fly、effect-combo-fire
+- 理科の発見：effect-ripple、effect-shockwave、deco-theme-science
+- 落ち着いた教材：effect-check-draw、edu-mark-pencil、deco-theme-note
+- バッジ獲得：effect-unlock、effect-badge-unlock、deco-theme-fantasy
+
+Decorationのテーマを使う場合は、edu-decorations-advanced.cssを追加します。テーマは1つを土台にし、必要な場合だけdeco-tape、deco-border-corner、deco-sparklesなどを重ねます。背景を重ねすぎて文字が読みにくくならないようにします。

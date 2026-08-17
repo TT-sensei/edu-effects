@@ -15,6 +15,9 @@
   <link rel="stylesheet" href="css/edu-effects-extra.css">
   <link rel="stylesheet" href="css/edu-effects-library.css">
   <link rel="stylesheet" href="css/edu-decorations.css">
+  <link rel="stylesheet" href="css/edu-ui-variants.css">
+  <link rel="stylesheet" href="css/edu-effects-advanced.css">
+  <link rel="stylesheet" href="css/edu-decorations-advanced.css">
   <style>
     :root { --ref-purple: #5b4bdb; --ref-purple-soft: #f2f0ff; }
     .ref-hero { padding: 58px 0 42px; background: linear-gradient(135deg, #f8fbff 0%, #eef5ff 58%, #f2f0ff 100%); border-bottom: 1px solid var(--edu-line); }
@@ -93,6 +96,17 @@
     .ref-decoration-examples span { font-size: .84rem; font-weight: 800; }
     @media (max-width: 960px) { .ref-tone-list { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
     @media (max-width: 720px) { .ref-decoration-explainer { grid-template-columns: 1fr; } .ref-tone-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } .ref-decoration-examples div { align-items: flex-start; flex-direction: column; } }
+    .ref-expanded-group { margin-top: 30px; }
+    .ref-expanded-heading { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 14px; }
+    .ref-expanded-heading > span { display: grid; width: 32px; height: 32px; flex: 0 0 auto; place-items: center; border-radius: 50%; color: #fff; background: var(--edu-primary); font: 800 .75rem ui-monospace, monospace; }
+    .ref-expanded-heading h3 { margin: 0; font-size: 1.18rem; }
+    .ref-expanded-heading p { margin: 3px 0 0; color: var(--edu-muted); font-size: .84rem; }
+    .ref-ui-demo { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; min-height: 82px; padding: 12px 0; }
+    .ref-expanded-group .edu-card > code { color: var(--edu-primary-dark); font: 700 .76rem ui-monospace, monospace; }
+    .ref-theme-catalog article { min-height: 140px; }
+    .ref-theme-catalog article h3 { margin-top: 24px; }
+    .ref-theme-catalog article p { color: currentColor; opacity: .78; }
+    .ref-theme-catalog article code { font: 700 .74rem ui-monospace, monospace; }
     .ref-footer { margin-top: 58px; padding: 28px 0; border-top: 1px solid var(--edu-line); color: var(--edu-muted); font-size: .85rem; }
     .ref-footer a { color: var(--edu-primary-dark); }
     @media (max-width: 720px) {
@@ -133,7 +147,7 @@
     <header class="edu-header">
       <div class="edu-container edu-header-inner">
         <a class="edu-brand" href="#">edu-effects<small>EDUCATION UI CSS</small></a>
-        <span class="edu-badge edu-badge-primary">9 CSS FILES · COPY READY</span>
+        <span class="edu-badge edu-badge-primary">12 CSS FILES · COPY READY</span>
       </div>
     </header>
 
@@ -152,6 +166,8 @@
         <a href="#interactive">問題パーツ</a>
         <a href="#effects">基本エフェクト</a>
         <a href="#effects-library">Effects素材</a>
+        <a href="#expanded-ui">UI拡張</a>
+        <a href="#advanced-effects">Effects拡張</a>
         <a href="#decorations">Decoration素材</a>
         <a href="#reference">クラス一覧</a>
       </div>
@@ -267,6 +283,24 @@
             <h3 class="ref-file-name">edu-decorations.css</h3>
             <p class="ref-file-desc">方眼、ドット、波、紙、枠、線、テイスト別の装飾。</p>
             <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="css/edu-decorations.css">'>読み込みをコピー</button>
+          </article>
+          <article class="ref-file ref-file-effects">
+            <span class="edu-badge edu-badge-danger">UI VARIANTS</span>
+            <h3 class="ref-file-name">edu-ui-variants.css</h3>
+            <p class="ref-file-desc">ボタン、問題、結果、ゲームUI、カードの見た目違い。</p>
+            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="css/edu-ui-variants.css">'>読み込みをコピー</button>
+          </article>
+          <article class="ref-file ref-file-motion">
+            <span class="edu-badge edu-badge-primary">EFFECTS+</span>
+            <h3 class="ref-file-name">edu-effects-advanced.css</h3>
+            <p class="ref-file-desc">キラッ、ドン、波紋、衝撃、スタンプ、アンロック。</p>
+            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="css/edu-effects-advanced.css">'>読み込みをコピー</button>
+          </article>
+          <article class="ref-file ref-file-decoration">
+            <span class="edu-badge edu-badge-warning">THEMES+</span>
+            <h3 class="ref-file-name">edu-decorations-advanced.css</h3>
+            <p class="ref-file-desc">理科、宇宙、デジタル、和風、黒板、ゲーム風。</p>
+            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="css/edu-decorations-advanced.css">'>読み込みをコピー</button>
           </article>
         <div class="ref-quick">
           <div class="ref-quick-item"><strong>通常の教材</strong><span>effects + learning</span></div>
@@ -780,6 +814,81 @@
       </section>
 
 
+      <section id="expanded-ui" class="edu-container ref-section">
+        <div class="ref-section-head">
+          <h2>UI拡張カタログ</h2>
+          <p>基本UIの見た目違いと、問題・結果・ゲーム・カードの用途別素材です。</p>
+        </div>
+        <div class="ref-expanded-group">
+          <div class="ref-expanded-heading"><span>01</span><div><h3>ボタン</h3><p>教材の操作感に合わせて選ぶ。</p></div></div>
+          <div class="edu-grid edu-grid-3">
+            <article class="edu-card edu-card-pad" data-catalog-card><h3 class="edu-card-title">立体</h3><div class="ref-ui-demo"><button class="edu-btn edu-btn-primary edu-btn-3d">決定する</button></div><p class="edu-card-meta"><code>edu-btn-3d</code> · 学習の決定</p></article>
+            <article class="edu-card edu-card-pad" data-catalog-card><h3 class="edu-card-title">ゲーム</h3><div class="ref-ui-demo"><button class="edu-btn edu-btn-game">START</button></div><p class="edu-card-meta"><code>edu-btn-game</code> · ゲーム画面</p></article>
+            <article class="edu-card edu-card-pad" data-catalog-card><h3 class="edu-card-title">丸型・アイコン</h3><div class="ref-ui-demo"><button class="edu-btn edu-btn-icon edu-btn-round" aria-label="次へ">→</button><button class="edu-btn edu-btn-icon" aria-label="ヒント">?</button></div><p class="edu-card-meta"><code>edu-btn-round</code> · <code>edu-btn-icon</code></p></article>
+            <article class="edu-card edu-card-pad" data-catalog-card><h3 class="edu-card-title">戻る・次へ</h3><div class="ref-ui-demo"><button class="edu-btn edu-btn-secondary edu-btn-back">戻る</button><button class="edu-btn edu-btn-primary edu-btn-next">次へ</button></div><p class="edu-card-meta"><code>edu-btn-back</code> · <code>edu-btn-next</code></p></article>
+            <article class="edu-card edu-card-pad" data-catalog-card><h3 class="edu-card-title">大きな開始</h3><div class="ref-ui-demo"><button class="edu-btn edu-btn-primary edu-btn-xl">学習を始める</button></div><p class="edu-card-meta"><code>edu-btn-xl</code> · はじめの一歩</p></article>
+          </div>
+        </div>
+        <div class="ref-expanded-group">
+          <div class="ref-expanded-heading"><span>02</span><div><h3>問題UI</h3><p>答え方そのものを素材として選ぶ。</p></div></div>
+          <div class="edu-grid edu-grid-3">
+            <article class="edu-card edu-card-pad" data-catalog-card><h3 class="edu-card-title">○×</h3><div class="edu-answer-binary"><button class="is-correct">○</button><button>×</button></div><p class="edu-card-meta"><code>edu-answer-binary</code></p></article>
+            <article class="edu-card edu-card-pad" data-catalog-card><h3 class="edu-card-title">入力</h3><div class="edu-input-answer"><span>3 × 4 =</span><input value="12" aria-label="答え"></div><p class="edu-card-meta"><code>edu-input-answer</code></p></article>
+            <article class="edu-card edu-card-pad" data-catalog-card><h3 class="edu-card-title">カード選択</h3><div class="edu-answer-card is-selected"><span class="edu-answer-card-icon">A</span><strong>条件をそろえる</strong></div><p class="edu-card-meta"><code>edu-answer-card</code></p></article>
+            <article class="edu-card edu-card-pad" data-catalog-card><h3 class="edu-card-title">穴埋め</h3><p style="margin-top:12px">水は <span class="edu-fill-blank">液体</span> である。</p><p class="edu-card-meta"><code>edu-fill-blank</code></p></article>
+            <article class="edu-card edu-card-pad" data-catalog-card><h3 class="edu-card-title">並べ替え</h3><div class="edu-sort-board"><span class="edu-sort-chip">First</span><span class="edu-sort-chip">Then</span><span class="edu-sort-chip">Finally</span></div><p class="edu-card-meta"><code>edu-sort-board</code> · <code>edu-sort-chip</code></p></article>
+          </div>
+        </div>
+        <div class="ref-expanded-group">
+          <div class="ref-expanded-heading"><span>03</span><div><h3>結果・ごほうび</h3><p>点数だけでなく、次の挑戦につながる表示。</p></div></div>
+          <div class="edu-grid edu-grid-3">
+            <article class="edu-card edu-card-pad" data-catalog-card><h3 class="edu-card-title">ランク</h3><div class="edu-rank-card"><span class="edu-rank-badge edu-rank-s">S</span><div><strong>すばらしい！</strong><p class="edu-card-meta">正答率 100%</p></div></div><p class="edu-card-meta"><code>edu-rank-card</code></p></article>
+            <article class="edu-card edu-card-pad" data-catalog-card><h3 class="edu-card-title">星評価</h3><div class="edu-stars">★ ★ ★ <span class="is-empty">★ ★</span></div><p class="edu-card-meta"><code>edu-stars</code></p></article>
+            <article class="edu-card edu-card-pad" data-catalog-card><h3 class="edu-card-title">XP</h3><div class="edu-xp"><div class="edu-xp-head"><span>LEVEL 4</span><span>72 / 100 XP</span></div><div class="edu-xp-track"><div class="edu-xp-value" style="width:72%"></div></div></div><p class="edu-card-meta"><code>edu-xp</code></p></article>
+            <article class="edu-card edu-card-pad" data-catalog-card><h3 class="edu-card-title">記録更新</h3><div class="edu-record">BEST SCORE 1280</div><p class="edu-card-meta"><code>edu-record</code></p></article>
+            <article class="edu-card edu-card-pad" data-catalog-card><h3 class="edu-card-title">コンプリート</h3><div class="edu-complete"><span class="edu-complete-mark">✓</span><strong>単元クリア</strong></div><p class="edu-card-meta"><code>edu-complete</code></p></article>
+          </div>
+        </div>
+        <div class="ref-expanded-group">
+          <div class="ref-expanded-heading"><span>04</span><div><h3>ゲームUI</h3><p>ゲームらしさを足すための情報表示。</p></div></div>
+          <div class="edu-grid edu-grid-3">
+            <article class="edu-card edu-card-pad" data-catalog-card><h3 class="edu-card-title">HP</h3><div class="edu-hud-label">HP</div><div class="edu-meter edu-hp"><div class="edu-meter-value" style="width:68%"></div></div><p class="edu-card-meta"><code>edu-hp</code> · <code>edu-meter</code></p></article>
+            <article class="edu-card edu-card-pad" data-catalog-card><h3 class="edu-card-title">ボスゲージ</h3><div class="edu-hud-label">BOSS ENERGY</div><div class="edu-meter edu-boss"><div class="edu-meter-value" style="width:42%"></div></div><p class="edu-card-meta"><code>edu-boss</code></p></article>
+            <article class="edu-card edu-card-pad" data-catalog-card><h3 class="edu-card-title">ステージ・残機</h3><div class="ref-ui-demo"><span class="edu-stage">03</span><span class="edu-lives">♥ ♥ <span class="is-lost">♥</span></span></div><p class="edu-card-meta"><code>edu-stage</code> · <code>edu-lives</code></p></article>
+            <article class="edu-card edu-card-pad" data-catalog-card><h3 class="edu-card-title">ミッション</h3><div class="edu-mission"><strong>3問連続で正解しよう</strong><small>あと1問</small></div><p class="edu-card-meta"><code>edu-mission</code></p></article>
+            <article class="edu-card edu-card-pad" data-catalog-card><h3 class="edu-card-title">コンボメーター</h3><div class="edu-combo-meter"><span>COMBO</span><strong>×8</strong></div><p class="edu-card-meta"><code>edu-combo-meter</code></p></article>
+          </div>
+        </div>
+        <div class="ref-expanded-group">
+          <div class="ref-expanded-heading"><span>05</span><div><h3>カードの肌</h3><p>同じ情報カードでも、教材の世界観を変えられる。</p></div></div>
+          <div class="edu-grid edu-grid-3">
+            <article class="edu-card edu-card-pad edu-card-textbook" data-catalog-card><h3 class="edu-card-title">教科書風</h3><p>見出しと本文を落ち着いて見せる。</p><code>edu-card-textbook</code></article>
+            <article class="edu-card edu-card-pad edu-card-sticky" data-catalog-card><h3 class="edu-card-title">付箋</h3><p>メモやヒントに。</p><code>edu-card-sticky</code></article>
+            <article class="edu-card edu-card-pad edu-card-chalk" data-catalog-card><h3>黒板</h3><p>授業・理科・説明に。</p><code>edu-card-chalk</code></article>
+            <article class="edu-card edu-card-pad edu-card-game" data-catalog-card><h3 class="edu-card-title">ゲームカード</h3><p>ステージやミッションに。</p><code>edu-card-game</code></article>
+            <article class="edu-card edu-card-pad edu-card-research" data-catalog-card><h3 class="edu-card-title">研究カード</h3><p>観察・実験・考察に。</p><code>edu-card-research</code></article>
+            <article class="edu-card edu-card-pad edu-card-collection" data-catalog-card><h3 class="edu-card-title">図鑑カード</h3><p>発見・バッジ・コレクションに。</p><code>edu-card-collection</code></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="advanced-effects" class="edu-container ref-section">
+        <div class="ref-section-head">
+          <h2>Effects拡張カタログ</h2>
+          <p>「ポン」以外の、キラッ・ドン・波紋・衝撃・アンロックを選べます。</p>
+        </div>
+        <div class="edu-grid edu-grid-3">
+          <article class="edu-card edu-card-pad" data-catalog-card><h3 class="edu-card-title">キラッ</h3><div class="ref-effect-stage"><span class="ref-effect-demo effect-glint" data-demo-key="glint" data-demo-class="effect-glint">SPECIAL</span></div><p class="edu-card-meta"><code>effect-glint</code> · 光が走る</p><button class="edu-btn edu-btn-secondary" data-demo-play data-demo-target="glint">▶ 再生</button></article>
+          <article class="edu-card edu-card-pad" data-catalog-card><h3 class="edu-card-title">ドン</h3><div class="ref-effect-stage"><span class="ref-effect-demo effect-impact" data-demo-key="impact" data-demo-class="effect-impact">HIT!</span></div><p class="edu-card-meta"><code>effect-impact</code> · 数字や結果</p><button class="edu-btn edu-btn-secondary" data-demo-play data-demo-target="impact">▶ 再生</button></article>
+          <article class="edu-card edu-card-pad" data-catalog-card><h3 class="edu-card-title">波紋</h3><div class="ref-effect-stage"><span class="ref-effect-demo effect-ripple" data-demo-key="ripple" data-demo-class="effect-ripple">✓</span></div><p class="edu-card-meta"><code>effect-ripple</code> · 正解の広がり</p><button class="edu-btn edu-btn-secondary" data-demo-play data-demo-target="ripple">▶ 再生</button></article>
+          <article class="edu-card edu-card-pad" data-catalog-card><h3 class="edu-card-title">衝撃・振動</h3><div class="ref-effect-stage"><span class="ref-effect-demo effect-screen-shake" data-demo-key="screen-shake" data-demo-class="effect-screen-shake">MISS</span></div><p class="edu-card-meta"><code>effect-screen-shake</code> · 画面振動</p><button class="edu-btn edu-btn-secondary" data-demo-play data-demo-target="screen-shake">▶ 再生</button></article>
+          <article class="edu-card edu-card-pad" data-catalog-card><h3 class="edu-card-title">スタンプ</h3><div class="ref-effect-stage"><span class="ref-effect-demo effect-stamp" data-demo-key="stamp" data-demo-class="effect-stamp">CLEAR</span></div><p class="edu-card-meta"><code>effect-stamp</code> · 判定印</p><button class="edu-btn edu-btn-secondary" data-demo-play data-demo-target="stamp">▶ 再生</button></article>
+          <article class="edu-card edu-card-pad" data-catalog-card><h3 class="edu-card-title">アンロック</h3><div class="ref-effect-stage"><span class="ref-effect-demo effect-unlock" data-demo-key="unlock" data-demo-class="effect-unlock">新しい単元</span></div><p class="edu-card-meta"><code>effect-unlock</code> · 解放表示</p><button class="edu-btn edu-btn-secondary" data-demo-play data-demo-target="unlock">▶ 再生</button></article>
+          <article class="edu-card edu-card-pad" data-catalog-card><h3 class="edu-card-title">数字が飛ぶ</h3><div class="ref-effect-stage"><span class="ref-effect-demo effect-number-fly" data-demo-key="number-fly" data-demo-class="effect-number-fly">+120 XP</span></div><p class="edu-card-meta"><code>effect-number-fly</code> · 得点・XP</p><button class="edu-btn edu-btn-secondary" data-demo-play data-demo-target="number-fly">▶ 再生</button></article>
+          <article class="edu-card edu-card-pad" data-catalog-card><h3 class="edu-card-title">チェックを描く</h3><div class="ref-effect-stage"><span class="ref-effect-demo effect-check-draw">正解</span></div><p class="edu-card-meta"><code>effect-check-draw</code> · 控えめな判定</p><button class="edu-btn edu-btn-secondary" data-demo-play data-demo-target="check-draw">▶ 再生</button></article>
+        </div>
+      </section>
+
       <section id="decorations" class="edu-container ref-section">
         <div class="ref-section-head">
           <h2>Decoration素材集</h2>
@@ -859,6 +968,21 @@
         </div>
       </section>
 
+        <div class="ref-section-head ref-subhead">
+          <h3>3. 教材ごとの背景テーマ</h3>
+          <p>Decorationを組み合わせなくても、まずテーマを1つ置いて雰囲気を作れます。</p>
+        </div>
+        <div class="edu-grid edu-grid-3 ref-theme-catalog">
+          <article class="edu-card edu-card-pad deco-theme-science" data-catalog-card><h3>理科</h3><p>観察・実験・自然</p><code>deco-theme-science</code></article>
+          <article class="edu-card edu-card-pad deco-theme-space" data-catalog-card><h3>宇宙</h3><p>天体・探究・コレクション</p><code>deco-theme-space</code></article>
+          <article class="edu-card edu-card-pad deco-theme-digital" data-catalog-card><h3>デジタル</h3><p>情報・データ・プログラミング</p><code>deco-theme-digital</code></article>
+          <article class="edu-card edu-card-pad deco-theme-japanese" data-catalog-card><h3>和風</h3><p>社会・歴史・文化</p><code>deco-theme-japanese</code></article>
+          <article class="edu-card edu-card-pad deco-theme-note" data-catalog-card><h3>ノート</h3><p>記録・振り返り・説明</p><code>deco-theme-note</code></article>
+          <article class="edu-card edu-card-pad deco-theme-chalk" data-catalog-card><h3>黒板</h3><p>授業・板書・発表</p><code>deco-theme-chalk</code></article>
+          <article class="edu-card edu-card-pad deco-theme-arcade" data-catalog-card><h3>レトロゲーム</h3><p>ステージ・スコア・挑戦</p><code>deco-theme-arcade</code></article>
+          <article class="edu-card edu-card-pad deco-theme-pop" data-catalog-card><h3>ポップ</h3><p>低学年・導入・達成</p><code>deco-theme-pop</code></article>
+          <article class="edu-card edu-card-pad deco-theme-fantasy" data-catalog-card><h3>ファンタジー</h3><p>報酬・冒険・図鑑</p><code>deco-theme-fantasy</code></article>
+        </div>
       <section id="reference" class="edu-container ref-section">
         <div class="ref-section-head">
           <h2>クラス一覧</h2>
