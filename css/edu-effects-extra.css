@@ -1,0 +1,112 @@
+/*
+ * edu-effects-extra.css
+ * Short, meaningful effects for learning feedback and screen transitions.
+ * Add a class to the element at the moment the state changes.
+ */
+
+.edu-effect-correct {
+  animation: edu-effect-correct 360ms cubic-bezier(.2,.8,.2,1) both;
+}
+.edu-effect-wrong {
+  animation: edu-effect-wrong 320ms ease both;
+}
+.edu-effect-combo {
+  animation: edu-effect-combo 480ms cubic-bezier(.2,.8,.2,1) both;
+}
+.edu-effect-stamp {
+  animation: edu-effect-stamp 420ms cubic-bezier(.2,.8,.2,1) both;
+  transform-origin: 20% 80%;
+}
+.edu-effect-unlock {
+  animation: edu-effect-unlock 520ms cubic-bezier(.2,.8,.2,1) both;
+}
+.edu-effect-slide-up {
+  animation: edu-effect-slide-up 300ms cubic-bezier(.2,.8,.2,1) both;
+}
+.edu-effect-focus {
+  animation: edu-effect-focus 1.1s ease-in-out 2 both;
+}
+.edu-effect-highlight {
+  position: relative;
+  z-index: 0;
+  isolation: isolate;
+}
+.edu-effect-highlight::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: -.12em;
+  right: -.12em;
+  bottom: .08em;
+  height: .42em;
+  border-radius: 2px;
+  background: var(--edu-primary-soft);
+  transform-origin: left;
+  animation: edu-effect-highlight 520ms ease-out both;
+}
+.edu-effect-complete {
+  animation: edu-effect-complete 520ms cubic-bezier(.2,.8,.2,1) both;
+}
+.edu-effect-paper-in {
+  animation: edu-effect-paper-in 360ms cubic-bezier(.2,.8,.2,1) both;
+}
+
+/* Strength and color modifiers */
+.edu-effect-correct-strong { animation-duration: 520ms; }
+.edu-effect-combo-high { animation-duration: 680ms; }
+.edu-effect-muted { animation-duration: 220ms; filter: saturate(.8); }
+
+@keyframes edu-effect-correct {
+  0% { opacity: 0; transform: scale(.92); box-shadow: 0 0 0 0 rgb(72 115 84 / 0%); }
+  55% { opacity: 1; transform: scale(1.045); box-shadow: 0 0 0 9px rgb(72 115 84 / 16%); }
+  100% { opacity: 1; transform: scale(1); box-shadow: 0 0 0 0 rgb(72 115 84 / 0%); }
+}
+@keyframes edu-effect-wrong {
+  0%, 100% { transform: translateX(0); }
+  18% { transform: translateX(-5px); }
+  36% { transform: translateX(5px); }
+  54% { transform: translateX(-4px); }
+  72% { transform: translateX(4px); }
+}
+@keyframes edu-effect-combo {
+  0% { opacity: .6; transform: scale(.84) rotate(-2deg); }
+  62% { opacity: 1; transform: scale(1.08) rotate(1deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0); }
+}
+@keyframes edu-effect-stamp {
+  0% { opacity: 0; transform: scale(1.7) rotate(-12deg); }
+  65% { opacity: 1; transform: scale(.94) rotate(2deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0); }
+}
+@keyframes edu-effect-unlock {
+  0% { opacity: .35; transform: translateY(5px); filter: grayscale(1); }
+  55% { opacity: 1; transform: translateY(-3px); filter: grayscale(0); box-shadow: 0 0 0 8px rgb(215 155 56 / 14%); }
+  100% { opacity: 1; transform: translateY(0); filter: grayscale(0); box-shadow: 0 0 0 0 rgb(215 155 56 / 0%); }
+}
+@keyframes edu-effect-slide-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes edu-effect-focus {
+  0%, 100% { box-shadow: 0 0 0 0 rgb(37 99 235 / 0%); }
+  50% { box-shadow: 0 0 0 6px rgb(37 99 235 / 16%); }
+}
+@keyframes edu-effect-highlight {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+@keyframes edu-effect-complete {
+  0% { opacity: 0; transform: scale(.88); }
+  65% { opacity: 1; transform: scale(1.035); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes edu-effect-paper-in {
+  from { opacity: 0; transform: translateY(8px) rotate(.4deg); }
+  to { opacity: 1; transform: translateY(0) rotate(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .edu-effect-correct, .edu-effect-wrong, .edu-effect-combo, .edu-effect-stamp,
+  .edu-effect-unlock, .edu-effect-slide-up, .edu-effect-focus, .edu-effect-highlight::after,
+  .edu-effect-complete, .edu-effect-paper-in { animation: none; }
+}
