@@ -78,3 +78,29 @@ TT-senseiの教材サイトで自由に利用するための共通素材です�
 
 \`.edu-enter\`、\`.edu-count-up\`、\`.edu-soft-glow\`、\`.edu-float\`、\`.edu-success-burst\`、\`.edu-wrong-shake\` など、控えめな演出を追加できます。
 
+
+
+## AIっぽさを抑えたデザイン
+
+丸いカード、強いグラデーション、青紫中心の配色を避けたい場合は、edu-editorial.cssを追加します。
+
+~~~html
+<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-editorial.css">
+~~~
+
+アプリ全体を紙面・教材プリントに近い雰囲気にする例です。
+
+~~~html
+<div class="edu-app edu-style-editorial edu-theme-paper">
+  ...
+</div>
+~~~
+
+利用できる追加パーツ：
+
+- edu-paper-note：ノート風の注意・ヒント
+- edu-paper-label：手書きラベル風の小見出し
+- edu-ruled-answer：記述欄・考察欄
+- edu-section-rule：区切り線つき見出し
+- edu-theme-chalk：黒板のような落ち着いた配色
+

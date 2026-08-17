@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/edu-variants.css">
   <link rel="stylesheet" href="css/edu-learning.css">
   <link rel="stylesheet" href="css/edu-motion.css">
+  <link rel="stylesheet" href="css/edu-editorial.css">
   <style>
     :root { --ref-purple: #5b4bdb; --ref-purple-soft: #f2f0ff; }
     .ref-hero { padding: 58px 0 42px; background: linear-gradient(135deg, #f8fbff 0%, #eef5ff 58%, #f2f0ff 100%); border-bottom: 1px solid var(--edu-line); }
@@ -43,10 +44,18 @@
       .ref-install { grid-template-columns: 1fr; }
       .ref-install .edu-btn { width: 100%; }
     }
+
+    .edu-style-editorial .ref-hero { background: #f7f3ed; }
+    .edu-style-editorial .ref-kicker { color: #854833; }
+    .edu-style-editorial .ref-kicker::before { background: #a95f43; }
+    .edu-style-editorial .ref-token { color: #854833; background: #f8ebe4; }
+    .edu-style-editorial .ref-code { border-radius: 8px; }
+    .edu-style-editorial .ref-copy { border-radius: 5px; }
+    .edu-style-editorial .ref-nav { background: #fffdf9; }
   </style>
 </head>
 <body>
-  <div class="edu-app">
+  <div class="edu-app edu-style-editorial edu-theme-paper">
     <header class="edu-header">
       <div class="edu-container edu-header-inner">
         <a class="edu-brand" href="#">edu-effects<small>EDUCATION UI CSS</small></a>
