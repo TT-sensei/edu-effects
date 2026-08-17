@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="css/edu-editorial.css">
   <link rel="stylesheet" href="css/edu-interactive.css">
   <link rel="stylesheet" href="css/edu-effects-extra.css">
+  <link rel="stylesheet" href="css/edu-effects-library.css">
+  <link rel="stylesheet" href="css/edu-decorations.css">
   <style>
     :root { --ref-purple: #5b4bdb; --ref-purple-soft: #f2f0ff; }
     .ref-hero { padding: 58px 0 42px; background: linear-gradient(135deg, #f8fbff 0%, #eef5ff 58%, #f2f0ff 100%); border-bottom: 1px solid var(--edu-line); }
@@ -93,7 +95,9 @@
         <a href="#timers">タイマー</a>
         <a href="#timer-variants">タイマー別案</a>
         <a href="#interactive">問題パーツ</a>
-        <a href="#effects">エフェクト</a>
+        <a href="#effects">基本エフェクト</a>
+        <a href="#effects-library">Effects素材</a>
+        <a href="#decorations">Decoration素材</a>
         <a href="#reference">クラス一覧</a>
       </div>
     </nav>
@@ -522,6 +526,37 @@
         </div>
       </section>
 
+
+      <section id="effects-library" class="edu-container ref-section">
+        <div class="ref-section-head">
+          <h2>Effects素材集</h2>
+          <p>状態が変わった瞬間にクラスを付けるだけ。必要ならjs/edu-effects.jsで再生・紙吹雪を呼び出せます。</p>
+        </div>
+        <div class="edu-grid edu-grid-3">
+          <div class="edu-card edu-card-pad effect-correct-pop effect-correct-ring effect-correct-sparkle">
+            <span class="edu-badge edu-badge-success">CORRECT</span><h3 class="edu-card-title" style="margin-top:12px">正解</h3><p class="edu-card-meta">pop / ring / sparkle</p>
+          </div>
+          <div class="edu-card edu-card-pad effect-wrong-shake effect-wrong-cross">
+            <span class="edu-badge edu-badge-danger">WRONG</span><h3 class="edu-card-title" style="margin-top:12px">不正解</h3><p class="edu-card-meta">shake / cross / wobble</p>
+          </div>
+          <div class="edu-card edu-card-pad effect-achievement-glow effect-achievement-burst">
+            <span class="edu-badge edu-badge-warning">ACHIEVEMENT</span><h3 class="edu-card-title" style="margin-top:12px">達成・発光</h3><p class="edu-card-meta">glow / burst / confetti</p><button class="edu-btn edu-btn-secondary" style="margin-top:12px" data-demo-confetti>紙吹雪</button>
+          </div>
+          <div class="edu-card edu-card-pad effect-badge-unlock" style="position:relative">
+            <span class="edu-badge edu-badge-primary">BADGE UNLOCK</span><div class="effect-badge-shine"></div><div class="effect-badge-icon" style="font-size:2.4rem;margin-top:12px">◉</div><h3 class="edu-card-title">バッジ獲得</h3><p class="edu-card-meta">出現 → 回転 → キラッ</p>
+          </div>
+          <div class="edu-card edu-card-pad effect-level-up">
+            <span class="edu-badge edu-badge-primary">LEVEL UP</span><h3 class="edu-card-title" style="margin-top:12px">レベルアップ</h3><p class="edu-card-meta">光 / オーラ / 表示</p>
+          </div>
+          <div class="edu-card edu-card-pad">
+            <span class="edu-badge edu-badge-warning effect-combo-fire">COMBO</span><strong class="effect-combo-number" style="display:block;margin-top:12px;font-size:2.7rem">×5</strong><p class="edu-card-meta">数字がドン、連続正解</p>
+          </div>
+          <div class="edu-card edu-card-pad effect-flash"><h3 class="edu-card-title">フラッシュ</h3><p class="edu-card-meta">画面全体の一瞬の反応</p></div>
+          <div class="edu-card edu-card-pad effect-zoom-in"><h3 class="edu-card-title">ズームイン</h3><p class="edu-card-meta">結果カードの登場</p></div>
+          <div class="edu-card edu-card-pad effect-card-lift"><h3 class="edu-card-title">カード登場</h3><p class="edu-card-meta">跳ねる / 登場する</p></div>
+        </div>
+      </section>
+
       <section id="interactive" class="edu-container ref-section">
         <div class="ref-section-head">
           <h2>インタラクティブな学習パーツ</h2>
@@ -594,6 +629,24 @@
         </div>
       </section>
 
+
+      <section id="decorations" class="edu-container ref-section">
+        <div class="ref-section-head">
+          <h2>Decoration素材集</h2>
+          <p>完成UIではなく、サイトごとの雰囲気を作る背景・線・枠・装飾です。</p>
+        </div>
+        <div class="edu-grid edu-grid-2">
+          <div class="edu-card edu-card-pad deco-surface deco-grid deco-science" style="min-height:130px"><span class="edu-badge edu-badge-success">SCIENCE</span><h3 class="edu-card-title" style="margin-top:18px">方眼 / 回路</h3><p class="edu-card-meta">deco-grid · deco-circuit</p></div>
+          <div class="edu-card edu-card-pad deco-surface deco-dots deco-digital" style="min-height:130px"><span class="edu-badge edu-badge-primary">DIGITAL</span><h3 class="edu-card-title" style="margin-top:18px">ドット / ハーフトーン</h3><p class="edu-card-meta">deco-dots · deco-halftone</p></div>
+          <div class="edu-card edu-card-pad deco-surface deco-rays deco-pop" style="min-height:130px"><span class="edu-badge edu-badge-warning">POP</span><h3 class="edu-card-title" style="margin-top:18px">集中線 / キラキラ</h3><p class="edu-card-meta">deco-rays · deco-sparkles</p></div>
+          <div class="edu-card edu-card-pad deco-surface deco-note deco-tape deco-frame" style="min-height:130px"><span class="edu-badge edu-badge-neutral">NOTE</span><h3 class="edu-card-title" style="margin-top:18px">紙 / テープ / 枠</h3><p class="edu-card-meta">deco-note · deco-tape · deco-frame</p></div>
+          <div class="edu-card edu-card-pad deco-surface deco-retro deco-wave" style="min-height:130px"><span class="edu-badge edu-badge-danger">RETRO</span><h3 class="edu-card-title" style="margin-top:18px">波 / レトロ</h3><p class="edu-card-meta">deco-wave · deco-retro</p></div>
+          <div class="edu-card edu-card-pad deco-surface deco-fantasy deco-shape-circle" style="min-height:130px"><span class="edu-badge edu-badge-primary">FANTASY</span><h3 class="edu-card-title" style="margin-top:18px">幾何学シェイプ</h3><p class="edu-card-meta">deco-shape-circle · deco-sparkles</p></div>
+          <div class="edu-card edu-card-pad deco-surface deco-minimal deco-divider" style="min-height:100px"><span class="edu-badge edu-badge-neutral">MINIMAL</span><h3 class="edu-card-title">区切り線</h3></div>
+          <div class="edu-card edu-card-pad deco-surface deco-sketch deco-note" style="min-height:100px"><span class="edu-badge edu-badge-warning">SKETCH</span><h3 class="edu-card-title" style="margin-top:18px">手描き線</h3></div>
+        </div>
+      </section>
+
       <section id="reference" class="edu-container ref-section">
         <div class="ref-section-head">
           <h2>クラス一覧</h2>
@@ -616,6 +669,7 @@
     </footer>
   </div>
 
+  <script src="js/edu-effects.js"></script>
   <script>
     function copyText(text, button) {
       const done = () => { const old = button.textContent; button.textContent = "コピーしました"; setTimeout(() => button.textContent = old, 1200); };
@@ -643,6 +697,11 @@
       zone.addEventListener("dragleave", () => zone.classList.remove("is-over"));
       zone.addEventListener("drop", event => { event.preventDefault(); zone.classList.remove("is-over"); });
     });
+
+    document.querySelectorAll("[data-demo-confetti]").forEach(button => button.addEventListener("click", () => {
+      const card = button.closest(".edu-card");
+      if (window.EduEffects) window.EduEffects.confetti(card);
+    }));
   </script>
 </body>
 </html>
