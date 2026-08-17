@@ -192,3 +192,8 @@
   border-radius: 10px;
   background: #fffaf1;
 }
+
+
+.edu-style-editorial .edu-timer { border-radius: 7px; }
+.edu-style-editorial .edu-timer-bar-track,
+.edu-style-editorial .edu-timer-bar-value { border-radius: 3px; }
