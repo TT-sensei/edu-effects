@@ -26,11 +26,14 @@
     .ref-hero h1 { max-width: 760px; margin: 15px 0 12px; font-size: clamp(2.2rem, 6vw, 4.3rem); line-height: 1.05; letter-spacing: -.055em; }
     .ref-hero p { max-width: 680px; margin: 0; color: var(--edu-muted); font-size: 1.05rem; }
     .ref-hero-actions { margin-top: 26px; }
-    .ref-nav { background: #fff; border-bottom: 1px solid var(--edu-line); }
+    html { scroll-behavior: smooth; }
+    .ref-skip { position: fixed; z-index: 100; top: 10px; left: 10px; padding: 10px 14px; border-radius: 8px; color: #fff; background: #172033; transform: translateY(-160%); }
+    .ref-skip:focus { transform: translateY(0); }
+    .ref-nav { position: sticky; z-index: 30; top: 0; background: rgb(255 255 255 / 94%); border-bottom: 1px solid var(--edu-line); backdrop-filter: blur(12px); }
     .ref-nav-inner { min-height: 52px; display: flex; align-items: center; gap: 18px; overflow-x: auto; }
     .ref-nav a { flex: 0 0 auto; color: var(--edu-muted); font-size: .88rem; font-weight: 750; text-decoration: none; }
-    .ref-nav a:hover { color: var(--edu-primary-dark); }
-    .ref-section { padding-top: 46px; }
+    .ref-nav a:hover, .ref-nav a:focus-visible { color: var(--edu-primary-dark); }
+    .ref-section { padding-top: 46px; scroll-margin-top: 64px; }
     .ref-section-head { margin-bottom: 18px; }
     .ref-section-head h2 { margin: 0; font-size: 1.7rem; letter-spacing: -.025em; }
     .ref-section-head p { margin: 6px 0 0; color: var(--edu-muted); }
@@ -63,10 +66,22 @@
     .ref-finder-feedback { border-top-color: #b14f42; }
     .ref-finder-reward { border-top-color: #d79b38; }
     .ref-finder-decoration { border-top-color: #177d69; }
-    .ref-search { margin-top: 18px; padding: 16px; border: 1px solid var(--edu-line); border-radius: 10px; background: var(--edu-surface); }
+    .ref-search { position: relative; margin-top: 18px; padding: 18px; border: 1px solid var(--edu-line); border-radius: 12px; background: var(--edu-surface); box-shadow: var(--edu-shadow-sm); }
     .ref-search label { display: block; margin-bottom: 8px; font-size: .84rem; font-weight: 850; }
     .ref-search-row { display: flex; align-items: center; gap: 12px; }
     .ref-search input { width: min(100%, 560px); min-height: 48px; padding: 10px 14px; border: 1px solid var(--edu-line); border-radius: 8px; color: var(--edu-ink); background: #fff; font: inherit; }
+    .ref-search input:focus { outline: 3px solid rgb(91 75 219 / 20%); border-color: var(--ref-purple); }
+    .ref-search-clear { min-height: 48px; }
+    .ref-filter-chips { display: flex; gap: 8px; margin-top: 12px; overflow-x: auto; padding-bottom: 2px; }
+    .ref-filter-chip { min-height: 38px; flex: 0 0 auto; padding: 7px 12px; border: 1px solid var(--edu-line); border-radius: 999px; color: var(--edu-muted); background: #fff; font: inherit; font-size: .8rem; font-weight: 800; }
+    .ref-filter-chip:hover { border-color: var(--edu-primary); color: var(--edu-primary-dark); }
+    .ref-filter-chip.is-active { color: #fff; border-color: var(--ref-purple); background: var(--ref-purple); }
+    .ref-search-results { display: grid; gap: 6px; margin-top: 12px; }
+    .ref-search-results:empty { display: none; }
+    .ref-search-result { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 10px 12px; border: 1px solid var(--edu-line); border-radius: 8px; color: var(--edu-ink); background: #fff; text-decoration: none; }
+    .ref-search-result:hover, .ref-search-result:focus-visible { border-color: var(--edu-primary); background: #f8fbff; }
+    .ref-search-result strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .ref-search-result small { color: var(--edu-muted); }
     #catalog-count { color: var(--edu-muted); font-size: .82rem; }
     .ref-file-interactive { border-top: 4px solid #177d69; }
     .ref-file-extra { border-top: 4px solid #7c3aed; }
@@ -129,6 +144,13 @@
     .ref-file-name { margin: 13px 0 6px; font: 800 .9rem ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; overflow-wrap: anywhere; }
     .ref-file-desc { margin: 0; color: var(--edu-muted); font-size: .82rem; line-height: 1.55; }
     .ref-file .edu-btn { margin-top: auto; padding-top: 8px; }
+    .ref-copy-all { margin-top: 16px; }
+    .ref-copy-all summary { cursor: pointer; font-weight: 850; }
+    .ref-copy-all .ref-code { margin-top: 12px; }
+    .ref-toast { position: fixed; z-index: 80; right: 18px; bottom: 18px; padding: 12px 16px; border-radius: 10px; color: #fff; background: #172033; box-shadow: 0 12px 35px rgb(15 23 42 / 28%); font-size: .86rem; font-weight: 800; opacity: 0; pointer-events: none; transform: translateY(12px); transition: 180ms ease; }
+    .ref-toast.is-visible { opacity: 1; transform: translateY(0); }
+    .ref-top { position: fixed; z-index: 25; right: 18px; bottom: 76px; width: 46px; height: 46px; border: 1px solid var(--edu-line); border-radius: 50%; color: var(--edu-primary-dark); background: rgb(255 255 255 / 94%); box-shadow: var(--edu-shadow-sm); font-size: 1.1rem; opacity: 0; pointer-events: none; transition: 180ms ease; }
+    .ref-top.is-visible { opacity: 1; pointer-events: auto; }
     .ref-file-core { border-top: 4px solid #6478d8; }
     .ref-file-theme { border-top: 4px solid #a95f43; }
     .ref-file-learning { border-top: 4px solid #177d69; }
@@ -139,37 +161,29 @@
     .ref-quick-item strong { display: block; font-size: .86rem; }
     .ref-quick-item span { color: var(--edu-muted); font-size: .78rem; }
     @media (max-width: 960px) { .ref-directory { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-    @media (max-width: 720px) { .ref-directory, .ref-quick { grid-template-columns: 1fr; } }
+    @media (max-width: 720px) { .ref-directory, .ref-quick { grid-template-columns: 1fr; } .ref-search-result { grid-template-columns: 1fr; gap: 2px; } .ref-top { right: 12px; bottom: 70px; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
   </style>
 </head>
 <body>
+  <a class="ref-skip" href="#main-content">本文へ移動</a>
   <div class="edu-app edu-style-editorial edu-theme-paper">
     <header class="edu-header">
       <div class="edu-container edu-header-inner">
         <a class="edu-brand" href="#">edu-effects<small>EDUCATION UI CSS</small></a>
-        <span class="edu-badge edu-badge-primary">12 CSS FILES · COPY READY</span>
+        <span class="edu-badge edu-badge-primary">13 CSS FILES · COPY READY</span>
       </div>
     </header>
 
     <nav class="ref-nav" aria-label="ページ内メニュー">
       <div class="edu-container ref-nav-inner">
         <a href="#start">はじめ方</a>
-        <a href="https://github.com/TT-sensei/edu-effects/blob/main/AI-GUIDE.md">AI-GUIDE ↗</a>
-        <a href="#find">目的から探す</a>
-        <a href="#directory">素材一覧</a>
-        <a href="#components">コンポーネント</a>
-        <a href="#feedback">学習フィードバック</a>
-        <a href="#variations">バリエーション</a>
-        <a href="#learning">学習画面</a>
-        <a href="#timers">タイマー</a>
-        <a href="#timer-variants">タイマー別案</a>
-        <a href="#interactive">問題パーツ</a>
-        <a href="#effects">基本エフェクト</a>
-        <a href="#effects-library">Effects素材</a>
-        <a href="#expanded-ui">UI拡張</a>
-        <a href="#advanced-effects">Effects拡張</a>
-        <a href="#decorations">Decoration素材</a>
+        <a href="#find">素材を探す</a>
+        <a href="#expanded-ui">UI素材</a>
+        <a href="#effects-library">演出</a>
+        <a href="#decorations">装飾</a>
         <a href="#reference">クラス一覧</a>
+        <a href="https://github.com/TT-sensei/edu-effects/blob/main/AI-GUIDE.md">AI向けガイド ↗</a>
       </div>
     </nav>
 
@@ -179,13 +193,13 @@
         <h1>教材サイトのUIを、<br>すぐ整える。</h1>
         <p>カード、ボタン、選択肢、進捗、正解演出。よく使うパーツを、外部フォントやJavaScriptなしで再利用できます。</p>
         <div class="edu-row ref-hero-actions">
-          <a class="edu-btn edu-btn-primary" href="#components">素材を見る ↓</a>
+          <a class="edu-btn edu-btn-primary" href="#find">素材を探す ↓</a>
           <a class="edu-btn edu-btn-secondary" href="https://github.com/TT-sensei/edu-effects/blob/main/AI-GUIDE.md">AI-GUIDEを見る ↗</a>
         </div>
       </div>
     </section>
 
-    <main class="edu-main">
+    <main id="main-content" class="edu-main">
       <section id="start" class="edu-container ref-section">
         <div class="ref-section-head">
           <h2>はじめ方</h2>
@@ -202,6 +216,25 @@
             <span class="ref-token">--edu-shadow-sm</span>
             <span class="edu-help">CSS変数でサイトに合わせて調整できます。</span>
           </div>
+          <details class="ref-copy-all">
+            <summary>すべての素材を使う場合（13ファイル）</summary>
+            <div class="ref-code">
+              <button class="ref-copy" data-copy-target="install-all-code">13行をまとめてコピー</button>
+              <pre id="install-all-code">&lt;link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-effects.css"&gt;
+&lt;link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-feedback.css"&gt;
+&lt;link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-variants.css"&gt;
+&lt;link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-learning.css"&gt;
+&lt;link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-motion.css"&gt;
+&lt;link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-editorial.css"&gt;
+&lt;link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-interactive.css"&gt;
+&lt;link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-effects-extra.css"&gt;
+&lt;link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-effects-library.css"&gt;
+&lt;link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-decorations.css"&gt;
+&lt;link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-ui-variants.css"&gt;
+&lt;link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-effects-advanced.css"&gt;
+&lt;link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-decorations-advanced.css"&gt;</pre>
+            </div>
+          </details>
         </div>
       </section>
 
@@ -219,7 +252,16 @@
         </div>
         <div class="ref-search">
           <label for="catalog-search">素材名・目的で検索</label>
-          <div class="ref-search-row"><input id="catalog-search" type="search" placeholder="例：正解、バッジ、方眼、timer" autocomplete="off"><span id="catalog-count" aria-live="polite"></span></div>
+          <div class="ref-search-row"><input id="catalog-search" type="search" placeholder="例：正解、バッジ、方眼、timer" autocomplete="off"><button class="edu-btn edu-btn-secondary ref-search-clear" id="catalog-clear" type="button">クリア</button><span id="catalog-count" aria-live="polite"></span></div>
+          <div class="ref-filter-chips" role="group" aria-label="素材の種類">
+            <button class="ref-filter-chip is-active" type="button" data-filter="all" aria-pressed="true">すべて</button>
+            <button class="ref-filter-chip" type="button" data-filter="ui" aria-pressed="false">基本UI</button>
+            <button class="ref-filter-chip" type="button" data-filter="question" aria-pressed="false">問題</button>
+            <button class="ref-filter-chip" type="button" data-filter="result" aria-pressed="false">結果・ゲーム</button>
+            <button class="ref-filter-chip" type="button" data-filter="effect" aria-pressed="false">動き・演出</button>
+            <button class="ref-filter-chip" type="button" data-filter="decoration" aria-pressed="false">装飾</button>
+          </div>
+          <div class="ref-search-results" id="catalog-results" aria-live="polite"></div>
         </div>
       </section>
 
@@ -233,75 +275,81 @@
             <span class="edu-badge edu-badge-primary">BASE</span>
             <h3 class="ref-file-name">edu-effects.css</h3>
             <p class="ref-file-desc">カード、ボタン、タブ、フォーム、状態表示、進捗などの基本UI。</p>
-            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="css/edu-effects.css">'>読み込みをコピー</button>
+            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-effects.css">'>読み込みをコピー</button>
           </article>
           <article class="ref-file ref-file-theme">
             <span class="edu-badge edu-badge-warning">STYLE</span>
             <h3 class="ref-file-name">edu-variants.css</h3>
             <p class="ref-file-desc">ソフト、暖色、自然、ナイト。ボタンやカードの見た目違い。</p>
-            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="css/edu-variants.css">'>読み込みをコピー</button>
+            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-variants.css">'>読み込みをコピー</button>
           </article>
           <article class="ref-file ref-file-learning">
             <span class="edu-badge edu-badge-success">LEARNING</span>
             <h3 class="ref-file-name">edu-learning.css</h3>
             <p class="ref-file-desc">問題画面、結果、テンキー、タイマー、比較、記述欄。</p>
-            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="css/edu-learning.css">'>読み込みをコピー</button>
+            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-learning.css">'>読み込みをコピー</button>
           </article>
           <article class="ref-file ref-file-motion">
             <span class="edu-badge edu-badge-primary">MOTION</span>
             <h3 class="ref-file-name">edu-motion.css</h3>
             <p class="ref-file-desc">入場、正解、不正解、集中などの控えめな動き。</p>
-            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="css/edu-motion.css">'>読み込みをコピー</button>
+            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-motion.css">'>読み込みをコピー</button>
+          </article>
+          <article class="ref-file ref-file-feedback">
+            <span class="edu-badge edu-badge-warning">FEEDBACK</span>
+            <h3 class="ref-file-name">edu-feedback.css</h3>
+            <p class="ref-file-desc">正解、不正解、花マル、達成などの学習フィードバック。</p>
+            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-feedback.css">'>読み込みをコピー</button>
           </article>
           <article class="ref-file ref-file-feedback">
             <span class="edu-badge edu-badge-warning">EDITORIAL</span>
             <h3 class="ref-file-name">edu-editorial.css</h3>
             <p class="ref-file-desc">紙、ノート、黒板。AIっぽさを抑えた落ち着いた教材風。</p>
-            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="css/edu-editorial.css">'>読み込みをコピー</button>
+            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-editorial.css">'>読み込みをコピー</button>
           </article>
-        </div>
           <article class="ref-file ref-file-interactive">
             <span class="edu-badge edu-badge-success">INTERACTIVE</span>
             <h3 class="ref-file-name">edu-interactive.css</h3>
             <p class="ref-file-desc">暗記シート、並べ替え、ヒント、ストリーク、花マル。</p>
-            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="css/edu-interactive.css">'>読み込みをコピー</button>
+            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-interactive.css">'>読み込みをコピー</button>
           </article>
           <article class="ref-file ref-file-extra">
             <span class="edu-badge edu-badge-primary">STATES</span>
             <h3 class="ref-file-name">edu-effects-extra.css</h3>
             <p class="ref-file-desc">学習中の正解、不正解、集中、完了などの状態演出。</p>
-            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="css/edu-effects-extra.css">'>読み込みをコピー</button>
+            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-effects-extra.css">'>読み込みをコピー</button>
           </article>
           <article class="ref-file ref-file-effects">
             <span class="edu-badge edu-badge-danger">EFFECTS</span>
             <h3 class="ref-file-name">edu-effects-library.css</h3>
             <p class="ref-file-desc">正誤、達成、バッジ、レベルアップ、コンボ、カード。</p>
-            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="css/edu-effects-library.css">'>読み込みをコピー</button>
+            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-effects-library.css">'>読み込みをコピー</button>
           </article>
           <article class="ref-file ref-file-decoration">
             <span class="edu-badge edu-badge-warning">DECORATION</span>
             <h3 class="ref-file-name">edu-decorations.css</h3>
             <p class="ref-file-desc">方眼、ドット、波、紙、枠、線、テイスト別の装飾。</p>
-            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="css/edu-decorations.css">'>読み込みをコピー</button>
+            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-decorations.css">'>読み込みをコピー</button>
           </article>
           <article class="ref-file ref-file-effects">
             <span class="edu-badge edu-badge-danger">UI VARIANTS</span>
             <h3 class="ref-file-name">edu-ui-variants.css</h3>
             <p class="ref-file-desc">ボタン、問題、結果、ゲームUI、カードの見た目違い。</p>
-            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="css/edu-ui-variants.css">'>読み込みをコピー</button>
+            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-ui-variants.css">'>読み込みをコピー</button>
           </article>
           <article class="ref-file ref-file-motion">
             <span class="edu-badge edu-badge-primary">EFFECTS+</span>
             <h3 class="ref-file-name">edu-effects-advanced.css</h3>
             <p class="ref-file-desc">キラッ、ドン、波紋、衝撃、スタンプ、アンロック。</p>
-            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="css/edu-effects-advanced.css">'>読み込みをコピー</button>
+            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-effects-advanced.css">'>読み込みをコピー</button>
           </article>
           <article class="ref-file ref-file-decoration">
             <span class="edu-badge edu-badge-warning">THEMES+</span>
             <h3 class="ref-file-name">edu-decorations-advanced.css</h3>
             <p class="ref-file-desc">理科、宇宙、デジタル、和風、黒板、ゲーム風。</p>
-            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="css/edu-decorations-advanced.css">'>読み込みをコピー</button>
+            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-decorations-advanced.css">'>読み込みをコピー</button>
           </article>
+        </div>
         <div class="ref-quick">
           <div class="ref-quick-item"><strong>通常の教材</strong><span>effects + learning</span></div>
           <div class="ref-quick-item"><strong>落ち着いた教材</strong><span>effects + editorial + learning</span></div>
@@ -885,7 +933,7 @@
           <article class="edu-card edu-card-pad" data-catalog-card><h3 class="edu-card-title">スタンプ</h3><div class="ref-effect-stage"><span class="ref-effect-demo effect-stamp" data-demo-key="stamp" data-demo-class="effect-stamp">CLEAR</span></div><p class="edu-card-meta"><code>effect-stamp</code> · 判定印</p><button class="edu-btn edu-btn-secondary" data-demo-play data-demo-target="stamp">▶ 再生</button></article>
           <article class="edu-card edu-card-pad" data-catalog-card><h3 class="edu-card-title">アンロック</h3><div class="ref-effect-stage"><span class="ref-effect-demo effect-unlock" data-demo-key="unlock" data-demo-class="effect-unlock">新しい単元</span></div><p class="edu-card-meta"><code>effect-unlock</code> · 解放表示</p><button class="edu-btn edu-btn-secondary" data-demo-play data-demo-target="unlock">▶ 再生</button></article>
           <article class="edu-card edu-card-pad" data-catalog-card><h3 class="edu-card-title">数字が飛ぶ</h3><div class="ref-effect-stage"><span class="ref-effect-demo effect-number-fly" data-demo-key="number-fly" data-demo-class="effect-number-fly">+120 XP</span></div><p class="edu-card-meta"><code>effect-number-fly</code> · 得点・XP</p><button class="edu-btn edu-btn-secondary" data-demo-play data-demo-target="number-fly">▶ 再生</button></article>
-          <article class="edu-card edu-card-pad" data-catalog-card><h3 class="edu-card-title">チェックを描く</h3><div class="ref-effect-stage"><span class="ref-effect-demo effect-check-draw">正解</span></div><p class="edu-card-meta"><code>effect-check-draw</code> · 控えめな判定</p><button class="edu-btn edu-btn-secondary" data-demo-play data-demo-target="check-draw">▶ 再生</button></article>
+          <article class="edu-card edu-card-pad" data-catalog-card><h3 class="edu-card-title">チェックを描く</h3><div class="ref-effect-stage"><span class="ref-effect-demo effect-check-draw" data-demo-key="check-draw" data-demo-class="effect-check-draw">正解</span></div><p class="edu-card-meta"><code>effect-check-draw</code> · 控えめな判定</p><button class="edu-btn edu-btn-secondary" data-demo-play data-demo-target="check-draw">▶ 再生</button></article>
         </div>
       </section>
 
@@ -1005,18 +1053,44 @@
     </footer>
   </div>
 
+  <button class="ref-top" id="back-to-top" type="button" aria-label="ページの先頭へ戻る">↑</button>
+  <div class="ref-toast" id="copy-toast" role="status" aria-live="polite">コピーしました</div>
+
   <script src="js/edu-effects.js"></script>
   <script>
-    function copyText(text, button) {
-      const done = () => { const old = button.textContent; button.textContent = "コピーしました"; setTimeout(() => button.textContent = old, 1200); };
-      if (navigator.clipboard) navigator.clipboard.writeText(text).then(done);
-      else { const area = document.createElement("textarea"); area.value = text; document.body.appendChild(area); area.select(); document.execCommand("copy"); area.remove(); done(); }
+    const copyToast = document.getElementById("copy-toast");
+    let toastTimer;
+    function showCopyToast(message = "コピーしました") {
+      copyToast.textContent = message;
+      copyToast.classList.add("is-visible");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => copyToast.classList.remove("is-visible"), 1500);
     }
-    document.querySelectorAll("[data-copy-text]").forEach(button => button.addEventListener("click", () => copyText(button.dataset.copyText, button)));
-    document.querySelectorAll("[data-copy-target]").forEach(button => button.addEventListener("click", () => {
-      const target = document.getElementById(button.dataset.copyTarget);
-      copyText(target.textContent, button);
-    }));
+    async function copyText(text) {
+      try {
+        if (navigator.clipboard && window.isSecureContext) await navigator.clipboard.writeText(text);
+        else {
+          const area = document.createElement("textarea");
+          area.value = text;
+          area.style.position = "fixed";
+          area.style.opacity = "0";
+          document.body.appendChild(area);
+          area.select();
+          document.execCommand("copy");
+          area.remove();
+        }
+        showCopyToast();
+      } catch (error) {
+        showCopyToast("コピーできませんでした");
+      }
+    }
+
+    document.addEventListener("click", event => {
+      const button = event.target.closest("[data-copy-text], [data-copy-target]");
+      if (!button) return;
+      const target = button.dataset.copyTarget ? document.getElementById(button.dataset.copyTarget) : null;
+      copyText(target ? target.textContent : button.dataset.copyText);
+    });
 
     document.querySelectorAll(".edu-mask").forEach(mask => mask.addEventListener("click", () => mask.classList.toggle("is-revealed")));
     document.querySelectorAll("[data-demo-dropzone]").forEach(zone => {
@@ -1037,17 +1111,106 @@
     const catalogCards = Array.from(document.querySelectorAll("[data-catalog-card]"));
     const catalogSearch = document.getElementById("catalog-search");
     const catalogCount = document.getElementById("catalog-count");
+    const catalogResults = document.getElementById("catalog-results");
+    const catalogClear = document.getElementById("catalog-clear");
+    const filterChips = Array.from(document.querySelectorAll("[data-filter]"));
+    let activeFilter = "all";
+
+    const sectionCategories = {
+      components: "ui", variations: "ui", timers: "ui", "timer-variants": "ui",
+      learning: "question", interactive: "question",
+      "expanded-ui": "result",
+      feedback: "effect", effects: "effect", "effects-library": "effect", "advanced-effects": "effect",
+      decorations: "decoration"
+    };
+
+    catalogCards.forEach((card, index) => {
+      const section = card.closest("section");
+      card.id = card.id || "catalog-item-" + (index + 1);
+      card.dataset.category = sectionCategories[section?.id] || "ui";
+      const expandedGroup = card.closest(".ref-expanded-group")?.querySelector("h3")?.textContent || "";
+      if (expandedGroup.includes("問題")) card.dataset.category = "question";
+      else if (expandedGroup.includes("結果") || expandedGroup.includes("ゲーム")) card.dataset.category = "result";
+      else if (expandedGroup.includes("ボタン") || expandedGroup.includes("カード")) card.dataset.category = "ui";
+      if (!card.querySelector("[data-copy-text]") && card.querySelector("code")) {
+        const className = card.querySelector("code").textContent.trim();
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "edu-btn edu-btn-secondary ref-copy-inline";
+        button.dataset.copyText = className;
+        button.textContent = "クラス名をコピー";
+        card.appendChild(button);
+      }
+    });
+
+    function resultLabel(card) {
+      return card.querySelector("h3")?.textContent.trim() || card.querySelector("code")?.textContent.trim() || "素材";
+    }
+
+    function renderSearchResults(matches, shouldShow) {
+      catalogResults.replaceChildren();
+      if (!shouldShow) return;
+      matches.slice(0, 12).forEach(card => {
+        const section = card.closest("section");
+        const link = document.createElement("a");
+        link.className = "ref-search-result";
+        link.href = "#" + card.id;
+        const title = document.createElement("strong");
+        title.textContent = resultLabel(card);
+        const group = document.createElement("small");
+        group.textContent = section?.querySelector("h2")?.textContent.trim() || "素材";
+        link.append(title, group);
+        catalogResults.appendChild(link);
+      });
+      if (!matches.length) {
+        const empty = document.createElement("p");
+        empty.className = "edu-help";
+        empty.textContent = "該当する素材はありません。別の言葉で検索してください。";
+        catalogResults.appendChild(empty);
+      }
+    }
+
     function updateCatalogFilter() {
       const query = catalogSearch.value.trim().toLowerCase();
-      let visible = 0;
+      const matches = [];
       catalogCards.forEach(card => {
-        const match = !query || card.textContent.toLowerCase().includes(query);
+        const categoryMatch = activeFilter === "all" || card.dataset.category === activeFilter;
+        const textMatch = !query || card.textContent.toLowerCase().includes(query);
+        const match = categoryMatch && textMatch;
         card.classList.toggle("ref-catalog-card-hidden", !match);
-        if (match) visible += 1;
+        if (match) matches.push(card);
       });
-      catalogCount.textContent = query ? visible + "件表示" : "Effects / Decorationを検索できます";
+      catalogCount.textContent = matches.length + " / " + catalogCards.length + "件";
+      renderSearchResults(matches, Boolean(query) || activeFilter !== "all");
     }
     catalogSearch.addEventListener("input", updateCatalogFilter);
+    catalogClear.addEventListener("click", () => {
+      catalogSearch.value = "";
+      activeFilter = "all";
+      filterChips.forEach(chip => {
+        const selected = chip.dataset.filter === "all";
+        chip.classList.toggle("is-active", selected);
+        chip.setAttribute("aria-pressed", String(selected));
+      });
+      updateCatalogFilter();
+      catalogSearch.focus();
+    });
+    filterChips.forEach(chip => chip.addEventListener("click", () => {
+      activeFilter = chip.dataset.filter;
+      filterChips.forEach(item => {
+        const selected = item === chip;
+        item.classList.toggle("is-active", selected);
+        item.setAttribute("aria-pressed", String(selected));
+      });
+      updateCatalogFilter();
+    }));
+    document.addEventListener("keydown", event => {
+      if (event.key === "/" && document.activeElement !== catalogSearch) {
+        event.preventDefault();
+        catalogSearch.focus();
+      }
+      if (event.key === "Escape" && document.activeElement === catalogSearch) catalogClear.click();
+    });
     updateCatalogFilter();
 
     document.querySelectorAll("[data-demo-play]").forEach(button => button.addEventListener("click", () => {
@@ -1058,11 +1221,10 @@
       const stage = button.closest(".edu-card").querySelector("[data-confetti-stage]");
       if (window.EduEffects) window.EduEffects.confetti(stage);
     }));
-      document.querySelectorAll("[data-demo-play]").forEach(button => button.addEventListener("click", () => {
-      const key = button.dataset.demoTarget;
-      const target = document.querySelector("[data-demo-key=\"" + key + "\"]");
-      if (target && window.EduEffects) window.EduEffects.play(target, target.dataset.demoClass);
-    }));
+
+    const backToTop = document.getElementById("back-to-top");
+    window.addEventListener("scroll", () => backToTop.classList.toggle("is-visible", window.scrollY > 700), { passive: true });
+    backToTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
   </script>
 </body>
 </html>
