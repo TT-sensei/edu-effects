@@ -589,6 +589,15 @@
 
     document.querySelectorAll(".edu-mask").forEach(mask => mask.addEventListener("click", () => mask.classList.toggle("is-revealed")));
     document.querySelectorAll("[data-demo-dropzone]").forEach(zone => {
+      let dragged = null;
+      zone.querySelectorAll(".edu-sort-item").forEach(item => {
+        item.addEventListener("dragstart", () => { dragged = item; item.classList.add("is-dragging"); });
+        item.addEventListener("dragend", () => { item.classList.remove("is-dragging"); dragged = null; });
+        item.addEventListener("dragover", event => {
+          event.preventDefault();
+          if (dragged && dragged !== item) item.before(dragged);
+        });
+      });
       zone.addEventListener("dragover", event => { event.preventDefault(); zone.classList.add("is-over"); });
       zone.addEventListener("dragleave", () => zone.classList.remove("is-over"));
       zone.addEventListener("drop", event => { event.preventDefault(); zone.classList.remove("is-over"); });
