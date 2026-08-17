@@ -170,3 +170,42 @@ edu-effects-extra.cssを追加すると、学習中の状態変化を短いア�
 ~~~
 
 状態が変わるタイミングでクラスを追加し、終了後に外すか、同じ要素を作り直して再生します。reduced-motionにも対応しています。
+
+
+## Effects素材集
+
+edu-effects-library.cssは、学習状態やゲーム演出をまとめた素材集です。
+
+- 正解：effect-correct-pop / effect-correct-ring / effect-correct-sparkle
+- 不正解：effect-wrong-shake / effect-wrong-cross / effect-wrong-wobble
+- 達成：effect-achievement-glow / effect-achievement-burst / effect-confetti
+- バッジ獲得：effect-badge-unlock
+- レベルアップ：effect-level-up
+- コンボ：effect-combo-number / effect-combo-fire
+- 画面演出：effect-flash / effect-zoom-in / effect-dim
+- カード：effect-card-lift / effect-card-flip
+
+~~~html
+<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-effects-library.css">
+<script src="https://tt-sensei.github.io/edu-effects/js/edu-effects.js"></script>
+~~~
+
+紙吹雪やエフェクトの再生には、必要なときだけ EduEffects.play() や EduEffects.confetti() を使います。
+
+## Decoration素材集
+
+edu-decorations.cssは、完成UIではなくサイトごとの雰囲気を作るための素材です。
+
+- 背景：deco-grid / deco-dots / deco-wave / deco-circuit / deco-halftone
+- 演出背景：deco-rays / deco-sparkles
+- 手作り風：deco-sketch / deco-tape / deco-note
+- 囲み・区切り：deco-frame / deco-divider / deco-bubble
+- 形：deco-shape-circle / deco-shape-square / deco-shape-blob
+
+テイストは deco-pop、deco-science、deco-digital、deco-note、deco-retro、deco-fantasy、deco-minimal を組み合わせます。
+
+よく使う組み合わせには名前付きクラスもあります：deco-science-grid、deco-science-circuit、deco-digital-dots、deco-digital-halftone、deco-pop-rays、deco-note-paper、deco-fantasy-shapes、deco-minimal-divider。
+
+~~~html
+<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-decorations.css">
+~~~
