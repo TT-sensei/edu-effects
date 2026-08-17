@@ -81,3 +81,44 @@
   .edu-comparison-divider::before { content: "↓"; font-size: 1.1rem; }
 }
 @keyframes edu-skeleton { 0% { background-position: 100% 0; } 100% { background-position: -100% 0; } }
+
+
+/* Timer / countdown ---------------------------------------------------- */
+.edu-timer {
+  display: inline-flex; align-items: baseline; gap: 6px; padding: 8px 14px;
+  border: 1px solid var(--edu-line); border-radius: 999px; background: var(--edu-surface);
+  font-variant-numeric: tabular-nums;
+}
+.edu-timer-icon { font-size: .95rem; color: var(--edu-muted); }
+.edu-timer-value { font-size: 1.3rem; font-weight: 900; letter-spacing: -.02em; color: var(--edu-ink); }
+.edu-timer-unit { font-size: .78rem; color: var(--edu-muted); font-weight: 700; }
+.edu-timer-lg { padding: 12px 20px; }
+.edu-timer-lg .edu-timer-value { font-size: 2rem; }
+.edu-timer-warning { border-color: #fde68a; background: var(--edu-warning-soft); }
+.edu-timer-warning .edu-timer-value { color: var(--edu-warning); }
+.edu-timer-danger { border-color: #fecaca; background: var(--edu-danger-soft); animation: edu-timer-pulse 1s ease-in-out infinite; }
+.edu-timer-danger .edu-timer-value { color: var(--edu-danger); }
+
+.edu-timer-ring {
+  --value: 100; width: 84px; height: 84px; display: grid; place-items: center;
+  border-radius: 50%; background: conic-gradient(var(--edu-primary) calc(var(--value) * 1%), var(--edu-line) 0);
+  transition: background 240ms linear;
+}
+.edu-timer-ring::after {
+  content: attr(data-label); display: grid; place-items: center; width: 64px; height: 64px;
+  border-radius: 50%; background: var(--edu-surface); color: var(--edu-ink);
+  font-weight: 900; font-size: 1.05rem; font-variant-numeric: tabular-nums;
+}
+.edu-timer-ring.edu-timer-warning { background: conic-gradient(var(--edu-warning) calc(var(--value) * 1%), var(--edu-line) 0); }
+.edu-timer-ring.edu-timer-danger { background: conic-gradient(var(--edu-danger) calc(var(--value) * 1%), var(--edu-line) 0); animation: edu-timer-pulse 1s ease-in-out infinite; }
+
+.edu-timer-bar { display: grid; gap: 6px; }
+.edu-timer-bar-track { height: 10px; overflow: hidden; border-radius: 999px; background: var(--edu-line); }
+.edu-timer-bar-value { height: 100%; border-radius: inherit; background: var(--edu-primary); transition: width 1s linear, background 240ms ease; }
+.edu-timer-bar.edu-timer-warning .edu-timer-bar-value { background: var(--edu-warning); }
+.edu-timer-bar.edu-timer-danger .edu-timer-bar-value { background: var(--edu-danger); }
+
+@keyframes edu-timer-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
