@@ -51,6 +51,27 @@
     .ref-demo-actions .ref-copy { position: static; min-height: 40px; color: var(--edu-ink); border-color: var(--edu-line); background: var(--edu-surface); }
     .ref-demo-actions .ref-copy:hover { background: var(--edu-line); }
     @media (max-width: 720px) { .ref-demo-actions { flex-wrap: wrap; } }
+    .ref-finder { display: grid; gap: 12px; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .ref-finder-card { display: flex; min-height: 142px; flex-direction: column; justify-content: space-between; padding: 18px; border: 1px solid var(--edu-line); border-top: 4px solid var(--edu-primary); border-radius: 10px; color: var(--edu-ink); background: var(--edu-surface); text-decoration: none; transition: transform 180ms ease, box-shadow 180ms ease; }
+    .ref-finder-card:hover { transform: translateY(-3px); box-shadow: var(--edu-shadow-sm); }
+    .ref-finder-card span { font-size: 1rem; font-weight: 850; }
+    .ref-finder-card small { color: var(--edu-muted); line-height: 1.5; }
+    .ref-finder-card strong { color: var(--edu-primary-dark); font-size: .82rem; }
+    .ref-finder-feedback { border-top-color: #b14f42; }
+    .ref-finder-reward { border-top-color: #d79b38; }
+    .ref-finder-decoration { border-top-color: #177d69; }
+    .ref-search { margin-top: 18px; padding: 16px; border: 1px solid var(--edu-line); border-radius: 10px; background: var(--edu-surface); }
+    .ref-search label { display: block; margin-bottom: 8px; font-size: .84rem; font-weight: 850; }
+    .ref-search-row { display: flex; align-items: center; gap: 12px; }
+    .ref-search input { width: min(100%, 560px); min-height: 48px; padding: 10px 14px; border: 1px solid var(--edu-line); border-radius: 8px; color: var(--edu-ink); background: #fff; font: inherit; }
+    #catalog-count { color: var(--edu-muted); font-size: .82rem; }
+    .ref-file-interactive { border-top: 4px solid #177d69; }
+    .ref-file-extra { border-top: 4px solid #7c3aed; }
+    .ref-file-effects { border-top: 4px solid #b14f42; }
+    .ref-file-decoration { border-top: 4px solid #d79b38; }
+    .ref-catalog-card-hidden { display: none !important; }
+    @media (max-width: 960px) { .ref-finder { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 720px) { .ref-finder { grid-template-columns: 1fr; } .ref-search-row { align-items: flex-start; flex-direction: column; } .ref-search input { width: 100%; } }
     .ref-footer { margin-top: 58px; padding: 28px 0; border-top: 1px solid var(--edu-line); color: var(--edu-muted); font-size: .85rem; }
     .ref-footer a { color: var(--edu-primary-dark); }
     @media (max-width: 720px) {
@@ -91,7 +112,7 @@
     <header class="edu-header">
       <div class="edu-container edu-header-inner">
         <a class="edu-brand" href="#">edu-effects<small>EDUCATION UI CSS</small></a>
-        <span class="edu-badge edu-badge-primary">5 CSS FILES · COPY READY</span>
+        <span class="edu-badge edu-badge-primary">9 CSS FILES · COPY READY</span>
       </div>
     </header>
 
@@ -99,6 +120,7 @@
       <div class="edu-container ref-nav-inner">
         <a href="#start">はじめ方</a>
         <a href="https://github.com/TT-sensei/edu-effects/blob/main/AI-GUIDE.md">AI-GUIDE ↗</a>
+        <a href="#find">目的から探す</a>
         <a href="#directory">素材一覧</a>
         <a href="#components">コンポーネント</a>
         <a href="#feedback">学習フィードバック</a>
@@ -147,6 +169,23 @@
       </section>
 
 
+      <section id="find" class="edu-container ref-section">
+        <div class="ref-section-head">
+          <h2>目的から探す</h2>
+          <p>作りたいものを選ぶと、近い素材の場所へ移動できます。</p>
+        </div>
+        <div class="ref-finder">
+          <a class="ref-finder-card ref-finder-learning" href="#learning"><span>問題画面を作る</span><small>問題・選択肢・進捗・タイマー</small><strong>学習UIを見る →</strong></a>
+          <a class="ref-finder-card ref-finder-feedback" href="#effects-library"><span>正解・不正解を出す</span><small>ポン、シェイク、リング、×</small><strong>Effectsを見る →</strong></a>
+          <a class="ref-finder-card ref-finder-reward" href="#effects-library"><span>達成感を出す</span><small>バッジ、レベルアップ、紙吹雪</small><strong>演出を見る →</strong></a>
+          <a class="ref-finder-card ref-finder-decoration" href="#decorations"><span>雰囲気を変える</span><small>方眼、紙、ドット、集中線</small><strong>Decorationを見る →</strong></a>
+        </div>
+        <div class="ref-search">
+          <label for="catalog-search">素材名・目的で検索</label>
+          <div class="ref-search-row"><input id="catalog-search" type="search" placeholder="例：正解、バッジ、方眼、timer" autocomplete="off"><span id="catalog-count" aria-live="polite"></span></div>
+        </div>
+      </section>
+
       <section id="directory" class="edu-container ref-section">
         <div class="ref-section-head">
           <h2>素材一覧</h2>
@@ -184,6 +223,30 @@
             <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="css/edu-editorial.css">'>読み込みをコピー</button>
           </article>
         </div>
+          <article class="ref-file ref-file-interactive">
+            <span class="edu-badge edu-badge-success">INTERACTIVE</span>
+            <h3 class="ref-file-name">edu-interactive.css</h3>
+            <p class="ref-file-desc">暗記シート、並べ替え、ヒント、ストリーク、花マル。</p>
+            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="css/edu-interactive.css">'>読み込みをコピー</button>
+          </article>
+          <article class="ref-file ref-file-extra">
+            <span class="edu-badge edu-badge-primary">STATES</span>
+            <h3 class="ref-file-name">edu-effects-extra.css</h3>
+            <p class="ref-file-desc">学習中の正解、不正解、集中、完了などの状態演出。</p>
+            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="css/edu-effects-extra.css">'>読み込みをコピー</button>
+          </article>
+          <article class="ref-file ref-file-effects">
+            <span class="edu-badge edu-badge-danger">EFFECTS</span>
+            <h3 class="ref-file-name">edu-effects-library.css</h3>
+            <p class="ref-file-desc">正誤、達成、バッジ、レベルアップ、コンボ、カード。</p>
+            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="css/edu-effects-library.css">'>読み込みをコピー</button>
+          </article>
+          <article class="ref-file ref-file-decoration">
+            <span class="edu-badge edu-badge-warning">DECORATION</span>
+            <h3 class="ref-file-name">edu-decorations.css</h3>
+            <p class="ref-file-desc">方眼、ドット、波、紙、枠、線、テイスト別の装飾。</p>
+            <button class="edu-btn edu-btn-secondary edu-btn-block" data-copy-text='<link rel="stylesheet" href="css/edu-decorations.css">'>読み込みをコピー</button>
+          </article>
         <div class="ref-quick">
           <div class="ref-quick-item"><strong>通常の教材</strong><span>effects + learning</span></div>
           <div class="ref-quick-item"><strong>落ち着いた教材</strong><span>effects + editorial + learning</span></div>
@@ -548,73 +611,73 @@
           <strong>AIへの指定例：</strong>「正解時は <code>effect-correct-ring</code> を使う」「バッジ獲得は <code>effect-badge-unlock</code> で」
         </div>
         <div class="edu-grid edu-grid-3 ref-effect-catalog">
-          <article class="edu-card edu-card-pad">
+          <article class="edu-card edu-card-pad" data-catalog-card>
             <div class="edu-row-between"><h3 class="edu-card-title">正解：ポン</h3><span class="edu-badge edu-badge-success">CORRECT</span></div>
             <div class="ref-effect-stage"><span class="ref-effect-demo effect-correct-pop" data-demo-key="correct-pop" data-demo-class="effect-correct-pop">○</span></div>
             <p class="edu-card-meta"><code>effect-correct-pop</code> · 軽い登場</p>
             <div class="ref-demo-actions"><button class="edu-btn edu-btn-secondary" data-demo-play data-demo-target="correct-pop">▶ 再生</button><button class="ref-copy" data-copy-text='<span class="effect-correct-pop">○</span>'>コード</button></div>
           </article>
-          <article class="edu-card edu-card-pad">
+          <article class="edu-card edu-card-pad" data-catalog-card>
             <div class="edu-row-between"><h3 class="edu-card-title">正解：リング</h3><span class="edu-badge edu-badge-success">CORRECT</span></div>
             <div class="ref-effect-stage"><span class="ref-effect-demo effect-correct-ring" data-demo-key="correct-ring" data-demo-class="effect-correct-ring">✓</span></div>
             <p class="edu-card-meta"><code>effect-correct-ring</code> · ○が広がる</p>
             <div class="ref-demo-actions"><button class="edu-btn edu-btn-secondary" data-demo-play data-demo-target="correct-ring">▶ 再生</button><button class="ref-copy" data-copy-text='<span class="effect-correct-ring">✓</span>'>コード</button></div>
           </article>
-          <article class="edu-card edu-card-pad">
+          <article class="edu-card edu-card-pad" data-catalog-card>
             <div class="edu-row-between"><h3 class="edu-card-title">正解：キラキラ</h3><span class="edu-badge edu-badge-success">CORRECT</span></div>
             <div class="ref-effect-stage"><span class="ref-effect-demo effect-correct-sparkle" data-demo-key="correct-sparkle" data-demo-class="effect-correct-sparkle">正解</span></div>
             <p class="edu-card-meta"><code>effect-correct-sparkle</code> · 控えめな粒</p>
             <div class="ref-demo-actions"><button class="edu-btn edu-btn-secondary" data-demo-play data-demo-target="correct-sparkle">▶ 再生</button><button class="ref-copy" data-copy-text='<span class="effect-correct-sparkle">正解</span>'>コード</button></div>
           </article>
-          <article class="edu-card edu-card-pad">
+          <article class="edu-card edu-card-pad" data-catalog-card>
             <div class="edu-row-between"><h3 class="edu-card-title">不正解：シェイク</h3><span class="edu-badge edu-badge-danger">WRONG</span></div>
             <div class="ref-effect-stage"><span class="ref-effect-demo effect-wrong-shake" data-demo-key="wrong-shake" data-demo-class="effect-wrong-shake">もう一度</span></div>
             <p class="edu-card-meta"><code>effect-wrong-shake</code> · 左右に揺れる</p>
             <div class="ref-demo-actions"><button class="edu-btn edu-btn-secondary" data-demo-play data-demo-target="wrong-shake">▶ 再生</button><button class="ref-copy" data-copy-text='<span class="effect-wrong-shake">もう一度</span>'>コード</button></div>
           </article>
-          <article class="edu-card edu-card-pad">
+          <article class="edu-card edu-card-pad" data-catalog-card>
             <div class="edu-row-between"><h3 class="edu-card-title">不正解：×</h3><span class="edu-badge edu-badge-danger">WRONG</span></div>
             <div class="ref-effect-stage"><span class="ref-effect-demo effect-wrong-cross" data-demo-key="wrong-cross" data-demo-class="effect-wrong-cross">確認</span></div>
             <p class="edu-card-meta"><code>effect-wrong-cross</code> · ×が出る</p>
             <div class="ref-demo-actions"><button class="edu-btn edu-btn-secondary" data-demo-play data-demo-target="wrong-cross">▶ 再生</button><button class="ref-copy" data-copy-text='<span class="effect-wrong-cross">確認</span>'>コード</button></div>
           </article>
-          <article class="edu-card edu-card-pad">
+          <article class="edu-card edu-card-pad" data-catalog-card>
             <div class="edu-row-between"><h3 class="edu-card-title">不正解：ぷるぷる</h3><span class="edu-badge edu-badge-danger">WRONG</span></div>
             <div class="ref-effect-stage"><span class="ref-effect-demo effect-wrong-wobble" data-demo-key="wrong-wobble" data-demo-class="effect-wrong-wobble">見直そう</span></div>
             <p class="edu-card-meta"><code>effect-wrong-wobble</code> · 小さく揺れる</p>
             <div class="ref-demo-actions"><button class="edu-btn edu-btn-secondary" data-demo-play data-demo-target="wrong-wobble">▶ 再生</button><button class="ref-copy" data-copy-text='<span class="effect-wrong-wobble">見直そう</span>'>コード</button></div>
           </article>
-          <article class="edu-card edu-card-pad">
+          <article class="edu-card edu-card-pad" data-catalog-card>
             <div class="edu-row-between"><h3 class="edu-card-title">達成：発光</h3><span class="edu-badge edu-badge-warning">ACHIEVEMENT</span></div>
             <div class="ref-effect-stage"><span class="ref-effect-demo effect-achievement-glow" data-demo-key="achievement-glow" data-demo-class="effect-achievement-glow">COMPLETE</span></div>
             <p class="edu-card-meta"><code>effect-achievement-glow</code> · オーラ</p>
             <div class="ref-demo-actions"><button class="edu-btn edu-btn-secondary" data-demo-play data-demo-target="achievement-glow">▶ 再生</button><button class="ref-copy" data-copy-text='<span class="effect-achievement-glow">COMPLETE</span>'>コード</button></div>
           </article>
-          <article class="edu-card edu-card-pad">
+          <article class="edu-card edu-card-pad" data-catalog-card>
             <div class="edu-row-between"><h3 class="edu-card-title">達成：紙吹雪</h3><span class="edu-badge edu-badge-warning">ACHIEVEMENT</span></div>
             <div class="ref-effect-stage effect-confetti" data-confetti-stage><span class="ref-effect-demo">達成！</span></div>
             <p class="edu-card-meta"><code>effect-confetti</code> · JSで粒を生成</p>
             <div class="ref-demo-actions"><button class="edu-btn edu-btn-secondary" data-demo-confetti>▶ 再生</button><button class="ref-copy" data-copy-text='<div class="effect-confetti"><span>達成！</span></div>'>コード</button></div>
           </article>
-          <article class="edu-card edu-card-pad">
+          <article class="edu-card edu-card-pad" data-catalog-card>
             <div class="edu-row-between"><h3 class="edu-card-title">バッジ獲得</h3><span class="edu-badge edu-badge-primary">UNLOCK</span></div>
             <div class="ref-effect-stage"><span class="ref-badge-demo effect-badge-unlock" data-demo-key="badge-unlock" data-demo-class="effect-badge-unlock"><span class="effect-badge-shine"></span><span class="effect-badge-icon">◉</span></span></div>
             <p class="edu-card-meta"><code>effect-badge-unlock</code> · 出現→回転→キラッ</p>
             <div class="ref-demo-actions"><button class="edu-btn edu-btn-secondary" data-demo-play data-demo-target="badge-unlock">▶ 再生</button><button class="ref-copy" data-copy-text='<div class="effect-badge-unlock"><span class="effect-badge-shine"></span><span class="effect-badge-icon">◉</span></div>'>コード</button></div>
           </article>
-          <article class="edu-card edu-card-pad">
+          <article class="edu-card edu-card-pad" data-catalog-card>
             <div class="edu-row-between"><h3 class="edu-card-title">レベルアップ</h3><span class="edu-badge edu-badge-primary">LEVEL</span></div>
             <div class="ref-effect-stage"><span class="ref-effect-demo effect-level-up" data-demo-key="level-up" data-demo-class="effect-level-up">LEVEL 3</span></div>
             <p class="edu-card-meta"><code>effect-level-up</code> · 光 / オーラ / 表示</p>
             <div class="ref-demo-actions"><button class="edu-btn edu-btn-secondary" data-demo-play data-demo-target="level-up">▶ 再生</button><button class="ref-copy" data-copy-text='<span class="effect-level-up">LEVEL 3</span>'>コード</button></div>
           </article>
-          <article class="edu-card edu-card-pad">
+          <article class="edu-card edu-card-pad" data-catalog-card>
             <div class="edu-row-between"><h3 class="edu-card-title">コンボ</h3><span class="edu-badge edu-badge-warning">COMBO</span></div>
             <div class="ref-effect-stage"><span class="ref-effect-demo effect-combo-fire" data-demo-key="combo-fire" data-demo-class="effect-combo-fire"><strong class="effect-combo-number">×5</strong></span></div>
             <p class="edu-card-meta"><code>effect-combo-fire</code> + <code>effect-combo-number</code></p>
             <div class="ref-demo-actions"><button class="edu-btn edu-btn-secondary" data-demo-play data-demo-target="combo-fire">▶ 再生</button><button class="ref-copy" data-copy-text='<span class="effect-combo-fire"><strong class="effect-combo-number">×5</strong></span>'>コード</button></div>
           </article>
-          <article class="edu-card edu-card-pad">
+          <article class="edu-card edu-card-pad" data-catalog-card>
             <div class="edu-row-between"><h3 class="edu-card-title">カード</h3><span class="edu-badge edu-badge-neutral">CARD</span></div>
             <div class="ref-effect-stage"><div class="ref-card-demo effect-card-lift" data-demo-key="card-lift" data-demo-class="effect-card-lift">カード登場</div></div>
             <p class="edu-card-meta"><code>effect-card-lift</code> · 跳ねて登場</p>
@@ -701,15 +764,15 @@
           <h2>Decoration素材集</h2>
           <p>完成UIではなく、サイトごとの雰囲気を作る背景・線・枠・装飾です。</p>
         </div>
-        <div class="edu-grid edu-grid-2">
-          <div class="edu-card edu-card-pad deco-surface deco-grid deco-science" style="min-height:130px"><span class="edu-badge edu-badge-success">SCIENCE</span><h3 class="edu-card-title" style="margin-top:18px">方眼 / 回路</h3><p class="edu-card-meta">deco-grid · deco-circuit</p></div>
-          <div class="edu-card edu-card-pad deco-surface deco-dots deco-digital" style="min-height:130px"><span class="edu-badge edu-badge-primary">DIGITAL</span><h3 class="edu-card-title" style="margin-top:18px">ドット / ハーフトーン</h3><p class="edu-card-meta">deco-dots · deco-halftone</p></div>
-          <div class="edu-card edu-card-pad deco-surface deco-rays deco-pop" style="min-height:130px"><span class="edu-badge edu-badge-warning">POP</span><h3 class="edu-card-title" style="margin-top:18px">集中線 / キラキラ</h3><p class="edu-card-meta">deco-rays · deco-sparkles</p></div>
-          <div class="edu-card edu-card-pad deco-surface deco-note deco-tape deco-frame" style="min-height:130px"><span class="edu-badge edu-badge-neutral">NOTE</span><h3 class="edu-card-title" style="margin-top:18px">紙 / テープ / 枠</h3><p class="edu-card-meta">deco-note · deco-tape · deco-frame</p></div>
-          <div class="edu-card edu-card-pad deco-surface deco-retro deco-wave" style="min-height:130px"><span class="edu-badge edu-badge-danger">RETRO</span><h3 class="edu-card-title" style="margin-top:18px">波 / レトロ</h3><p class="edu-card-meta">deco-wave · deco-retro</p></div>
-          <div class="edu-card edu-card-pad deco-surface deco-fantasy deco-shape-circle" style="min-height:130px"><span class="edu-badge edu-badge-primary">FANTASY</span><h3 class="edu-card-title" style="margin-top:18px">幾何学シェイプ</h3><p class="edu-card-meta">deco-shape-circle · deco-sparkles</p></div>
-          <div class="edu-card edu-card-pad deco-surface deco-minimal deco-divider" style="min-height:100px"><span class="edu-badge edu-badge-neutral">MINIMAL</span><h3 class="edu-card-title">区切り線</h3></div>
-          <div class="edu-card edu-card-pad deco-surface deco-sketch deco-note" style="min-height:100px"><span class="edu-badge edu-badge-warning">SKETCH</span><h3 class="edu-card-title" style="margin-top:18px">手描き線</h3></div>
+        <div class="edu-grid edu-grid-2 ref-decoration-catalog">
+          <div class="edu-card edu-card-pad" data-catalog-card deco-surface deco-grid deco-science" style="min-height:130px"><span class="edu-badge edu-badge-success">SCIENCE</span><h3 class="edu-card-title" style="margin-top:18px">方眼 / 回路</h3><p class="edu-card-meta">deco-grid · deco-circuit</p></div>
+          <div class="edu-card edu-card-pad" data-catalog-card deco-surface deco-dots deco-digital" style="min-height:130px"><span class="edu-badge edu-badge-primary">DIGITAL</span><h3 class="edu-card-title" style="margin-top:18px">ドット / ハーフトーン</h3><p class="edu-card-meta">deco-dots · deco-halftone</p></div>
+          <div class="edu-card edu-card-pad" data-catalog-card deco-surface deco-rays deco-pop" style="min-height:130px"><span class="edu-badge edu-badge-warning">POP</span><h3 class="edu-card-title" style="margin-top:18px">集中線 / キラキラ</h3><p class="edu-card-meta">deco-rays · deco-sparkles</p></div>
+          <div class="edu-card edu-card-pad" data-catalog-card deco-surface deco-note deco-tape deco-frame" style="min-height:130px"><span class="edu-badge edu-badge-neutral">NOTE</span><h3 class="edu-card-title" style="margin-top:18px">紙 / テープ / 枠</h3><p class="edu-card-meta">deco-note · deco-tape · deco-frame</p></div>
+          <div class="edu-card edu-card-pad" data-catalog-card deco-surface deco-retro deco-wave" style="min-height:130px"><span class="edu-badge edu-badge-danger">RETRO</span><h3 class="edu-card-title" style="margin-top:18px">波 / レトロ</h3><p class="edu-card-meta">deco-wave · deco-retro</p></div>
+          <div class="edu-card edu-card-pad" data-catalog-card deco-surface deco-fantasy deco-shape-circle" style="min-height:130px"><span class="edu-badge edu-badge-primary">FANTASY</span><h3 class="edu-card-title" style="margin-top:18px">幾何学シェイプ</h3><p class="edu-card-meta">deco-shape-circle · deco-sparkles</p></div>
+          <div class="edu-card edu-card-pad" data-catalog-card deco-surface deco-minimal deco-divider" style="min-height:100px"><span class="edu-badge edu-badge-neutral">MINIMAL</span><h3 class="edu-card-title">区切り線</h3></div>
+          <div class="edu-card edu-card-pad" data-catalog-card deco-surface deco-sketch deco-note" style="min-height:100px"><span class="edu-badge edu-badge-warning">SKETCH</span><h3 class="edu-card-title" style="margin-top:18px">手描き線</h3></div>
         </div>
       </section>
 
@@ -763,6 +826,22 @@
       zone.addEventListener("dragleave", () => zone.classList.remove("is-over"));
       zone.addEventListener("drop", event => { event.preventDefault(); zone.classList.remove("is-over"); });
     });
+
+    const catalogCards = Array.from(document.querySelectorAll("[data-catalog-card]"));
+    const catalogSearch = document.getElementById("catalog-search");
+    const catalogCount = document.getElementById("catalog-count");
+    function updateCatalogFilter() {
+      const query = catalogSearch.value.trim().toLowerCase();
+      let visible = 0;
+      catalogCards.forEach(card => {
+        const match = !query || card.textContent.toLowerCase().includes(query);
+        card.classList.toggle("ref-catalog-card-hidden", !match);
+        if (match) visible += 1;
+      });
+      catalogCount.textContent = query ? visible + "件表示" : "Effects / Decorationを検索できます";
+    }
+    catalogSearch.addEventListener("input", updateCatalogFilter);
+    updateCatalogFilter();
 
     document.querySelectorAll("[data-demo-play]").forEach(button => button.addEventListener("click", () => {
       const target = document.querySelector("[data-demo-key=\"" + button.dataset.demoTarget + "\"]");
