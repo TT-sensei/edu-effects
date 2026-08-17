@@ -1,0 +1,142 @@
+/*
+ * edu-interactive.css
+ * Interactive learning parts for study, motivation, accessibility, and feedback.
+ * Works with native HTML details/summary and optional small JavaScript.
+ */
+
+/* Mask / blank -------------------------------------------------------- */
+.edu-mask {
+  display: inline-flex; align-items: center; min-height: 34px; padding: 3px 8px;
+  border: 1px solid var(--edu-line); border-radius: 5px; color: transparent;
+  background: #263238; cursor: pointer; transition: color 180ms ease, background 180ms ease;
+}
+.edu-mask::before { content: "クリックして確認"; color: #d6dde2; font-size: .75rem; font-weight: 700; }
+.edu-mask:hover, .edu-mask:focus-visible, .edu-mask.is-revealed {
+  color: var(--edu-ink); background: var(--edu-primary-soft);
+}
+.edu-mask:hover::before, .edu-mask:focus-visible::before, .edu-mask.is-revealed::before { display: none; }
+.edu-blank {
+  display: inline-block; min-width: 5em; padding: 0 7px 2px;
+  border-bottom: 2px solid var(--edu-primary); color: transparent; cursor: pointer;
+}
+.edu-blank.is-revealed { color: var(--edu-ink); }
+
+/* Sorting / drag and drop -------------------------------------------- */
+.edu-dropzone {
+  display: grid; gap: 10px; min-height: 92px; padding: 12px;
+  border: 2px dashed var(--edu-line); border-radius: var(--edu-radius-md);
+  background: color-mix(in srgb, var(--edu-primary-soft) 45%, transparent);
+  transition: border-color 160ms ease, background 160ms ease;
+}
+.edu-dropzone.is-over, .edu-dropzone:focus-within {
+  border-color: var(--edu-primary); background: var(--edu-primary-soft);
+}
+.edu-sort-item {
+  display: flex; align-items: center; gap: 10px; min-height: 48px; padding: 10px 12px;
+  border: 1px solid var(--edu-line); border-radius: 8px; color: var(--edu-ink);
+  background: var(--edu-surface); cursor: grab; box-shadow: var(--edu-shadow-sm);
+}
+.edu-sort-item:active { cursor: grabbing; }
+.edu-sort-item.is-dragging { opacity: .55; }
+.edu-drag-handle { color: var(--edu-subtle); font-size: 1.1rem; letter-spacing: -.2em; }
+.edu-dropzone-label { color: var(--edu-muted); font-size: .8rem; font-weight: 800; }
+
+/* Streak -------------------------------------------------------------- */
+.edu-streak {
+  display: inline-flex; align-items: center; gap: 9px; min-height: 50px; padding: 7px 13px;
+  border: 1px solid #f2c98b; border-radius: 10px; color: #70451d; background: #fff7e8;
+}
+.edu-streak-icon { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; color: #fff; background: #dc713c; }
+.edu-streak-value { font-size: 1.3rem; font-weight: 950; line-height: 1; }
+.edu-streak-label { color: #8b6235; font-size: .76rem; font-weight: 800; }
+.edu-streak-calm { border-color: var(--edu-line); color: var(--edu-ink); background: var(--edu-surface); }
+.edu-streak-calm .edu-streak-icon { color: var(--edu-primary-dark); background: var(--edu-primary-soft); }
+.edu-streak-hot .edu-streak-icon { animation: edu-streak-flare 900ms ease-in-out infinite; }
+
+/* Stamp card ---------------------------------------------------------- */
+.edu-stamp-card {
+  display: grid; gap: 12px; padding: 18px; border: 1px solid var(--edu-line);
+  border-radius: var(--edu-radius-md); background: var(--edu-surface);
+}
+.edu-stamp-card-title { margin: 0; font-weight: 850; }
+.edu-stamp-grid { display: grid; grid-template-columns: repeat(5, minmax(44px, 1fr)); gap: 8px; }
+.edu-stamp {
+  display: grid; place-items: center; aspect-ratio: 1; min-width: 44px;
+  border: 1px dashed var(--edu-line); border-radius: 50%; color: var(--edu-subtle);
+  background: var(--edu-bg); font-size: .8rem; font-weight: 800;
+}
+.edu-stamp.is-stamped { border-style: solid; border-color: var(--edu-primary); color: #fff; background: var(--edu-primary); transform: rotate(-4deg); }
+.edu-stamp.is-stamped:nth-child(3n) { transform: rotate(4deg); background: var(--edu-accent); }
+
+/* Hint / accordion ---------------------------------------------------- */
+.edu-hint, .edu-accordion {
+  overflow: hidden; border: 1px solid var(--edu-line); border-radius: var(--edu-radius-md); background: var(--edu-surface);
+}
+.edu-hint summary, .edu-accordion summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  min-height: 48px; padding: 11px 15px; color: var(--edu-primary-dark); cursor: pointer; font-weight: 800;
+  list-style: none;
+}
+.edu-hint summary::-webkit-details-marker, .edu-accordion summary::-webkit-details-marker { display: none; }
+.edu-hint summary::after, .edu-accordion summary::after { content: "+"; color: var(--edu-muted); font-size: 1.2rem; font-weight: 400; }
+.edu-hint[open] summary::after, .edu-accordion[open] summary::after { content: "−"; }
+.edu-hint-body, .edu-accordion-body { padding: 0 15px 15px; color: var(--edu-muted); animation: edu-hint-open 180ms ease both; }
+
+/* Marker -------------------------------------------------------------- */
+.edu-marker {
+  position: relative; z-index: 0; display: inline;
+  background: linear-gradient(transparent 56%, rgb(245 212 76 / 72%) 56%, rgb(245 212 76 / 72%) 90%, transparent 90%);
+  box-decoration-break: clone; -webkit-box-decoration-break: clone;
+}
+.edu-marker-quiet { background: linear-gradient(transparent 62%, rgb(166 214 190 / 70%) 62%, rgb(166 214 190 / 70%) 88%, transparent 88%); }
+.edu-marker-animated { background: linear-gradient(transparent 56%, rgb(245 212 76 / 72%) 56%, rgb(245 212 76 / 72%) 90%, transparent 90%); background-size: 0 100%; background-repeat: no-repeat; animation: edu-marker-draw 700ms ease-out forwards; }
+
+/* Ruby ---------------------------------------------------------------- */
+.edu-ruby { ruby-position: over; line-height: 2.05; }
+.edu-ruby rt { margin-bottom: .12em; color: var(--edu-muted); font-size: .52em; font-weight: 600; line-height: 1; }
+.edu-ruby-large { line-height: 2.25; }
+.edu-ruby-large rt { font-size: .48em; }
+
+/* Teacher feedback ---------------------------------------------------- */
+.edu-mark-flower {
+  position: relative; display: inline-grid; place-items: center; width: 78px; height: 78px;
+  border: 3px solid #d45445; border-radius: 50%; color: #d45445; background: transparent;
+  font-size: 1.25rem; font-weight: 950; transform: rotate(-8deg);
+}
+.edu-mark-flower::before, .edu-mark-flower::after {
+  content: ""; position: absolute; inset: 5px; border: 1px solid currentColor; border-radius: 50%;
+}
+.edu-mark-flower::after { inset: 11px; border-style: dashed; }
+.edu-mark-flower.is-animated { animation: edu-mark-stamp 360ms cubic-bezier(.2,.8,.2,1) both; }
+.edu-speech-bubble {
+  position: relative; display: flex; align-items: flex-start; gap: 12px; max-width: 480px;
+  padding: 14px 16px; border: 1px solid var(--edu-line); border-radius: 12px;
+  color: var(--edu-ink); background: var(--edu-surface); box-shadow: var(--edu-shadow-sm);
+}
+.edu-speech-bubble::before {
+  content: ""; position: absolute; left: 22px; bottom: -9px; width: 16px; height: 16px;
+  border-right: 1px solid var(--edu-line); border-bottom: 1px solid var(--edu-line);
+  background: var(--edu-surface); transform: rotate(45deg);
+}
+.edu-speech-avatar { display: grid; place-items: center; flex: 0 0 auto; width: 38px; height: 38px; border-radius: 50%; color: #fff; background: var(--edu-accent); }
+.edu-speech-text { position: relative; z-index: 1; }
+.edu-speech-text strong { display: block; }
+.edu-speech-text p { margin: 3px 0 0; color: var(--edu-muted); font-size: .9rem; }
+
+/* Variations / accessibility ----------------------------------------- */
+.edu-style-editorial .edu-mask { border-radius: 4px; }
+.edu-style-editorial .edu-dropzone { border-radius: 6px; }
+.edu-style-editorial .edu-streak { border-radius: 7px; }
+.edu-style-editorial .edu-mark-flower { border-width: 2px; }
+.edu-style-editorial .edu-speech-bubble { border-radius: 8px; }
+@media (max-width: 720px) {
+  .edu-stamp-grid { grid-template-columns: repeat(5, minmax(42px, 1fr)); gap: 6px; }
+  .edu-sort-item { min-height: 52px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .edu-hint-body, .edu-accordion-body, .edu-streak-hot .edu-streak-icon, .edu-mark-flower.is-animated, .edu-marker-animated { animation: none; }
+}
+@keyframes edu-hint-open { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes edu-marker-draw { from { background-size: 0 100%; } to { background-size: 100% 100%; } }
+@keyframes edu-streak-flare { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.08) rotate(-4deg); } }
+@keyframes edu-mark-stamp { 0% { opacity: 0; transform: scale(1.6) rotate(-8deg); } 70% { transform: scale(.95) rotate(-8deg); } 100% { opacity: 1; transform: scale(1) rotate(-8deg); } }

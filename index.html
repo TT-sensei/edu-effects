@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/edu-learning.css">
   <link rel="stylesheet" href="css/edu-motion.css">
   <link rel="stylesheet" href="css/edu-editorial.css">
+  <link rel="stylesheet" href="css/edu-interactive.css">
   <style>
     :root { --ref-purple: #5b4bdb; --ref-purple-soft: #f2f0ff; }
     .ref-hero { padding: 58px 0 42px; background: linear-gradient(135deg, #f8fbff 0%, #eef5ff 58%, #f2f0ff 100%); border-bottom: 1px solid var(--edu-line); }
@@ -90,6 +91,7 @@
         <a href="#learning">学習画面</a>
         <a href="#timers">タイマー</a>
         <a href="#timer-variants">タイマー別案</a>
+        <a href="#interactive">問題パーツ</a>
         <a href="#reference">クラス一覧</a>
       </div>
     </nav>
@@ -478,6 +480,79 @@
         </div>
       </section>
 
+
+      <section id="interactive" class="edu-container ref-section">
+        <div class="ref-section-head">
+          <h2>インタラクティブな学習パーツ</h2>
+          <p>暗記、並べ替え、ヒント、継続、採点まで。教材にそのまま組み込めます。</p>
+        </div>
+        <div class="edu-grid edu-grid-2">
+          <div class="edu-card edu-card-pad">
+            <div class="edu-row-between"><h3 class="edu-card-title">暗記シート</h3><span class="edu-badge edu-badge-primary">MASK</span></div>
+            <p class="edu-card-meta">クリックで答えを確認。単語や用語チェックに。</p>
+            <p style="margin-top:18px">日本の首都は <button class="edu-mask" type="button">東京</button> です。</p>
+            <div class="ref-code" style="margin-top:18px">
+              <button class="ref-copy" data-copy-text='<button class="edu-mask" type="button">東京</button>'>コピー</button>
+              <pre>&lt;button class="edu-mask" type="button"&gt;東京&lt;/button&gt;</pre>
+            </div>
+          </div>
+          <div class="edu-card edu-card-pad">
+            <div class="edu-row-between"><h3 class="edu-card-title">並べ替え枠</h3><span class="edu-badge edu-badge-success">DROPZONE</span></div>
+            <p class="edu-card-meta">英語、年表、手順の並べ替えに。</p>
+            <div class="edu-dropzone" data-demo-dropzone style="margin-top:18px">
+              <span class="edu-dropzone-label">ここへ並べる</span>
+              <div class="edu-sort-item" draggable="true"><span class="edu-drag-handle">⋮⋮</span>First</div>
+              <div class="edu-sort-item" draggable="true"><span class="edu-drag-handle">⋮⋮</span>Then</div>
+            </div>
+            <div class="ref-code" style="margin-top:18px">
+              <button class="ref-copy" data-copy-text='<div class="edu-dropzone"><div class="edu-sort-item" draggable="true">First</div></div>'>コピー</button>
+              <pre>&lt;div class="edu-dropzone"&gt;
+  &lt;div class="edu-sort-item" draggable="true"&gt;First&lt;/div&gt;
+&lt;/div&gt;</pre>
+            </div>
+          </div>
+          <div class="edu-card edu-card-pad">
+            <div class="edu-row-between"><h3 class="edu-card-title">連続正解</h3><span class="edu-badge edu-badge-warning">STREAK</span></div>
+            <div style="margin-top:18px"><span class="edu-streak edu-streak-hot"><span class="edu-streak-icon">3</span><span><span class="edu-streak-value">3</span><span class="edu-streak-label">問連続正解！</span></span></span></div>
+            <div class="ref-code" style="margin-top:18px">
+              <button class="ref-copy" data-copy-text='<div class="edu-streak"><span class="edu-streak-icon">3</span><span class="edu-streak-value">3</span></span>'>コピー</button>
+              <pre>&lt;div class="edu-streak"&gt;
+  &lt;span class="edu-streak-icon"&gt;3&lt;/span&gt;
+  &lt;span class="edu-streak-value"&gt;3&lt;/span&gt;
+&lt;/div&gt;</pre>
+            </div>
+          </div>
+          <div class="edu-card edu-card-pad">
+            <div class="edu-row-between"><h3 class="edu-card-title">スタンプカード</h3><span class="edu-badge edu-badge-primary">STUDY LOG</span></div>
+            <div class="edu-stamp-card" style="margin-top:18px">
+              <p class="edu-stamp-card-title">理科ラボ 6年</p>
+              <div class="edu-stamp-grid"><span class="edu-stamp is-stamped">1</span><span class="edu-stamp is-stamped">2</span><span class="edu-stamp is-stamped">3</span><span class="edu-stamp">4</span><span class="edu-stamp">5</span></div>
+            </div>
+          </div>
+          <div class="edu-card edu-card-pad">
+            <div class="edu-row-between"><h3 class="edu-card-title">ヒント</h3><span class="edu-badge edu-badge-neutral">HELP</span></div>
+            <details class="edu-hint" style="margin-top:18px"><summary>ヒントを見る</summary><div class="edu-hint-body">まず、問題文の「変える条件」に線を引いてみよう。</div></details>
+            <div class="edu-speech-bubble" style="margin-top:18px"><span class="edu-speech-avatar">先生</span><div class="edu-speech-text"><strong>先生からのヒント</strong><p>答えを急がず、表に整理してみよう。</p></div></div>
+          </div>
+          <div class="edu-card edu-card-pad">
+            <div class="edu-row-between"><h3 class="edu-card-title">学習補助</h3><span class="edu-badge edu-badge-success">ACCESSIBLE</span></div>
+            <p style="margin-top:18px" class="edu-ruby">漢字に<ruby>振<rt>ふ</rt></ruby>り<ruby>仮名<rt>がな</rt></ruby>を付ける。</p>
+            <p><span class="edu-marker edu-marker-animated">大切な言葉</span>を見つけよう。</p>
+            <div class="edu-ruled-answer" style="margin-top:14px">考えたことを書く欄</div>
+          </div>
+          <div class="edu-card edu-card-pad">
+            <div class="edu-row-between"><h3 class="edu-card-title">花マル採点</h3><span class="edu-badge edu-badge-danger">FEEDBACK</span></div>
+            <div class="edu-row" style="margin-top:18px"><span class="edu-mark-flower is-animated">花マル</span><span class="edu-help">大きな演出にも、控えめな採点印にも。</span></div>
+            <div class="ref-code" style="margin-top:18px">
+              <button class="ref-copy" data-copy-text='<span class="edu-mark-flower is-animated">花マル</span>'>コピー</button>
+              <pre>&lt;span class="edu-mark-flower is-animated"&gt;
+  花マル
+&lt;/span&gt;</pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="reference" class="edu-container ref-section">
         <div class="ref-section-head">
           <h2>クラス一覧</h2>
@@ -511,6 +586,22 @@
       const target = document.getElementById(button.dataset.copyTarget);
       copyText(target.textContent, button);
     }));
+
+    document.querySelectorAll(".edu-mask").forEach(mask => mask.addEventListener("click", () => mask.classList.toggle("is-revealed")));
+    document.querySelectorAll("[data-demo-dropzone]").forEach(zone => {
+      let dragged = null;
+      zone.querySelectorAll(".edu-sort-item").forEach(item => {
+        item.addEventListener("dragstart", () => { dragged = item; item.classList.add("is-dragging"); });
+        item.addEventListener("dragend", () => { item.classList.remove("is-dragging"); dragged = null; });
+        item.addEventListener("dragover", event => {
+          event.preventDefault();
+          if (dragged && dragged !== item) item.before(dragged);
+        });
+      });
+      zone.addEventListener("dragover", event => { event.preventDefault(); zone.classList.add("is-over"); });
+      zone.addEventListener("dragleave", () => zone.classList.remove("is-over"));
+      zone.addEventListener("drop", event => { event.preventDefault(); zone.classList.remove("is-over"); });
+    });
   </script>
 </body>
 </html>
