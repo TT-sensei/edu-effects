@@ -74,15 +74,6 @@
 .edu-checklist li { display: flex; align-items: flex-start; gap: 10px; }
 .edu-checklist li::before { content: "✓"; flex: 0 0 auto; display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; color: var(--edu-success); background: var(--edu-success-soft); font-weight: 900; }
 
-@media (max-width: 720px) {
-  .edu-answer-grid-2, .edu-answer-grid-4 { grid-template-columns: 1fr; }
-  .edu-comparison { grid-template-columns: 1fr; }
-  .edu-comparison-divider { min-height: 24px; font-size: 0; }
-  .edu-comparison-divider::before { content: "↓"; font-size: 1.1rem; }
-}
-@keyframes edu-skeleton { 0% { background-position: 100% 0; } 100% { background-position: -100% 0; } }
-
-
 /* Timer / countdown ---------------------------------------------------- */
 .edu-timer {
   display: inline-flex; align-items: baseline; gap: 6px; padding: 8px 14px;
@@ -99,6 +90,7 @@
 .edu-timer-danger { border-color: #fecaca; background: var(--edu-danger-soft); animation: edu-timer-pulse 1s ease-in-out infinite; }
 .edu-timer-danger .edu-timer-value { color: var(--edu-danger); }
 
+/* Ring variant: same --value(0-100) pattern as .edu-progress-ring */
 .edu-timer-ring {
   --value: 100; width: 84px; height: 84px; display: grid; place-items: center;
   border-radius: 50%; background: conic-gradient(var(--edu-primary) calc(var(--value) * 1%), var(--edu-line) 0);
@@ -112,28 +104,19 @@
 .edu-timer-ring.edu-timer-warning { background: conic-gradient(var(--edu-warning) calc(var(--value) * 1%), var(--edu-line) 0); }
 .edu-timer-ring.edu-timer-danger { background: conic-gradient(var(--edu-danger) calc(var(--value) * 1%), var(--edu-line) 0); animation: edu-timer-pulse 1s ease-in-out infinite; }
 
+/* Bar variant */
 .edu-timer-bar { display: grid; gap: 6px; }
 .edu-timer-bar-track { height: 10px; overflow: hidden; border-radius: 999px; background: var(--edu-line); }
 .edu-timer-bar-value { height: 100%; border-radius: inherit; background: var(--edu-primary); transition: width 1s linear, background 240ms ease; }
 .edu-timer-bar.edu-timer-warning .edu-timer-bar-value { background: var(--edu-warning); }
 .edu-timer-bar.edu-timer-danger .edu-timer-bar-value { background: var(--edu-danger); }
 
-@keyframes edu-timer-pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.04); }
-}
-
-
-/* Timer visual variations --------------------------------------------- */
-.edu-timer-minimal {
-  border: 0; padding: 2px 4px; background: transparent;
-}
+/* Style variants ------------------------------------------------------- */
+.edu-timer-minimal { border: 0; padding: 2px 4px; background: transparent; }
 .edu-timer-minimal .edu-timer-value { font-size: 1.6rem; letter-spacing: -.03em; }
 .edu-timer-minimal .edu-timer-icon { display: none; }
 
-.edu-timer-outline {
-  border: 1.5px solid var(--edu-primary); background: transparent;
-}
+.edu-timer-outline { border: 1.5px solid var(--edu-primary); background: transparent; }
 .edu-timer-outline .edu-timer-value { color: var(--edu-primary-dark); }
 .edu-timer-outline.edu-timer-warning { border-color: var(--edu-warning); }
 .edu-timer-outline.edu-timer-warning .edu-timer-value { color: var(--edu-warning); }
@@ -148,15 +131,24 @@
 .edu-timer-gradient .edu-timer-unit,
 .edu-timer-gradient .edu-timer-icon { color: #fff; }
 
-.edu-timer-dots {
-  display: inline-flex; align-items: center; gap: 5px; padding: 4px 2px;
-}
+.edu-timer-dots { display: inline-flex; align-items: center; gap: 5px; padding: 4px 2px; }
 .edu-timer-dots .edu-timer-dot {
   width: 9px; height: 9px; border-radius: 50%; background: var(--edu-line);
   transition: background 200ms ease, transform 200ms ease;
 }
 .edu-timer-dots .edu-timer-dot.is-lit { background: var(--edu-primary); }
 .edu-timer-dots.edu-timer-warning .edu-timer-dot.is-lit { background: var(--edu-warning); }
-.edu-timer-dots.edu-timer-danger .edu-timer-dot.is-lit {
-  background: var(--edu-danger); transform: scale(1.15);
+.edu-timer-dots.edu-timer-danger .edu-timer-dot.is-lit { background: var(--edu-danger); transform: scale(1.15); }
+
+@keyframes edu-timer-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
 }
+
+@media (max-width: 720px) {
+  .edu-answer-grid-2, .edu-answer-grid-4 { grid-template-columns: 1fr; }
+  .edu-comparison { grid-template-columns: 1fr; }
+  .edu-comparison-divider { min-height: 24px; font-size: 0; }
+  .edu-comparison-divider::before { content: "↓"; font-size: 1.1rem; }
+}
+@keyframes edu-skeleton { 0% { background-position: 100% 0; } 100% { background-position: -100% 0; } }
