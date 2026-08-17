@@ -1,1 +1,28 @@
-base64: invalid input
+/*
+ * edu-motion.css
+ * Small, readable motion patterns. Use with edu-effects.css.
+ */
+
+.edu-enter { animation: edu-enter 300ms cubic-bezier(.2,.8,.2,1) both; }
+.edu-enter-delay-1 { animation-delay: 60ms; }
+.edu-enter-delay-2 { animation-delay: 120ms; }
+.edu-enter-delay-3 { animation-delay: 180ms; }
+.edu-count-up { animation: edu-count-up 500ms cubic-bezier(.2,.8,.2,1) both; }
+.edu-soft-glow { animation: edu-soft-glow 2.2s ease-in-out infinite; }
+.edu-float { animation: edu-float 2.4s ease-in-out infinite; }
+.edu-success-burst { animation: edu-success-burst 420ms cubic-bezier(.2,.8,.2,1) both; }
+.edu-wrong-shake { animation: edu-wrong-shake 360ms ease both; }
+.edu-focus-ring { animation: edu-focus-ring 1.2s ease-in-out infinite; }
+
+@keyframes edu-enter { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes edu-count-up { from { opacity: 0; transform: scale(.7); } to { opacity: 1; transform: scale(1); } }
+@keyframes edu-soft-glow { 0%, 100% { box-shadow: 0 0 0 0 rgb(37 99 235 / 0%); } 50% { box-shadow: 0 0 0 7px rgb(37 99 235 / 11%); } }
+@keyframes edu-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+@keyframes edu-success-burst { 0% { opacity: 0; transform: scale(.75); } 70% { transform: scale(1.08); } 100% { opacity: 1; transform: scale(1); } }
+@keyframes edu-wrong-shake { 0%, 100% { transform: translateX(0); } 20% { transform: translateX(-6px); } 40% { transform: translateX(6px); } 60% { transform: translateX(-4px); } 80% { transform: translateX(4px); } }
+@keyframes edu-focus-ring { 0%, 100% { box-shadow: 0 0 0 0 rgb(37 99 235 / 0%); } 50% { box-shadow: 0 0 0 6px rgb(37 99 235 / 15%); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .edu-enter, .edu-count-up, .edu-soft-glow, .edu-float, .edu-success-burst, .edu-wrong-shake, .edu-focus-ring,
+  .edu-skeleton, .edu-timer-danger, .edu-timer-ring.edu-timer-danger { animation: none; }
+}
