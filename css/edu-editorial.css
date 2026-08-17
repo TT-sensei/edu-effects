@@ -197,3 +197,7 @@
 .edu-style-editorial .edu-timer { border-radius: 7px; }
 .edu-style-editorial .edu-timer-bar-track,
 .edu-style-editorial .edu-timer-bar-value { border-radius: 3px; }
+
+
+.edu-style-editorial .edu-timer-gradient { background: var(--edu-primary); }
+.edu-style-editorial .edu-timer-outline { border-width: 1px; }

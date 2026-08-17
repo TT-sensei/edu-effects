@@ -115,3 +115,13 @@ edu-learning.cssには3種類のタイマーがあります。
 - edu-timer-bar：残り時間を横棒で表示するバー型
 
 残り時間に応じて、edu-timer-warningやedu-timer-dangerを付け替えて使います。
+
+
+タイマーの見た目違い：
+
+- edu-timer-minimal：数字だけを見せる
+- edu-timer-outline：背景なしの線だけ
+- edu-timer-gradient：目立たせる強調型
+- edu-timer-dots：残り時間や残り問題数を粒で表示
+
+edu-timer-dotsは、子要素のedu-timer-dotにis-litを付け外しして表示を更新します。
