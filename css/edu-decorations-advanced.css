@@ -1,0 +1,35 @@
+/*
+ * edu-decorations-advanced.css
+ * Stronger, clearly separated visual directions for site-specific decoration.
+ */
+
+/* Theme surfaces ------------------------------------------------------ */
+.deco-theme-science { color: #164e63; background-color: #ecfeff; background-image: linear-gradient(rgb(8 145 178 / 13%) 1px, transparent 1px), linear-gradient(90deg, rgb(8 145 178 / 13%) 1px, transparent 1px); background-size: 28px 28px; }
+.deco-theme-space { color: #e9d5ff; background: radial-gradient(circle at 72% 22%, rgb(167 139 250 / 28%) 0 2px, transparent 3px), radial-gradient(circle at 22% 68%, rgb(125 211 252 / 24%) 0 2px, transparent 3px), #10152c; background-size: 90px 90px, 130px 130px, auto; }
+.deco-theme-digital { color: #dbeafe; background: repeating-linear-gradient(0deg, rgb(96 165 250 / 10%) 0 1px, transparent 1px 5px), #0f1b31; }
+.deco-theme-japanese { color: #4a3027; background-color: #fbf5e9; background-image: repeating-linear-gradient(0deg, rgb(169 95 67 / 10%) 0 1px, transparent 1px 8px); }
+.deco-theme-note { color: #4a3d34; background-color: #fffaf1; background-image: linear-gradient(transparent 30px, rgb(87 152 192 / 22%) 31px, transparent 32px); background-size: 100% 32px; }
+.deco-theme-chalk { color: #f4f1e8; background-color: #263a38; background-image: radial-gradient(rgb(255 255 255 / 10%) 1px, transparent 1px); background-size: 12px 12px; }
+.deco-theme-arcade { color: #f5d44c; background-color: #172033; background-image: linear-gradient(135deg, transparent 0 46%, rgb(220 113 60 / 22%) 47% 49%, transparent 50%); background-size: 24px 24px; }
+.deco-theme-pop { color: #172033; background-color: #fff7d6; background-image: radial-gradient(rgb(220 113 60 / 28%) 1.5px, transparent 1.5px); background-size: 15px 15px; }
+.deco-theme-fantasy { color: #41216b; background: linear-gradient(135deg, #f7edff, #e0e7ff); }
+
+/* Frames and accents -------------------------------------------------- */
+.deco-border-double { border: 3px double var(--deco-accent, #64748b); }
+.deco-border-corner { position: relative; border: 1px solid var(--deco-line, #d6dbe3); }
+.deco-border-corner::before, .deco-border-corner::after { content: ""; position: absolute; width: 22px; height: 22px; border-color: var(--deco-accent, #64748b); border-style: solid; pointer-events: none; }
+.deco-border-corner::before { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
+.deco-border-corner::after { right: -1px; bottom: -1px; border-width: 0 2px 2px 0; }
+.deco-label-tape { position: relative; }
+.deco-label-tape::after { content: attr(data-label); position: absolute; top: 12px; right: 14px; padding: 5px 9px; color: #4a3d34; background: rgb(245 212 76 / 72%); font-size: .68rem; font-weight: 850; transform: rotate(3deg); }
+.deco-asterisk { position: relative; }
+.deco-asterisk::before { content: "✳"; position: absolute; top: -20px; right: -10px; color: var(--deco-accent, #d79b38); font-size: 2rem; }
+.deco-arrow-line { position: relative; border-bottom: 2px solid var(--deco-accent, #64748b); }
+.deco-arrow-line::after { content: "→"; position: absolute; right: -1px; bottom: -14px; color: var(--deco-accent, #64748b); font-size: 1.2rem; }
+.deco-scanline { position: relative; overflow: hidden; }
+.deco-scanline::after { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent 0 5px, rgb(255 255 255 / 7%) 6px 7px); pointer-events: none; }
+.deco-sunburst { position: relative; overflow: hidden; }
+.deco-sunburst::before { content: ""; position: absolute; inset: -65%; background: repeating-conic-gradient(from 0deg, var(--deco-line, rgb(220 113 60 / 16%)) 0 4deg, transparent 4deg 16deg); pointer-events: none; }
+
+/* Reduced motion keeps decoration static. */
+@media (prefers-reduced-motion: reduce) { .deco-theme-space, .deco-theme-digital, .deco-theme-arcade { animation: none; } }
