@@ -31,6 +31,7 @@
   --edu-line: #d7ebe3;
 }
 .edu-theme-night {
+  color-scheme: dark;
   --edu-ink: #f4f7fb;
   --edu-muted: #aab7cc;
   --edu-line: #334155;

@@ -77,8 +77,7 @@
 @media (max-width: 720px) {
   .edu-answer-grid-2, .edu-answer-grid-4 { grid-template-columns: 1fr; }
   .edu-comparison { grid-template-columns: 1fr; }
-  .edu-comparison-divider { min-height: 24px; }
-  .edu-comparison-divider::before { content: "↓"; }
-  .edu-comparison-divider { font-size: 0; }
+  .edu-comparison-divider { min-height: 24px; font-size: 0; }
+  .edu-comparison-divider::before { content: "↓"; font-size: 1.1rem; }
 }
 @keyframes edu-skeleton { 0% { background-position: 100% 0; } 100% { background-position: -100% 0; } }

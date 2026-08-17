@@ -117,6 +117,7 @@
   background: var(--edu-primary);
 }
 .edu-theme-chalk {
+  color-scheme: dark;
   --edu-ink: #f2eee7;
   --edu-muted: #b9c3bb;
   --edu-line: #46534d;
