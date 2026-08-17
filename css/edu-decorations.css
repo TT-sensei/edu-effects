@@ -42,3 +42,14 @@
 @media (prefers-reduced-motion: reduce) {
   .deco-sketch, .deco-tape { transform: none; }
 }
+
+/* Named combinations -------------------------------------------------- */
+/* These aliases make common AI/design handoffs explicit and readable. */
+.deco-science-grid { --deco-line: rgb(23 125 105 / 18%); background-image: linear-gradient(var(--deco-line) 1px, transparent 1px), linear-gradient(90deg, var(--deco-line) 1px, transparent 1px); background-size: 24px 24px; }
+.deco-science-circuit { --deco-line: rgb(23 125 105 / 18%); --deco-accent: #177d69; background-image: linear-gradient(90deg, var(--deco-line) 1px, transparent 1px), linear-gradient(var(--deco-line) 1px, transparent 1px); background-size: 48px 48px; }
+.deco-digital-dots { --deco-dot: rgb(96 165 250 / 36%); background-image: radial-gradient(var(--deco-dot) 1.2px, transparent 1.2px); background-size: 16px 16px; }
+.deco-digital-halftone { --deco-dot: rgb(96 165 250 / 36%); background-image: radial-gradient(var(--deco-dot) 1.6px, transparent 1.6px); background-size: 9px 9px; }
+.deco-pop-rays { --deco-line: rgb(220 113 60 / 22%); }
+.deco-note-paper { --deco-line: #dfd1c4; --deco-accent: #a95f43; background-color: #fffaf1; }
+.deco-fantasy-shapes { --deco-shape: rgb(236 72 153 / 13%); }
+.deco-minimal-divider { --deco-line: rgb(100 116 139 / 15%); --deco-muted: #64748b; }
