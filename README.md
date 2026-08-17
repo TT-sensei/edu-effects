@@ -104,3 +104,14 @@ TT-senseiの教材サイトで自由に利用するための共通素材です�
 - edu-section-rule：区切り線つき見出し
 - edu-theme-chalk：黒板のような落ち着いた配色
 
+
+
+### タイマー
+
+edu-learning.cssには3種類のタイマーがあります。
+
+- edu-timer：残り時間を文字で表示するバッジ型
+- edu-timer-ring：--valueとdata-labelを使うリング型
+- edu-timer-bar：残り時間を横棒で表示するバー型
+
+残り時間に応じて、edu-timer-warningやedu-timer-dangerを付け替えて使います。
