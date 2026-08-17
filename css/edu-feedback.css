@@ -1,0 +1,46 @@
+/*
+ * Optional feedback effects for learning activities.
+ * Add this file after edu-effects.css when you need answer/result feedback.
+ */
+.edu-answer-pop { animation: edu-answer-pop 280ms cubic-bezier(.2,.8,.2,1) both; }
+.edu-correct-mark, .edu-wrong-mark {
+  display: inline-grid; place-items: center; width: 34px; height: 34px;
+  border-radius: 50%; font-weight: 900;
+}
+.edu-correct-mark { color: #166534; background: #dcfce7; }
+.edu-wrong-mark { color: #991b1b; background: #fee2e2; }
+.edu-reward {
+  display: grid; place-items: center; min-height: 120px; padding: 20px;
+  border: 1px solid #bfdbfe; border-radius: 18px; text-align: center;
+  background: linear-gradient(135deg, #eff6ff, #ecfeff);
+  animation: edu-reward-in 420ms cubic-bezier(.2,.8,.2,1) both;
+}
+.edu-reward-icon { font-size: 2.4rem; line-height: 1; }
+.edu-reward-title { margin: 10px 0 0; font-size: 1.2rem; font-weight: 850; }
+.edu-reward-text { margin: 4px 0 0; color: var(--edu-muted); font-size: .9rem; }
+.edu-shake { animation: edu-shake 300ms ease both; }
+.edu-pulse { animation: edu-pulse 900ms ease-in-out infinite; }
+.edu-pop { animation: edu-pop 260ms cubic-bezier(.2,.8,.2,1) both; }
+@keyframes edu-answer-pop {
+  0% { opacity: 0; transform: scale(.94); }
+  65% { transform: scale(1.04); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes edu-reward-in {
+  0% { opacity: 0; transform: translateY(12px) scale(.96); }
+  70% { transform: translateY(-2px) scale(1.01); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes edu-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+@keyframes edu-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgb(37 99 235 / 0%); }
+  50% { box-shadow: 0 0 0 8px rgb(37 99 235 / 12%); }
+}
+@keyframes edu-pop {
+  0% { transform: scale(.85); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
