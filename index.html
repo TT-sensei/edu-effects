@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>edu-effects | CSS素材リファレンス</title>
+  <meta name="description" content="TT-senseiの教材サイトで使える、再利用可能なCSS UI素材のリファレンス。">
+  <link rel="stylesheet" href="css/edu-effects.css">
+  <link rel="stylesheet" href="css/edu-feedback.css">
+  <style>
+    :root { --ref-purple: #5b4bdb; --ref-purple-soft: #f2f0ff; }
+    .ref-hero { padding: 58px 0 42px; background: linear-gradient(135deg, #f8fbff 0%, #eef5ff 58%, #f2f0ff 100%); border-bottom: 1px solid var(--edu-line); }
+    .ref-kicker { display: inline-flex; align-items: center; gap: 8px; color: var(--edu-primary-dark); font-size: .78rem; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
+    .ref-kicker::before { content: ""; width: 22px; height: 3px; border-radius: 99px; background: var(--edu-primary); }
+    .ref-hero h1 { max-width: 760px; margin: 15px 0 12px; font-size: clamp(2.2rem, 6vw, 4.3rem); line-height: 1.05; letter-spacing: -.055em; }
+    .ref-hero p { max-width: 680px; margin: 0; color: var(--edu-muted); font-size: 1.05rem; }
+    .ref-hero-actions { margin-top: 26px; }
+    .ref-nav { background: #fff; border-bottom: 1px solid var(--edu-line); }
+    .ref-nav-inner { min-height: 52px; display: flex; align-items: center; gap: 18px; overflow-x: auto; }
+    .ref-nav a { flex: 0 0 auto; color: var(--edu-muted); font-size: .88rem; font-weight: 750; text-decoration: none; }
+    .ref-nav a:hover { color: var(--edu-primary-dark); }
+    .ref-section { padding-top: 46px; }
+    .ref-section-head { margin-bottom: 18px; }
+    .ref-section-head h2 { margin: 0; font-size: 1.7rem; letter-spacing: -.025em; }
+    .ref-section-head p { margin: 6px 0 0; color: var(--edu-muted); }
+    .ref-preview { display: grid; gap: 18px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .ref-preview > .edu-card { min-height: 100%; }
+    .ref-code { position: relative; overflow: hidden; border-radius: 14px; background: #172033; }
+    .ref-code pre { max-height: 270px; overflow: auto; margin: 0; padding: 18px; color: #dbeafe; font: .78rem/1.65 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; white-space: pre-wrap; }
+    .ref-copy { position: absolute; top: 10px; right: 10px; min-height: 34px; padding: 6px 10px; border: 1px solid rgb(255 255 255 / 18%); border-radius: 8px; color: #fff; background: rgb(255 255 255 / 10%); font-size: .76rem; font-weight: 800; }
+    .ref-copy:hover { background: rgb(255 255 255 / 18%); }
+    .ref-install { display: grid; gap: 12px; grid-template-columns: 1fr auto; align-items: center; }
+    .ref-install code { display: block; overflow: auto; padding: 13px 15px; border: 1px solid var(--edu-line); border-radius: 12px; color: var(--edu-ink); background: #f8fafc; font-size: .82rem; white-space: nowrap; }
+    .ref-token { display: inline-flex; align-items: center; gap: 8px; padding: 7px 10px; border-radius: 8px; color: var(--ref-purple); background: var(--ref-purple-soft); font: 700 .78rem ui-monospace, monospace; }
+    .ref-footer { margin-top: 58px; padding: 28px 0; border-top: 1px solid var(--edu-line); color: var(--edu-muted); font-size: .85rem; }
+    .ref-footer a { color: var(--edu-primary-dark); }
+    @media (max-width: 720px) {
+      .ref-hero { padding: 40px 0 32px; }
+      .ref-preview { grid-template-columns: 1fr; }
+      .ref-install { grid-template-columns: 1fr; }
+      .ref-install .edu-btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="edu-app">
+    <header class="edu-header">
+      <div class="edu-container edu-header-inner">
+        <a class="edu-brand" href="#">edu-effects<small>EDUCATION UI CSS</small></a>
+        <span class="edu-badge edu-badge-primary">v1 · no framework</span>
+      </div>
+    </header>
+
+    <nav class="ref-nav" aria-label="ページ内メニュー">
+      <div class="edu-container ref-nav-inner">
+        <a href="#start">はじめ方</a>
+        <a href="#components">コンポーネント</a>
+        <a href="#feedback">学習フィードバック</a>
+        <a href="#reference">クラス一覧</a>
+      </div>
+    </nav>
+
+    <section class="ref-hero">
+      <div class="edu-container">
+        <span class="ref-kicker">Reusable CSS for learning sites</span>
+        <h1>教材サイトのUIを、<br>すぐ整える。</h1>
+        <p>カード、ボタン、選択肢、進捗、正解演出。よく使うパーツを、外部フォントやJavaScriptなしで再利用できます。</p>
+        <div class="edu-row ref-hero-actions">
+          <a class="edu-btn edu-btn-primary" href="#components">素材を見る ↓</a>
+          <a class="edu-btn edu-btn-secondary" href="https://github.com/TT-sensei/edu-effects">GitHubで見る ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <main class="edu-main">
+      <section id="start" class="edu-container ref-section">
+        <div class="ref-section-head">
+          <h2>はじめ方</h2>
+          <p>HTMLのheadにCSSを読み込むだけです。</p>
+        </div>
+        <div class="edu-card edu-card-pad">
+          <div class="ref-install">
+            <code id="install-code">&lt;link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-effects.css"&gt;</code>
+            <button class="edu-btn edu-btn-secondary" data-copy-target="install-code">コードをコピー</button>
+          </div>
+          <div class="edu-row" style="margin-top:14px">
+            <span class="ref-token">--edu-primary</span>
+            <span class="ref-token">--edu-radius-md</span>
+            <span class="ref-token">--edu-shadow-sm</span>
+            <span class="edu-help">CSS変数でサイトに合わせて調整できます。</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="components" class="edu-container ref-section">
+        <div class="ref-section-head">
+          <h2>コンポーネント</h2>
+          <p>クリックすると、サンプルのHTMLをコピーできます。</p>
+        </div>
+        <div class="ref-preview">
+          <article class="edu-card edu-card-pad">
+            <div class="edu-row-between"><h3 class="edu-card-title">ボタン</h3><span class="edu-badge edu-badge-neutral">操作</span></div>
+            <p class="edu-card-meta">開始・戻る・確認など、役割が伝わる3種類。</p>
+            <div class="edu-row" style="margin-top:18px">
+              <button class="edu-btn edu-btn-primary">学習を始める</button>
+              <button class="edu-btn edu-btn-secondary">あとで</button>
+              <button class="edu-btn edu-btn-quiet">ヒント</button>
+            </div>
+            <div class="ref-code" style="margin-top:18px">
+              <button class="ref-copy" data-copy-text='<button class="edu-btn edu-btn-primary">学習を始める</button>'>コピー</button>
+              <pre>&lt;button class="edu-btn edu-btn-primary"&gt;学習を始める&lt;/button&gt;</pre>
+            </div>
+          </article>
+
+          <article class="edu-card edu-card-pad">
+            <div class="edu-row-between"><h3 class="edu-card-title">カード</h3><span class="edu-badge edu-badge-primary">情報</span></div>
+            <p class="edu-card-meta">問題、単元、記録、発見などをまとめる基本の箱。</p>
+            <div class="edu-card edu-card-pad edu-card-hover" style="margin-top:18px">
+              <h3 class="edu-card-title">植物の成長</h3>
+              <p class="edu-card-meta">発芽に必要な条件を調べよう。</p>
+            </div>
+            <div class="ref-code" style="margin-top:18px">
+              <button class="ref-copy" data-copy-text='<div class="edu-card edu-card-pad edu-card-hover">...</div>'>コピー</button>
+              <pre>&lt;div class="edu-card edu-card-pad edu-card-hover"&gt;
+  ...
+&lt;/div&gt;</pre>
+            </div>
+          </article>
+
+          <article class="edu-card edu-card-pad">
+            <div class="edu-row-between"><h3 class="edu-card-title">状態表示</h3><span class="edu-badge edu-badge-success">フィードバック</span></div>
+            <div class="edu-status edu-status-success" style="margin-top:18px">
+              <span class="edu-correct-mark">✓</span>
+              <div><strong>よくできました</strong><p>条件を正しくそろえられています。</p></div>
+            </div>
+            <div class="edu-status edu-status-warning" style="margin-top:10px">
+              <span>!</span><div><strong>もう一度確認</strong><p>大事な言葉を見直してみよう。</p></div>
+            </div>
+            <div class="ref-code" style="margin-top:18px">
+              <button class="ref-copy" data-copy-text='<div class="edu-status edu-status-success">...</div>'>コピー</button>
+              <pre>&lt;div class="edu-status edu-status-success"&gt;
+  ...
+&lt;/div&gt;</pre>
+            </div>
+          </article>
+
+          <article class="edu-card edu-card-pad">
+            <div class="edu-row-between"><h3 class="edu-card-title">進捗バー</h3><span class="edu-badge edu-badge-warning">学習状況</span></div>
+            <div class="edu-progress" style="margin-top:20px">
+              <div class="edu-progress-head"><span>6問中4問</span><span>67%</span></div>
+              <div class="edu-progress-track"><div class="edu-progress-value" style="width:67%"></div></div>
+            </div>
+            <div class="ref-code" style="margin-top:18px">
+              <button class="ref-copy" data-copy-text='<div class="edu-progress"><div class="edu-progress-track"><div class="edu-progress-value" style="width:67%"></div></div></div>'>コピー</button>
+              <pre>&lt;div class="edu-progress"&gt;
+  &lt;div class="edu-progress-track"&gt;
+    &lt;div class="edu-progress-value" style="width:67%"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+            </div>
+          </article>
+
+          <article class="edu-card edu-card-pad">
+            <div class="edu-row-between"><h3 class="edu-card-title">選択肢</h3><span class="edu-badge edu-badge-primary">問題画面</span></div>
+            <div class="edu-stack" style="margin-top:18px">
+              <button class="edu-choice">A. まず水を入れる</button>
+              <button class="edu-choice is-selected">B. 条件をそろえる</button>
+              <button class="edu-choice">C. 結果だけを書く</button>
+            </div>
+            <div class="ref-code" style="margin-top:18px">
+              <button class="ref-copy" data-copy-text='<button class="edu-choice is-selected">B. 条件をそろえる</button>'>コピー</button>
+              <pre>&lt;button class="edu-choice is-selected"&gt;
+  B. 条件をそろえる
+&lt;/button&gt;</pre>
+            </div>
+          </article>
+
+          <article class="edu-card edu-card-pad">
+            <div class="edu-row-between"><h3 class="edu-card-title">タブ</h3><span class="edu-badge edu-badge-neutral">切り替え</span></div>
+            <div class="edu-tabs" style="margin-top:18px">
+              <button class="edu-tab is-active">知識</button><button class="edu-tab">実験</button><button class="edu-tab">考察</button>
+            </div>
+            <div class="ref-code" style="margin-top:18px">
+              <button class="ref-copy" data-copy-text='<div class="edu-tabs"><button class="edu-tab is-active">知識</button><button class="edu-tab">実験</button></div>'>コピー</button>
+              <pre>&lt;div class="edu-tabs"&gt;
+  &lt;button class="edu-tab is-active"&gt;知識&lt;/button&gt;
+  &lt;button class="edu-tab"&gt;実験&lt;/button&gt;
+&lt;/div&gt;</pre>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="feedback" class="edu-container ref-section">
+        <div class="ref-section-head">
+          <h2>学習フィードバック</h2>
+          <p>edu-feedback.cssを追加すると、結果画面や正解演出にも使えます。</p>
+        </div>
+        <div class="edu-grid edu-grid-3">
+          <div class="edu-reward"><div><div class="edu-reward-icon edu-pop">✓</div><div class="edu-reward-title">正解！</div><div class="edu-reward-text">次の問題へ進もう</div></div></div>
+          <div class="edu-card edu-card-pad edu-answer-pop"><span class="edu-badge edu-badge-success">ANSWERED</span><h3 class="edu-card-title" style="margin-top:12px">答えを記録しました</h3><p class="edu-card-meta">edu-answer-pop</p></div>
+          <div class="edu-card edu-card-pad edu-pulse"><span class="edu-badge edu-badge-primary">NEXT</span><h3 class="edu-card-title" style="margin-top:12px">次の挑戦へ</h3><p class="edu-card-meta">edu-pulse</p></div>
+        </div>
+      </section>
+
+      <section id="reference" class="edu-container ref-section">
+        <div class="ref-section-head">
+          <h2>クラス一覧</h2>
+          <p>READMEにも同じ一覧を掲載しています。</p>
+        </div>
+        <div class="edu-card edu-card-pad">
+          <div class="edu-grid edu-grid-2">
+            <div><span class="edu-badge edu-badge-primary">layout</span><p class="edu-card-meta"><code>.edu-container</code> <code>.edu-grid</code> <code>.edu-row-between</code></p></div>
+            <div><span class="edu-badge edu-badge-primary">surface</span><p class="edu-card-meta"><code>.edu-card</code> <code>.edu-modal</code> <code>.edu-toast</code></p></div>
+            <div><span class="edu-badge edu-badge-success">learning</span><p class="edu-card-meta"><code>.edu-choice</code> <code>.edu-progress</code> <code>.edu-reward</code></p></div>
+            <div><span class="edu-badge edu-badge-warning">state</span><p class="edu-card-meta"><code>.edu-badge-*</code> <code>.edu-status-*</code> <code>.edu-lock</code></p></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="edu-container ref-footer">
+      <span>edu-effects · reusable CSS for TT-sensei's learning sites</span>
+      <span style="float:right"><a href="https://github.com/TT-sensei/edu-effects">GitHub ↗</a></span>
+    </footer>
+  </div>
+
+  <script>
+    function copyText(text, button) {
+      const done = () => { const old = button.textContent; button.textContent = "コピーしました"; setTimeout(() => button.textContent = old, 1200); };
+      if (navigator.clipboard) navigator.clipboard.writeText(text).then(done);
+      else { const area = document.createElement("textarea"); area.value = text; document.body.appendChild(area); area.select(); document.execCommand("copy"); area.remove(); done(); }
+    }
+    document.querySelectorAll("[data-copy-text]").forEach(button => button.addEventListener("click", () => copyText(button.dataset.copyText, button)));
+    document.querySelectorAll("[data-copy-target]").forEach(button => button.addEventListener("click", () => {
+      const target = document.getElementById(button.dataset.copyTarget);
+      copyText(target.textContent, button);
+    }));
+  </script>
+</body>
+</html>
