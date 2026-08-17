@@ -164,6 +164,7 @@
     @media (max-width: 720px) { .ref-directory, .ref-quick { grid-template-columns: 1fr; } .ref-search-result { grid-template-columns: 1fr; gap: 2px; } .ref-top { right: 12px; bottom: 70px; } }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
   </style>
+  <link rel="stylesheet" href="css/catalog.css">
 </head>
 <body>
   <a class="ref-skip" href="#main-content">本文へ移動</a>
@@ -172,11 +173,13 @@
       <div class="edu-container edu-header-inner">
         <a class="edu-brand" href="#">edu-effects<small>EDUCATION UI CSS</small></a>
         <span class="edu-badge edu-badge-primary">13 CSS FILES · COPY READY</span>
+        <button class="ref-motion-switch" id="motion-switch" type="button" aria-pressed="false">動きを止める</button>
       </div>
     </header>
 
     <nav class="ref-nav" aria-label="ページ内メニュー">
       <div class="edu-container ref-nav-inner">
+        <a href="#showcase">触って試す</a>
         <a href="#start">はじめ方</a>
         <a href="#find">素材を探す</a>
         <a href="#expanded-ui">UI素材</a>
@@ -187,19 +190,72 @@
       </div>
     </nav>
 
-    <section class="ref-hero">
-      <div class="edu-container">
-        <span class="ref-kicker">Reusable CSS for learning sites</span>
-        <h1>教材サイトのUIを、<br>すぐ整える。</h1>
-        <p>カード、ボタン、選択肢、進捗、正解演出。よく使うパーツを、外部フォントやJavaScriptなしで再利用できます。</p>
-        <div class="edu-row ref-hero-actions">
-          <a class="edu-btn edu-btn-primary" href="#find">素材を探す ↓</a>
-          <a class="edu-btn edu-btn-secondary" href="https://github.com/TT-sensei/edu-effects/blob/main/AI-GUIDE.md">AI-GUIDEを見る ↗</a>
+    <section class="ref-hero" aria-labelledby="hero-title">
+      <div class="edu-container ref-hero-grid">
+        <div class="ref-hero-copy">
+          <span class="ref-kicker">CSS playground for learning sites</span>
+          <h1 id="hero-title"><span>見つけて、</span><span class="ref-hero-accent">触って、使う。</span></h1>
+          <p class="ref-hero-lead">教材サイトのボタン、問題UI、結果、ごほうび、動き。実際に試してから、そのままコードを持ち帰れるCSS素材集です。</p>
+          <div class="edu-row ref-hero-actions">
+            <a class="edu-btn edu-btn-primary edu-btn-3d" href="#showcase">まず触ってみる ↓</a>
+            <a class="edu-btn edu-btn-secondary" href="#find">素材を探す</a>
+          </div>
+          <div class="ref-hero-meta" aria-label="サイトの特徴">
+            <span><b data-material-count>66</b> MATERIALS</span>
+            <span>NO FONT / NO API</span>
+            <span>TABLET READY</span>
+          </div>
+        </div>
+        <div class="ref-playground" aria-label="演出を試す">
+          <div class="ref-playground-board">
+            <span class="ref-float-tag">.effect-impact</span>
+            <span class="ref-float-tag">.edu-choice</span>
+            <span class="ref-float-tag">.deco-grid</span>
+            <button class="ref-play-button" id="hero-play" type="button">TAP ME<small>動きを試す</small></button>
+            <span class="ref-play-label" id="hero-play-label" aria-live="polite">押すたびに演出が変わります</span>
+          </div>
         </div>
       </div>
     </section>
 
+    <div class="ref-motion-strip" aria-hidden="true">
+      <div class="ref-motion-track">
+        <span>BUTTON</span><span>QUESTION</span><span>FEEDBACK</span><span>REWARD</span><span>MOTION</span><span>DECORATION</span>
+        <span>BUTTON</span><span>QUESTION</span><span>FEEDBACK</span><span>REWARD</span><span>MOTION</span><span>DECORATION</span>
+      </div>
+    </div>
+
     <main id="main-content" class="edu-main">
+      <section id="showcase" class="edu-container ref-showcase">
+        <div class="ref-showcase-head">
+          <div>
+            <span class="ref-kicker">PLAYGROUND</span>
+            <h2>まず、さわってみる。</h2>
+            <p>説明を読む前に、教材でよく使う場面を試せます。動きや手触りを確かめて、気に入った素材を探してください。</p>
+          </div>
+          <button class="ref-surprise" id="surprise-me" type="button">おまかせで1つ見る ↗</button>
+        </div>
+        <div class="ref-scene-grid">
+          <article class="ref-scene">
+            <div><span class="ref-scene-number">SCENE 01 · ANSWER</span><h3>こたえる</h3><p>選択肢は、大きく、迷わず、押した結果が伝わるように。</p></div>
+            <div class="ref-scene-demo">
+              <button class="edu-choice is-selected" type="button" data-showcase-target><span class="edu-choice-mark">A</span><span><strong>条件をそろえる</strong><small>実験で確かめたい条件</small></span></button>
+            </div>
+            <button class="ref-scene-play" type="button" data-showcase-action="edu-success-burst">▶ 正解の動きを試す</button>
+          </article>
+          <article class="ref-scene">
+            <div><span class="ref-scene-number">SCENE 02 · RESULT</span><h3>できた！</h3><p>学びの区切りに、次へ進みたくなる達成感を。</p></div>
+            <div class="ref-scene-demo"><div class="edu-complete" data-showcase-target><span class="edu-complete-mark">✓</span><strong>単元クリア</strong></div></div>
+            <button class="ref-scene-play" type="button" data-showcase-action="effect-stamp">▶ 達成を再生</button>
+          </article>
+          <article class="ref-scene">
+            <div><span class="ref-scene-number">SCENE 03 · REWARD</span><h3>もっとやる</h3><p>点数だけでなく、集める・育てる楽しさも教材に。</p></div>
+            <div class="ref-scene-demo"><div class="edu-rank-card" data-showcase-target><span class="edu-rank-badge edu-rank-s">S</span><div><strong>新記録！</strong><p class="edu-card-meta">BEST SCORE 1280</p></div></div></div>
+            <button class="ref-scene-play" type="button" data-showcase-action="confetti">▶ ごほうびを再生</button>
+          </article>
+        </div>
+      </section>
+
       <section id="start" class="edu-container ref-section">
         <div class="ref-section-head">
           <h2>はじめ方</h2>
@@ -235,6 +291,11 @@
 &lt;link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-decorations-advanced.css"&gt;</pre>
             </div>
           </details>
+        </div>
+        <div class="ref-steps" aria-label="素材を使う3つの手順">
+          <div class="ref-step"><b>1</b><strong>見つける</strong><span>目的や名前で、必要な素材を絞り込む。</span></div>
+          <div class="ref-step"><b>2</b><strong>試してみる</strong><span>その場で動きと見た目を確かめる。</span></div>
+          <div class="ref-step"><b>3</b><strong>コピーする</strong><span>読み込みとクラス名を教材へ持っていく。</span></div>
         </div>
       </section>
 
@@ -1226,5 +1287,6 @@
     window.addEventListener("scroll", () => backToTop.classList.toggle("is-visible", window.scrollY > 700), { passive: true });
     backToTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
   </script>
+  <script src="js/catalog-showcase.js"></script>
 </body>
 </html>
