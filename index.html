@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/edu-motion.css">
   <link rel="stylesheet" href="css/edu-editorial.css">
   <link rel="stylesheet" href="css/edu-interactive.css">
+  <link rel="stylesheet" href="css/edu-effects-extra.css">
   <style>
     :root { --ref-purple: #5b4bdb; --ref-purple-soft: #f2f0ff; }
     .ref-hero { padding: 58px 0 42px; background: linear-gradient(135deg, #f8fbff 0%, #eef5ff 58%, #f2f0ff 100%); border-bottom: 1px solid var(--edu-line); }
@@ -92,6 +93,7 @@
         <a href="#timers">タイマー</a>
         <a href="#timer-variants">タイマー別案</a>
         <a href="#interactive">問題パーツ</a>
+        <a href="#effects">エフェクト</a>
         <a href="#reference">クラス一覧</a>
       </div>
     </nav>
@@ -480,6 +482,45 @@
         </div>
       </section>
 
+
+
+      <section id="effects" class="edu-container ref-section">
+        <div class="ref-section-head">
+          <h2>学習用エフェクト</h2>
+          <p>状態が変わった瞬間にクラスを付けるだけ。短く、意味が伝わる動きです。</p>
+        </div>
+        <div class="edu-grid edu-grid-3">
+          <div class="edu-card edu-card-pad edu-effect-correct">
+            <span class="edu-badge edu-badge-success">CORRECT</span>
+            <h3 class="edu-card-title" style="margin-top:12px">正解しました</h3>
+            <p class="edu-card-meta">edu-effect-correct</p>
+          </div>
+          <div class="edu-card edu-card-pad edu-effect-wrong">
+            <span class="edu-badge edu-badge-danger">RETRY</span>
+            <h3 class="edu-card-title" style="margin-top:12px">もう一度考える</h3>
+            <p class="edu-card-meta">edu-effect-wrong</p>
+          </div>
+          <div class="edu-card edu-card-pad edu-effect-combo">
+            <span class="edu-badge edu-badge-warning">COMBO ×3</span>
+            <h3 class="edu-card-title" style="margin-top:12px">連続正解</h3>
+            <p class="edu-card-meta">edu-effect-combo</p>
+          </div>
+          <div class="edu-card edu-card-pad">
+            <span class="edu-mark-flower edu-effect-stamp">合格</span>
+            <p class="edu-card-meta" style="margin-top:12px">edu-effect-stamp</p>
+          </div>
+          <div class="edu-card edu-card-pad edu-effect-unlock">
+            <span class="edu-badge edu-badge-primary">UNLOCKED</span>
+            <h3 class="edu-card-title" style="margin-top:12px">次の単元が開きました</h3>
+            <p class="edu-card-meta">edu-effect-unlock</p>
+          </div>
+          <div class="edu-card edu-card-pad edu-effect-paper-in">
+            <span class="edu-badge edu-badge-neutral">PAPER IN</span>
+            <h3 class="edu-card-title" style="margin-top:12px"><span class="edu-effect-highlight">大切な言葉</span></h3>
+            <p class="edu-card-meta">edu-effect-paper-in / highlight</p>
+          </div>
+        </div>
+      </section>
 
       <section id="interactive" class="edu-container ref-section">
         <div class="ref-section-head">
