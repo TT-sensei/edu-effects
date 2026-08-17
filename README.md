@@ -1,6 +1,10 @@
 # edu-effects
 
-TT-senseiの教材サイトで共通利用する、落ち着いたUI用CSS素材集です。
+教材サイト制作でAIと人間が再利用するための、共通CSS / Effectsライブラリです。
+
+基本UI、学習UI、タイマー、インタラクティブ部品、学習用Effects、Decoration素材を、必要なファイルだけ読み込んで使えます。
+
+まずは [AI-GUIDE.md](AI-GUIDE.md) と [公開カタログ](https://tt-sensei.github.io/edu-effects/) を確認してください。見本サイトでは各素材を再生し、クラス名とHTMLをコピーできます。
 
 ## 使い方
 
