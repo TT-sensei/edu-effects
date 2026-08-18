@@ -310,3 +310,22 @@ edu-decorations-advanced.cssには、教材のテーマをはっきり分ける�
 - `edu-kinetic-dot`：保存中・接続中などの状態表示
 - `edu-kinetic-toast`：短い通知の登場
 
+
+
+## クリエイティブ素材
+
+`edu-effects-creative.css` は、見出し、カード、背景、報酬表示などを単体で試せる追加素材です。Reactや外部ライブラリは必要ありません。
+
+~~~html
+<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-effects-creative.css">
+~~~
+
+主なクラス：
+
+- `edu-creative-shimmer` / `edu-creative-blur-in`：見出しや報酬の登場
+- `edu-creative-highlight`：重要語句の強調
+- `edu-creative-tilt`：カードの軽い浮遊感
+- `edu-creative-glow-border`：選択中カードの光る枠
+- `edu-creative-stack`：カードを重ねた見た目
+- `edu-creative-aurora` / `edu-creative-orbit`：教材背景の雰囲気づくり
+
