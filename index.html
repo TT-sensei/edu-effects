@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="css/edu-effects-kinetic.css">
   <link rel="stylesheet" href="css/edu-effects-creative.css">
   <link rel="stylesheet" href="css/edu-effects-learning-panels.css">
+  <link rel="stylesheet" href="css/edu-effects-interaction-kit.css">
   <link rel="stylesheet" href="css/edu-effects-21st-composer.css">
   <link rel="stylesheet" href="css/edu-effects-learning-shell.css">
   <link rel="stylesheet" href="css/edu-decorations.css">
@@ -1325,6 +1326,42 @@
         </div>
       </section>
 
+
+      <section id="interaction-materials" class="edu-container ref-section">
+        <div class="ref-section-head">
+          <span class="ref-kicker">NEW · INTERACTION KIT</span>
+          <h2>状態・遷移・注釈の素材</h2>
+          <p>教材の「いま何が起きているか」「どこを見直すか」を伝えるための独自パターンです。</p>
+        </div>
+        <div class="edu-grid edu-grid-2 ref-catalog-grid">
+          <article class="edu-card edu-card-pad" data-catalog-card>
+            <div class="edu-row" style="align-items:center;gap:16px"><div><div class="edu-state-orb">考え中</div><span class="edu-state-orb-label">処理中・思考中</span></div><div><div class="edu-state-orb is-success">完了</div><span class="edu-state-orb-label">成功・確認済み</span></div><div><div class="edu-state-orb is-waiting">待機</div><span class="edu-state-orb-label">待機中</span></div></div>
+            <p class="edu-card-meta"><code>edu-state-orb</code> · <code>is-success</code> · <code>is-waiting</code></p>
+            <button class="edu-btn edu-btn-secondary ref-copy-inline" data-copy-text='<div class="edu-state-orb is-success">完了</div>'>コードをコピー</button>
+          </article>
+          <article class="edu-card edu-card-pad" data-catalog-card>
+            <div class="edu-transition-stage"><div class="edu-transition-page"><h3>次の問題へ</h3><p>画面切り替えを短く知らせる</p><div class="edu-transition-dots"><i></i><i></i><i></i></div></div></div>
+            <p class="edu-card-meta"><code>edu-transition-page</code> · <code>edu-transition-dots</code></p>
+            <button class="edu-btn edu-btn-secondary ref-copy-inline" data-copy-text='<div class="edu-transition-page">...</div>'>コードをコピー</button>
+          </article>
+          <article class="edu-card edu-card-pad" data-catalog-card>
+            <div class="edu-annotation-board"><div class="edu-annotation-target"><strong>この資料から分かること</strong><p>数字の変化に注目しよう。</p></div><div class="edu-annotation-note"><strong>先生のメモ</strong>根拠になる部分に線を引こう。</div></div>
+            <p class="edu-card-meta"><code>edu-annotation-target</code> · <code>edu-annotation-note</code></p>
+            <button class="edu-btn edu-btn-secondary ref-copy-inline" data-copy-text='<div class="edu-annotation-note">...</div>'>コードをコピー</button>
+          </article>
+          <article class="edu-card edu-card-pad" data-catalog-card>
+            <div class="edu-pattern-list"><article class="edu-pattern-card"><span>QUESTION</span><h3>問いカード</h3><p>考える対象を一つにしぼる。</p></article><article class="edu-pattern-card"><span>FEEDBACK</span><h3>振り返り</h3><p>理由や根拠を残す。</p></article><article class="edu-pattern-card"><span>RESULT</span><h3>結果表示</h3><p>次の行動へつなげる。</p></article></div>
+            <p class="edu-card-meta"><code>edu-pattern-list</code> · <code>edu-pattern-card</code></p>
+            <button class="edu-btn edu-btn-secondary ref-copy-inline" data-copy-text='<article class="edu-pattern-card">...</article>'>コードをコピー</button>
+          </article>
+          <article class="edu-card edu-card-pad" data-catalog-card>
+            <div class="edu-sheet"><div class="edu-sheet-handle"></div><h3>ヒントを確認</h3><p>必要なときだけ開く、タブレット向け下部パネル。</p></div>
+            <p class="edu-card-meta"><code>edu-sheet</code> · <code>edu-sheet-handle</code></p>
+            <button class="edu-btn edu-btn-secondary ref-copy-inline" data-copy-text='<aside class="edu-sheet">...</aside>'>コードをコピー</button>
+          </article>
+        </div>
+      </section>
+
       <section id="reference" class="edu-container ref-section">
         <div class="ref-section-head">
           <h2>クラス一覧</h2>
@@ -1555,6 +1592,15 @@
           canvas.appendChild(next);
         }
       }
+    });
+  </script>
+
+  <script>
+    document.querySelectorAll("[data-interaction-demo]").forEach(button => {
+      button.addEventListener("click", () => {
+        const target = document.querySelector(button.dataset.interactionDemo);
+        if (target) target.classList.toggle("is-exit");
+      });
     });
   </script>
   <script src="js/catalog-showcase.js"></script>
