@@ -367,3 +367,29 @@ beautifului.devのContext / Insight / Recommendation / Approvalパターンを�
 - `edu-panel-processing`：採点中、生成中、保存中
 - `edu-panel-stream`：結果を順番に見せる
 
+
+
+## 学習画面コンポーザー素材
+
+`edu-effects-21st-composer.css` は、部品を選んで学習画面の流れを組み立てるための素材です。21st.devの部品ギャラリーの考え方を、教材の問い・ヒント・振り返り・達成に置き換えています。
+
+~~~html
+<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-effects-21st-composer.css">
+<div class="edu-composer">
+  <div class="edu-component-palette">
+    <button class="edu-component-chip" data-component="question">問いを置く</button>
+  </div>
+  <div class="edu-composer-canvas">
+    <div class="edu-composer-slot is-question">...</div>
+  </div>
+</div>
+~~~
+
+主なクラス：
+
+- `edu-composer`：部品パレットと組み立てキャンバス
+- `edu-component-palette` / `edu-component-chip`：追加する部品の一覧
+- `edu-composer-canvas`：学習の流れを置く場所
+- `edu-composer-slot`：問い・ヒント・振り返り・達成の各スロット
+- `edu-composer-remove`：組み合わせから部品を外すボタン
+

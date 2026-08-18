@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="css/edu-effects-kinetic.css">
   <link rel="stylesheet" href="css/edu-effects-creative.css">
   <link rel="stylesheet" href="css/edu-effects-learning-panels.css">
+  <link rel="stylesheet" href="css/edu-effects-21st-composer.css">
   <link rel="stylesheet" href="css/edu-effects-learning-shell.css">
   <link rel="stylesheet" href="css/edu-decorations.css">
   <link rel="stylesheet" href="css/edu-ui-variants.css">
@@ -1297,6 +1298,33 @@
         </div>
       </section>
 
+
+      <section id="learning-composer" class="edu-container ref-section">
+        <div class="ref-section-head">
+          <span class="ref-kicker">NEW · LEARNING COMPOSER</span>
+          <h2>教材画面を組み立てる</h2>
+          <p>部品を選んで、問題・ヒント・振り返りの流れを試せます。必要な部品だけを持ち帰るための見本です。</p>
+        </div>
+        <div class="edu-card edu-card-pad" data-catalog-card>
+          <div class="edu-composer" data-composer>
+            <div class="edu-component-palette" aria-label="追加できる教材部品">
+              <strong>部品を選ぶ</strong>
+              <button class="edu-component-chip" type="button" data-component="question">問いを置く</button>
+              <button class="edu-component-chip" type="button" data-component="hint">ヒントを置く</button>
+              <button class="edu-component-chip" type="button" data-component="feedback">振り返りを置く</button>
+              <button class="edu-component-chip" type="button" data-component="reward">達成を置く</button>
+            </div>
+            <div class="edu-composer-canvas" data-composer-canvas aria-live="polite">
+              <strong>MY LEARNING FLOW</strong>
+              <div class="edu-composer-empty" data-composer-empty>左の部品をタップして追加<small>順番を考えながら組み合わせよう</small></div>
+            </div>
+            <p class="edu-composer-status" data-composer-status>現在 <strong>0</strong> 個の部品</p>
+          </div>
+          <p class="edu-card-meta"><code>edu-composer</code> · <code>edu-component-chip</code> · <code>edu-composer-slot</code></p>
+          <button class="edu-btn edu-btn-secondary ref-copy-inline" data-copy-text='<div class="edu-composer">...</div>'>コードをコピー</button>
+        </div>
+      </section>
+
       <section id="reference" class="edu-container ref-section">
         <div class="ref-section-head">
           <h2>クラス一覧</h2>
@@ -1491,6 +1519,43 @@
     const backToTop = document.getElementById("back-to-top");
     window.addEventListener("scroll", () => backToTop.classList.toggle("is-visible", window.scrollY > 700), { passive: true });
     backToTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+  </script>
+
+  <script>
+    const composerLabels = {
+      question: ["問い", "考えることを1つにしぼる"],
+      hint: ["ヒント", "手がかりを必要な人へ"],
+      feedback: ["振り返り", "理由や根拠を言葉にする"],
+      reward: ["達成", "できたことを記録する"]
+    };
+    document.querySelectorAll("[data-composer]").forEach(composer => {
+      const canvas = composer.querySelector("[data-composer-canvas]");
+      const empty = composer.querySelector("[data-composer-empty]");
+      const status = composer.querySelector("[data-composer-status] strong");
+      composer.querySelectorAll("[data-component]").forEach(button => button.addEventListener("click", () => {
+        const type = button.dataset.component;
+        const label = composerLabels[type];
+        if (!label) return;
+        empty?.remove();
+        const slot = document.createElement("div");
+        slot.className = "edu-composer-slot is-" + type + " is-new";
+        slot.innerHTML = "<span><b>" + label[0] + "</b><small>" + label[1] + "</small></span><code>edu-" + type + "</code><button class=\"edu-composer-remove\" type=\"button\" aria-label=\"" + label[0] + "を削除\">×</button>";
+        slot.querySelector("button").addEventListener("click", () => { slot.remove(); updateComposer(); });
+        canvas.appendChild(slot);
+        updateComposer();
+      }));
+      function updateComposer() {
+        const count = canvas.querySelectorAll(".edu-composer-slot").length;
+        status.textContent = count;
+        if (!count && !canvas.querySelector("[data-composer-empty]")) {
+          const next = document.createElement("div");
+          next.className = "edu-composer-empty";
+          next.dataset.composerEmpty = "";
+          next.innerHTML = "左の部品をタップして追加<small>順番を考えながら組み合わせよう</small>";
+          canvas.appendChild(next);
+        }
+      }
+    });
   </script>
   <script src="js/catalog-showcase.js"></script>
 </body>
