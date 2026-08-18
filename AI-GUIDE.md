@@ -258,3 +258,17 @@ Decorationのテーマを使う場合は、edu-decorations-advanced.cssを追加
 <link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-effects-creative.css">
 ~~~
 
+
+
+## 実用レイアウト素材の選び方
+
+`edu-effects-practical.css` は、WraptasのCSSサンプル集のような「ページ全体を整える小さな部品」を教材用にまとめたものです。
+
+- 見出し：`edu-practical-heading`、`edu-practical-heading-number`
+- リンクをボタン風にする：`edu-practical-link-button`
+- タグや単元選択：`edu-practical-chip`、選択時は `is-active`
+- ヒント・注意：`edu-practical-callout` と success / warning / danger
+- 表：`edu-practical-table-wrap` で囲み、スマホの横スクロールに対応
+- コード・手順：`edu-practical-code`
+- 長いページ：`edu-practical-top` をページ上部リンクとして使う
+
