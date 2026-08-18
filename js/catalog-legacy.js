@@ -563,8 +563,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "decoration",
     "file": "edu-effects-creative.css",
     "tags": "図鑑カード .edu-creative-tilt creative-materials",
-    "preview": "<h3>図鑑カード</h3> <p>見つけたものをカードで見せる</p> <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<article class=\"edu-creative-tilt\">...",
-    "copy": "<h3>図鑑カード</h3> <p>見つけたものをカードで見せる</p> <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<article class=\"edu-creative-tilt\">..."
+    "preview": "<h3>図鑑カード</h3> <p>見つけたものをカードで見せる</p>",
+    "copy": "<h3>図鑑カード</h3> <p>見つけたものをカードで見せる</p>"
   },
   {
     "title": "選択中のカード",
@@ -572,8 +572,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "decoration",
     "file": "edu-effects-creative.css",
     "tags": "選択中のカード .edu-creative-glow-border is-active creative-materials",
-    "preview": "<h3>選択中のカード</h3> <p>is-active で選択状態を表現</p> <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<article class=\"edu-creative-glow-border is-active\">...",
-    "copy": "<h3>選択中のカード</h3> <p>is-active で選択状態を表現</p> <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<article class=\"edu-creative-glow-border is-active\">..."
+    "preview": "<h3>選択中のカード</h3> <p>is-active で選択状態を表現</p>",
+    "copy": "<h3>選択中のカード</h3> <p>is-active で選択状態を表現</p>"
   },
   {
     "title": "理科ラボへようこそ",
