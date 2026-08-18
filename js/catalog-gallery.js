@@ -173,6 +173,11 @@
     }
   ];
 
+  // Keep the newer showroom cards and restore the older catalog examples too.
+  // The legacy set is generated from the real examples that were previously
+  // visible in the catalog, so the gallery does not silently lose materials.
+  const allMaterials = materials.concat(window.EduEffectsLegacyMaterials || []);
+
   const labels = {
     question: "ANSWER / 答える",
     feedback: "FEEDBACK / 伝える",
@@ -199,7 +204,7 @@
     .replaceAll('"', "&quot;");
 
   function renderCards() {
-    grid.innerHTML = materials.map((material, index) => `
+    grid.innerHTML = allMaterials.map((material, index) => `
       <article class="material-card" data-index="${index}" data-category="${material.category}" data-search="${escapeHtml(`${material.title} ${material.className} ${material.file} ${material.tags}`.toLowerCase())}">
         <div class="material-preview ${material.stage || ""}" data-preview>${material.preview}</div>
         <button class="material-replay" type="button" data-replay aria-label="${material.title}を再生">↻</button>
@@ -208,7 +213,7 @@
           <button class="material-copy" type="button" data-copy-index="${index}">HTMLをコピー</button>
         </div>
       </article>`).join("");
-    total.textContent = String(materials.length);
+    total.textContent = String(allMaterials.length);
     filterCards();
   }
 
@@ -236,7 +241,7 @@
   }
 
   function playMaterial(card) {
-    const material = materials[Number(card.dataset.index)];
+    const material = allMaterials[Number(card.dataset.index)];
     const preview = card.querySelector("[data-preview]");
     preview.innerHTML = material.preview;
     const target = preview.firstElementChild;
@@ -276,7 +281,7 @@
     const replay = event.target.closest("[data-replay]");
     if (replay) playMaterial(replay.closest(".material-card"));
     const copy = event.target.closest("[data-copy-index]");
-    if (copy) copyText(materials[Number(copy.dataset.copyIndex)].copy);
+    if (copy) copyText(allMaterials[Number(copy.dataset.copyIndex)].copy);
   });
 
   document.querySelectorAll("button[data-category]").forEach(button => {
