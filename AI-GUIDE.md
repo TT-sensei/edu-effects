@@ -27,7 +27,8 @@
 
 | 目的 | 読み込むファイル |
 | --- | --- |
-| カード、ボタン、選択肢、フォーム | edu-effects.css |
+| 基本カード、ボタン、選択肢、フォーム | edu-effects.css |
+| 正解・不正解のマークと状態 | edu-feedback.css |
 | 色や部品の見た目違い | edu-variants.css |
 | 問題、結果、タイマー、テンキー | edu-learning.css |
 | 入場、正解、不正解など控えめな動き | edu-motion.css |
@@ -37,8 +38,30 @@
 | 強いインパクト、波紋、衝撃波、解除演出 | edu-effects-advanced.css |
 | 拡張ボタン、問題UI、結果、ゲームUI | edu-ui-variants.css |
 | 正解、達成、バッジ、コンボ、カード演出 | edu-effects-library.css |
-| 背景、枠、線、装飾 | edu-decorations.css |
+| 問題・答え・結果の登場、開示、順番表示 | edu-effects-learning-motion.css |
+| 押す・数値変化・ヒント開閉などの操作感 | edu-effects-kinetic.css |
+| 見出し、カード、オーロラ、重なりの表現 | edu-effects-creative.css |
+| 資料、ヒント、気づき、採点・分析パネル | edu-effects-learning-panels.css |
+| 思考中、処理中、画面遷移、先生メモ | edu-effects-interaction-kit.css |
+| 問い・ヒント・振り返り・達成を組み合わせる画面 | edu-effects-21st-composer.css |
+| 教材ヘッダー、単元カード、活動、結果の骨格 | edu-effects-learning-shell.css |
+| 背景、枠、線、基本装飾 | edu-decorations.css |
+| 理科、宇宙、ノート、黒板などのテーマ装飾 | edu-decorations-advanced.css |
 | 紙吹雪などの任意ヘルパー | js/edu-effects.js |
+
+### 同じ役割の演出を選ぶとき
+
+- `edu-feedback.css` の `.edu-correct-mark` や `.edu-wrong-mark` は、判定を静かに伝える状態部品です。
+- `edu-effects-library.css` の `effect-correct-*` / `effect-wrong-*` は、正解・不正解を動きで見せる演出です。
+- 迷ったら、毎問の判定には `edu-feedback.css`、特別な演出には `edu-effects-library.css` を使います。同じ役割の新しいCSSは作りません。
+
+### 命名と互換性
+
+装飾の `deco-*` と演出の `effect-*` は既存教材との互換性のため現状維持しています。新しく共通クラスを追加するときは、他教材との衝突を避けるため `edu-` 接頭辞を優先してください。既存の `deco-*` / `effect-*` を一括リネームしないでください。
+
+### 旧カタログ用ファイル
+
+`css/catalog.css`、`css/catalog-showroom.css`、`js/catalog-showcase.js` は旧カタログのレイアウト・検索・演出用です。教材アプリからは読み込みません。現在の公開カタログは `css/catalog-gallery.css`、`js/catalog-gallery.js`、`js/catalog-legacy.js` を使っています。旧カタログにあった実素材は、重複整理のうえ現在の一覧へ復元済みです。
 
 ## 読み込み例
 
