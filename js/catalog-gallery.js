@@ -223,8 +223,12 @@
   const empty = document.getElementById("catalog-empty");
   const toast = document.getElementById("copy-toast");
   const motionToggle = document.getElementById("motion-toggle");
+  const cssFileCount = document.getElementById("css-file-count");
   let activeCategory = "all";
   let toastTimer;
+  if (cssFileCount) {
+    cssFileCount.textContent = String(Array.from(document.querySelectorAll("link[rel=stylesheet]")).filter(link => !link.href.includes("catalog-gallery.css")).length);
+  }
   const activeHeroComposition = setRandomHeroComposition();
 
   const escapeHtml = value => value
