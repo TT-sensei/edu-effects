@@ -7,7 +7,7 @@
 /* Text materials ------------------------------------------------------ */
 .edu-creative-shimmer {
   color: transparent;
-  background: linear-gradient(110deg, currentColor 0 32%, var(--edu-shimmer-light, #fff) 46%, currentColor 60% 100%);
+  background: linear-gradient(110deg, var(--edu-shimmer-base, #2563eb) 0 32%, var(--edu-shimmer-light, #fff) 46%, var(--edu-shimmer-base, #2563eb) 60% 100%);
   background-size: 220% 100%;
   -webkit-background-clip: text;
   background-clip: text;
