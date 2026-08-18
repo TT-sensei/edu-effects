@@ -393,3 +393,19 @@ beautifului.devのContext / Insight / Recommendation / Approvalパターンを�
 - `edu-composer-slot`：問い・ヒント・振り返り・達成の各スロット
 - `edu-composer-remove`：組み合わせから部品を外すボタン
 
+
+
+## インタラクション素材
+
+`edu-effects-interaction-kit.css` は、思考中・処理中・成功・画面切り替え・注釈・パターン整理を教材向けにまとめた素材です。外部ライブラリなしで使えます。
+
+~~~html
+<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-effects-interaction-kit.css">
+~~~
+
+- `edu-state-orb`：思考中・成功・待機などの状態表示
+- `edu-transition-stage` / `edu-transition-page`：問題や結果の切り替え
+- `edu-annotation-board` / `edu-annotation-note`：資料や問題への注釈
+- `edu-pattern-list` / `edu-pattern-card`：教材部品のパターン整理
+- `edu-sheet`：ヒントや確認を置く下部パネル風の面
+
