@@ -258,3 +258,23 @@ Decorationのテーマを使う場合は、edu-decorations-advanced.cssを追加
 <link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-effects-creative.css">
 ~~~
 
+
+
+## 学習アプリの共通シェルを使うとき
+
+TT-senseiの複数教材で繰り返し使っている画面構造を、`edu-effects-learning-shell.css` にまとめています。
+
+- 単元選択：`edu-shell-unit-grid` と `edu-shell-unit-card`
+- 学習開始：`edu-shell-hero` と `edu-shell-flow`
+- 問題・実験：`edu-shell-workspace`、`edu-shell-activity-nav`、`edu-shell-activity-card`
+- 理科の予想・根拠：`edu-shell-prediction`、`edu-shell-evidence`
+- 結果・正誤：`edu-shell-feedback`、`edu-shell-result-ring`
+- 発見図鑑：`edu-shell-discovery-grid`、`edu-shell-discovery-card`
+
+読み込み：
+
+~~~html
+<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-effects-learning-shell.css">
+~~~
+
+既存教材の保存処理、問題ロジック、バッジ処理は変更せず、HTML構造にクラスを足して使います。画面幅820px以下では活動ナビが横スクロール型に変わります。
