@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#15171c">
+  <title>edu-effects | 教材UI素材カタログ</title>
+  <meta name="description" content="教材サイト向けCSS素材を、実際に触って選び、コードをコピーできるカタログです。">
+  <link rel="stylesheet" href="css/edu-effects.css">
+  <link rel="stylesheet" href="css/edu-feedback.css">
+  <link rel="stylesheet" href="css/edu-variants.css">
+  <link rel="stylesheet" href="css/edu-learning.css">
+  <link rel="stylesheet" href="css/edu-motion.css">
+  <link rel="stylesheet" href="css/edu-editorial.css">
+  <link rel="stylesheet" href="css/edu-interactive.css">
+  <link rel="stylesheet" href="css/edu-effects-extra.css">
+  <link rel="stylesheet" href="css/edu-effects-library.css">
+  <link rel="stylesheet" href="css/edu-effects-learning-motion.css">
+  <link rel="stylesheet" href="css/edu-effects-kinetic.css">
+  <link rel="stylesheet" href="css/edu-effects-creative.css">
+  <link rel="stylesheet" href="css/edu-effects-learning-panels.css">
+  <link rel="stylesheet" href="css/edu-effects-interaction-kit.css">
+  <link rel="stylesheet" href="css/edu-effects-21st-composer.css">
+  <link rel="stylesheet" href="css/edu-effects-learning-shell.css">
+  <link rel="stylesheet" href="css/edu-decorations.css">
+  <link rel="stylesheet" href="css/edu-ui-variants.css">
+  <link rel="stylesheet" href="css/edu-effects-advanced.css">
+  <link rel="stylesheet" href="css/edu-decorations-advanced.css">
+  <link rel="stylesheet" href="css/catalog-gallery.css">
+</head>
+<body>
+  <a class="gallery-skip" href="#catalog">カタログへ移動</a>
+
+  <header class="gallery-header">
+    <a class="gallery-logo" href="#top" aria-label="edu-effects トップへ">
+      <span class="gallery-logo-mark">e</span>
+      <span>edu-effects<small>EDUCATION UI LIBRARY</small></span>
+    </a>
+    <nav class="gallery-header-nav" aria-label="メインメニュー">
+      <a href="#collections">コレクション</a>
+      <a href="#catalog">すべての素材</a>
+      <a href="#start">使い方</a>
+    </nav>
+    <button class="gallery-motion" id="motion-toggle" type="button" aria-pressed="false">動き ON</button>
+  </header>
+
+  <main id="top">
+    <section class="gallery-hero">
+      <div class="gallery-hero-copy">
+        <p class="gallery-eyebrow"><span></span> CSS MATERIAL CATALOG · 2026</p>
+        <h1>教材の画面を、<br><em>もっと気持ちよく。</em></h1>
+        <p class="gallery-hero-lead">ボタン、問題、結果、ごほうび、動き。実際の素材を触りながら、授業に合うデザインを選べます。</p>
+        <div class="gallery-hero-actions">
+          <a class="gallery-primary" href="#catalog">素材を見る <span>↘</span></a>
+          <button class="gallery-secondary" id="random-material" type="button">おまかせで見る</button>
+        </div>
+        <dl class="gallery-stats" aria-label="カタログ概要">
+          <div><dt id="material-total">0</dt><dd>LIVE MATERIALS</dd></div>
+          <div><dt>20</dt><dd>CSS FILES</dd></div>
+          <div><dt>0</dt><dd>DEPENDENCIES</dd></div>
+        </dl>
+      </div>
+
+      <div class="gallery-hero-stage deco-theme-space" aria-label="素材を組み合わせた見本">
+        <div class="gallery-orbit edu-creative-orbit"></div>
+        <span class="gallery-stage-label">LIVE COMPOSITION</span>
+        <div class="gallery-demo-card edu-card edu-card-collection edu-creative-glow-border" id="hero-demo-card">
+          <div class="gallery-demo-head">
+            <span class="edu-badge edu-badge-primary">MISSION 04</span>
+            <span class="edu-streak edu-streak-hot"><span class="edu-streak-icon">✦</span><span><b class="edu-streak-value">8</b><small class="edu-streak-label">COMBO</small></span></span>
+          </div>
+          <p class="gallery-demo-kicker">SCIENCE LAB</p>
+          <h2>月の見え方を<br>説明しよう</h2>
+          <div class="edu-xp edu-kinetic-xp">
+            <div class="edu-xp-head"><span>研究XP</span><strong>72 / 100</strong></div>
+            <div class="edu-xp-track"><div class="edu-xp-value" style="width:72%"></div></div>
+          </div>
+          <button class="edu-btn edu-btn-primary edu-btn-3d" id="hero-demo-play" type="button">演出を再生</button>
+        </div>
+        <span class="gallery-code-tag tag-one">.edu-card-collection</span>
+        <span class="gallery-code-tag tag-two">.edu-kinetic-xp</span>
+        <span class="gallery-code-tag tag-three">.effect-glint</span>
+      </div>
+    </section>
+
+    <div class="gallery-marquee" aria-hidden="true">
+      <div><span>BUTTON</span><i>✦</i><span>QUESTION</span><i>✦</i><span>FEEDBACK</span><i>✦</i><span>REWARD</span><i>✦</i><span>MOTION</span><i>✦</i><span>DECORATION</span><i>✦</i><span>BUTTON</span><i>✦</i><span>QUESTION</span><i>✦</i><span>FEEDBACK</span><i>✦</i><span>REWARD</span><i>✦</i></div>
+    </div>
+
+    <section class="gallery-intro" id="collections">
+      <div>
+        <p class="gallery-section-number">01 / COLLECTIONS</p>
+        <h2>作りたい場面から、<br>選んでみる。</h2>
+      </div>
+      <p>素材名が分からなくても大丈夫。教材づくりでよくある場面ごとに、使いやすい素材をまとめました。</p>
+    </section>
+
+    <section class="gallery-collections" aria-label="目的別コレクション">
+      <button class="gallery-collection is-active" type="button" data-category="all">
+        <span class="gallery-collection-index">ALL</span><strong>すべての素材</strong><small>カタログ全体を見る</small><b>↘</b>
+      </button>
+      <button class="gallery-collection" type="button" data-category="question">
+        <span class="gallery-collection-index">01</span><strong>答える</strong><small>問題・選択肢・入力</small><b>↘</b>
+      </button>
+      <button class="gallery-collection" type="button" data-category="feedback">
+        <span class="gallery-collection-index">02</span><strong>伝える</strong><small>正解・ヒント・状態</small><b>↘</b>
+      </button>
+      <button class="gallery-collection" type="button" data-category="reward">
+        <span class="gallery-collection-index">03</span><strong>ほめる</strong><small>結果・達成・ごほうび</small><b>↘</b>
+      </button>
+      <button class="gallery-collection" type="button" data-category="motion">
+        <span class="gallery-collection-index">04</span><strong>動かす</strong><small>登場・反応・切替</small><b>↘</b>
+      </button>
+      <button class="gallery-collection" type="button" data-category="decoration">
+        <span class="gallery-collection-index">05</span><strong>飾る</strong><small>背景・カード・テーマ</small><b>↘</b>
+      </button>
+    </section>
+
+    <section class="gallery-catalog" id="catalog">
+      <div class="gallery-catalog-head">
+        <div>
+          <p class="gallery-section-number">02 / MATERIALS</p>
+          <h2>素材カタログ</h2>
+        </div>
+        <div class="gallery-search-wrap">
+          <label for="material-search">素材を検索</label>
+          <div class="gallery-search"><span>⌕</span><input id="material-search" type="search" placeholder="正解、タイマー、カード…" autocomplete="off"><button id="search-clear" type="button" aria-label="検索をクリア">×</button></div>
+        </div>
+      </div>
+
+      <div class="gallery-filter-bar">
+        <div class="gallery-filter-chips" role="group" aria-label="カテゴリ絞り込み">
+          <button class="is-active" type="button" data-category="all">すべて</button>
+          <button type="button" data-category="question">答える</button>
+          <button type="button" data-category="feedback">伝える</button>
+          <button type="button" data-category="reward">ほめる</button>
+          <button type="button" data-category="motion">動かす</button>
+          <button type="button" data-category="decoration">飾る</button>
+        </div>
+        <p><strong id="visible-count">0</strong> MATERIALS</p>
+      </div>
+
+      <div class="gallery-grid" id="material-grid"></div>
+      <div class="gallery-empty" id="catalog-empty" hidden>
+        <strong>見つかりませんでした</strong>
+        <p>別の言葉で検索するか、「すべて」を選んでください。</p>
+      </div>
+    </section>
+
+    <section class="gallery-start" id="start">
+      <div class="gallery-start-copy">
+        <p class="gallery-section-number">03 / START</p>
+        <h2>選んだら、<br>すぐ使える。</h2>
+        <p>必要なCSSを読み込み、見本のHTMLを貼り付けます。外部フォント・画像・APIは不要です。</p>
+      </div>
+      <div class="gallery-install">
+        <div class="gallery-install-step"><span>1</span><div><strong>CSSを読み込む</strong><p>まずは基本ファイルを1行追加。</p></div></div>
+        <div class="gallery-code-block"><code id="base-install">&lt;link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-effects.css"&gt;</code><button type="button" data-copy="base-install">COPY</button></div>
+        <div class="gallery-install-step"><span>2</span><div><strong>素材を置く</strong><p>各カードの「HTMLをコピー」を使います。</p></div></div>
+        <div class="gallery-install-links"><a href="https://github.com/TT-sensei/edu-effects/blob/main/AI-GUIDE.md">AI-GUIDEを読む ↗</a><a href="https://github.com/TT-sensei/edu-effects">GitHubを見る ↗</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="gallery-footer">
+    <div><span class="gallery-logo-mark">e</span><strong>edu-effects</strong></div>
+    <p>教材サイトのための、軽くて使い回せるCSS素材集。</p>
+    <a href="#top">TOP ↑</a>
+  </footer>
+
+  <div class="gallery-toast" id="copy-toast" role="status" aria-live="polite">コピーしました</div>
+  <script src="js/edu-effects.js"></script>
+  <script src="js/catalog-gallery.js"></script>
+</body>
+</html>
