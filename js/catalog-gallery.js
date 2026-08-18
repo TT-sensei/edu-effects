@@ -178,6 +178,35 @@
   // visible in the catalog, so the gallery does not silently lose materials.
   const allMaterials = materials.concat(window.EduEffectsLegacyMaterials || []);
 
+  const heroCompositions = [
+    { badge: "MISSION 04", combo: "8", comboLabel: "COMBO", kicker: "SCIENCE LAB", title: "月の見え方を<br>説明しよう", xpLabel: "研究XP", xp: "72 / 100", progress: 72, card: "edu-card-collection", stage: "deco-theme-space", tags: [".edu-card-collection", ".edu-kinetic-xp", ".effect-glint"], effect: "effect-glint" },
+    { badge: "QUESTION 12", combo: "5", comboLabel: "STREAK", kicker: "LANGUAGE LAB", title: "ことばの順番を<br>見つけよう", xpLabel: "ことばXP", xp: "48 / 100", progress: 48, card: "edu-card-textbook", stage: "deco-theme-note", tags: [".edu-question", ".edu-sort-board", ".edu-stagger"], effect: "edu-kinetic-pop" },
+    { badge: "MISSION 07", combo: "3", comboLabel: "CHAIN", kicker: "MATH ARENA", title: "答えを選んで<br>記録を更新しよう", xpLabel: "CHALLENGE XP", xp: "86 / 100", progress: 86, card: "edu-card-game", stage: "deco-theme-chalk", tags: [".edu-choice", ".edu-rank-card", ".effect-impact"], effect: "effect-impact" },
+    { badge: "DISCOVERY 08", combo: "12", comboLabel: "COMBO", kicker: "DISCOVERY LOG", title: "見つけたことを<br>図鑑に残そう", xpLabel: "発見XP", xp: "64 / 100", progress: 64, card: "edu-card-collection", stage: "edu-creative-aurora", tags: [".edu-card-collection", ".edu-panel-insight", ".effect-badge-unlock"], effect: "effect-badge-unlock" },
+    { badge: "REVIEW 03", combo: "6", comboLabel: "FOCUS", kicker: "LEARNING REVIEW", title: "ヒントを使って<br>もう一度考えよう", xpLabel: "RETRY XP", xp: "35 / 100", progress: 35, card: "edu-card-research", stage: "deco-theme-science", tags: [".edu-panel-context", ".edu-reveal", ".edu-focus-ring"], effect: "edu-reveal-up" },
+    { badge: "NEW RECORD", combo: "9", comboLabel: "STREAK", kicker: "RESULT SCREEN", title: "できた！を<br>次の挑戦につなげよう", xpLabel: "RESULT XP", xp: "94 / 100", progress: 94, card: "edu-card-game", stage: "deco-theme-space", tags: [".edu-rank-card", ".edu-complete", ".effect-level-up"], effect: "effect-level-up" }
+  ];
+
+  function setRandomHeroComposition() {
+    const composition = heroCompositions[Math.floor(Math.random() * heroCompositions.length)];
+    const stage = document.querySelector(".gallery-hero-stage");
+    const card = document.getElementById("hero-demo-card");
+    const setText = (id, value) => { const el = document.getElementById(id); if (el) el.innerHTML = value; };
+    setText("hero-demo-badge", composition.badge);
+    setText("hero-demo-combo", composition.combo);
+    setText("hero-demo-combo-label", composition.comboLabel);
+    setText("hero-demo-kicker", composition.kicker);
+    setText("hero-demo-title", composition.title);
+    setText("hero-demo-xp-label", composition.xpLabel);
+    setText("hero-demo-xp", composition.xp);
+    const bar = document.getElementById("hero-demo-xp-bar");
+    if (bar) bar.style.width = `${composition.progress}%`;
+    ["one", "two", "three"].forEach((name, index) => setText(`hero-demo-tag-${name}`, composition.tags[index]));
+    if (stage) stage.className = `gallery-hero-stage ${composition.stage}`;
+    if (card) card.className = `gallery-demo-card edu-card ${composition.card} edu-creative-glow-border`;
+    return composition;
+  }
+
   const labels = {
     question: "ANSWER / 答える",
     feedback: "FEEDBACK / 伝える",
@@ -196,6 +225,7 @@
   const motionToggle = document.getElementById("motion-toggle");
   let activeCategory = "all";
   let toastTimer;
+  const activeHeroComposition = setRandomHeroComposition();
 
   const escapeHtml = value => value
     .replaceAll("&", "&amp;")
@@ -304,7 +334,7 @@
   document.getElementById("hero-demo-play").addEventListener("click", () => {
     const card = document.getElementById("hero-demo-card");
     if (!document.body.classList.contains("motion-off")) {
-      window.EduEffects?.play(card, "effect-glint");
+      window.EduEffects?.play(card, activeHeroComposition.effect);
       window.EduEffects?.confetti(card.parentElement, 16);
     }
   });
@@ -322,3 +352,4 @@
   setMotionOff(savedMotion ? savedMotion === "off" : window.matchMedia("(prefers-reduced-motion: reduce)").matches);
   renderCards();
 })();
+
