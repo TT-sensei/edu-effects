@@ -329,3 +329,24 @@ edu-decorations-advanced.cssには、教材のテーマをはっきり分ける�
 - `edu-creative-stack`：カードを重ねた見た目
 - `edu-creative-aurora` / `edu-creative-orbit`：教材背景の雰囲気づくり
 
+
+
+## 実用レイアウト素材
+
+`edu-effects-practical.css` は、教材ページの見出し、注釈、リンク、表、区切りなどを整えるためのCSS素材です。
+
+~~~html
+<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-effects-practical.css">
+~~~
+
+主なクラス：
+
+- `edu-practical-heading` / `edu-practical-heading-number`：章見出し
+- `edu-practical-link-button`：リンクや操作のボタン化
+- `edu-practical-chip-list` / `edu-practical-chip`：タグ・単元選択
+- `edu-practical-callout`：ヒント・注意・成功メッセージ
+- `edu-practical-table-wrap`：スマホで横スクロールできる表
+- `edu-practical-code`：コードや手順の表示
+- `edu-practical-divider`：説明の区切り
+- `edu-practical-top`：ページトップへ戻るリンク
+
