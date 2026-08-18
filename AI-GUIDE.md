@@ -61,7 +61,7 @@
 
 ### 旧カタログ用ファイル
 
-`css/catalog.css`、`css/catalog-showroom.css`、`js/catalog-showcase.js` は旧カタログのレイアウト・検索・演出用です。教材アプリからは読み込みません。現在の公開カタログは `css/catalog-gallery.css`、`js/catalog-gallery.js`、`js/catalog-legacy.js` を使っています。旧カタログにあった実素材は、重複整理のうえ現在の一覧へ復元済みです。
+`archive/legacy-catalog/catalog.css`、`archive/legacy-catalog/catalog-showroom.css`、`archive/legacy-catalog/catalog-showcase.js` は旧カタログのレイアウト・検索・演出用です。教材アプリからは読み込みません。現在の公開カタログは `css/catalog-gallery.css`、`js/catalog-gallery.js`、`js/catalog-legacy.js` を使っています。旧カタログにあった実素材は、重複整理のうえ現在の一覧へ復元済みです。
 
 ## 読み込み例
 
