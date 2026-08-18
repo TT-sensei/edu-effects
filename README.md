@@ -290,3 +290,23 @@ edu-decorations-advanced.cssには、教材のテーマをはっきり分ける�
 - `edu-sweep-marker`：重要語句にマーカーを引く
 
 `prefers-reduced-motion` に対応し、動きを止めても内容が読めるようにしています。
+
+
+## 触って分かるキネティック素材
+
+`edu-effects-kinetic.css` は、ボタンを押す、数値が変わる、ヒントが開く、状態が待機するなど、教材の操作感を伝える追加素材です。動きに重さと反発を加えます。
+
+~~~html
+<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-effects-kinetic.css">
+~~~
+
+主なクラス：
+
+- `edu-kinetic-pop` / `edu-kinetic-slide-up`：カードや結果の出現
+- `edu-kinetic-number`：得点、XP、コンボ数の更新
+- `edu-kinetic-expand`：ヒント・説明の開閉
+- `edu-kinetic-button`：押す・ホバー・波紋の反応
+- `edu-kinetic-xp`：ゲージや報酬バーの光
+- `edu-kinetic-dot`：保存中・接続中などの状態表示
+- `edu-kinetic-toast`：短い通知の登場
+
