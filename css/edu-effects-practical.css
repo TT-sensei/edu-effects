@@ -1,0 +1,227 @@
+/*
+ * edu-effects-practical.css
+ * Small practical layout materials for educational web pages.
+ * Dependency-free and touch-friendly.
+ */
+
+/* Headings ------------------------------------------------------------ */
+.edu-practical-heading {
+  position: relative;
+  margin: 1.6rem 0 .9rem;
+  padding: .65rem .85rem;
+  border-left: 5px solid var(--edu-practical-accent, #2563eb);
+  color: var(--edu-ink, #172033);
+  background: var(--edu-practical-surface, #f5f8ff);
+  font-size: 1.25rem;
+  line-height: 1.45;
+}
+.edu-practical-heading::after {
+  content: "";
+  position: absolute;
+  right: .75rem;
+  bottom: .45rem;
+  width: 42px;
+  height: 3px;
+  border-radius: 99px;
+  background: var(--edu-practical-accent, #2563eb);
+}
+.edu-practical-heading-number {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: .7rem;
+  align-items: center;
+}
+.edu-practical-heading-number::before {
+  content: attr(data-number);
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--edu-practical-accent, #2563eb);
+  font-size: .78rem;
+  font-weight: 850;
+}
+
+/* Links / chips ------------------------------------------------------- */
+a.edu-practical-link-button,
+button.edu-practical-link-button {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: .45rem;
+  padding: .65rem 1rem;
+  border: 1px solid var(--edu-practical-accent, #2563eb);
+  border-radius: 8px;
+  color: var(--edu-practical-accent, #2563eb);
+  background: #fff;
+  font: inherit;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 160ms ease, background 160ms ease, transform 160ms ease;
+}
+a.edu-practical-link-button::after { content: "→"; }
+a.edu-practical-link-button:hover,
+a.edu-practical-link-button:focus-visible,
+button.edu-practical-link-button:hover,
+button.edu-practical-link-button:focus-visible {
+  color: #fff;
+  background: var(--edu-practical-accent, #2563eb);
+  transform: translateY(-2px);
+}
+.edu-practical-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  padding: 0;
+  list-style: none;
+}
+.edu-practical-chip {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  padding: .35rem .7rem;
+  border: 1px solid var(--edu-line, #dbe3ee);
+  border-radius: 999px;
+  color: var(--edu-muted, #667085);
+  background: #fff;
+  font-size: .82rem;
+  font-weight: 750;
+}
+.edu-practical-chip.is-active {
+  color: #fff;
+  border-color: var(--edu-practical-accent, #2563eb);
+  background: var(--edu-practical-accent, #2563eb);
+}
+
+/* Notes / callouts ---------------------------------------------------- */
+.edu-practical-callout {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: .75rem;
+  align-items: start;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--edu-practical-line, #cfe0ff);
+  border-left: 5px solid var(--edu-practical-accent, #2563eb);
+  border-radius: 8px;
+  color: var(--edu-ink, #172033);
+  background: var(--edu-practical-surface, #f5f8ff);
+}
+.edu-practical-callout::before {
+  content: "!";
+  display: grid;
+  width: 1.55rem;
+  height: 1.55rem;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--edu-practical-accent, #2563eb);
+  font-weight: 900;
+}
+.edu-practical-callout-success {
+  --edu-practical-accent: #177d69;
+  --edu-practical-line: #b8e2d6;
+  --edu-practical-surface: #f0fbf7;
+}
+.edu-practical-callout-warning {
+  --edu-practical-accent: #b7791f;
+  --edu-practical-line: #f1d7a1;
+  --edu-practical-surface: #fffaf0;
+}
+.edu-practical-callout-danger {
+  --edu-practical-accent: #b14f42;
+  --edu-practical-line: #efc5c0;
+  --edu-practical-surface: #fff6f5;
+}
+
+/* Tables / code ------------------------------------------------------- */
+.edu-practical-table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--edu-line, #dbe3ee);
+  border-radius: 8px;
+}
+.edu-practical-table-wrap table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  background: #fff;
+}
+.edu-practical-table-wrap th,
+.edu-practical-table-wrap td {
+  padding: .75rem .85rem;
+  border-bottom: 1px solid var(--edu-line, #dbe3ee);
+  text-align: left;
+  vertical-align: top;
+}
+.edu-practical-table-wrap th {
+  color: var(--edu-ink, #172033);
+  background: var(--edu-practical-surface, #f5f8ff);
+  font-size: .86rem;
+}
+.edu-practical-table-wrap tr:last-child td { border-bottom: 0; }
+.edu-practical-code {
+  display: block;
+  overflow-x: auto;
+  padding: 1rem;
+  border-radius: 8px;
+  color: #dbeafe;
+  background: #172033;
+  font: .82rem/1.65 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  white-space: pre;
+}
+
+/* Page utilities ------------------------------------------------------ */
+.edu-practical-divider {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  margin: 1.7rem 0;
+  color: var(--edu-muted, #667085);
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+.edu-practical-divider::before,
+.edu-practical-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--edu-line, #dbe3ee);
+}
+.edu-practical-top {
+  position: fixed;
+  z-index: 20;
+  right: 1rem;
+  bottom: 1rem;
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border: 1px solid var(--edu-line, #dbe3ee);
+  border-radius: 50%;
+  color: var(--edu-ink, #172033);
+  background: rgb(255 255 255 / 94%);
+  box-shadow: 0 8px 24px rgb(31 41 55 / 14%);
+  text-decoration: none;
+  font-weight: 900;
+}
+.edu-practical-top:hover,
+.edu-practical-top:focus-visible { color: #fff; background: var(--edu-practical-accent, #2563eb); }
+
+@media (prefers-reduced-motion: reduce) {
+  a.edu-practical-link-button,
+  button.edu-practical-link-button { transition: none; }
+  a.edu-practical-link-button:hover,
+  a.edu-practical-link-button:focus-visible,
+  button.edu-practical-link-button:hover,
+  button.edu-practical-link-button:focus-visible { transform: none; }
+}
+@media (max-width: 640px) {
+  .edu-practical-table-wrap table { min-width: 500px; }
+  .edu-practical-callout { grid-template-columns: 1fr; }
+}
