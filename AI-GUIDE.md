@@ -2,6 +2,8 @@
 
 教材サイトを作るAIが、edu-effectsを既存の共通部品として参照するための短い設計ガイドです。
 
+4資産を組み合わせる全体方針、`edu-components`のイベントとの接続、教材タイプ別レシピは、[edu-componentsのAI-GUIDE](https://github.com/TT-sensei/edu-components/blob/main/AI-GUIDE.md)を中心に参照してください。このガイドは`edu-effects`内のCSS選択に使います。
+
 ## まず守ること
 
 1. 既存のクラスを優先して使う。
