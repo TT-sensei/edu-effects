@@ -172,6 +172,7 @@
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
   </style>
   <link rel="stylesheet" href="css/catalog.css">
+  <link rel="stylesheet" href="css/catalog-showroom.css">
 </head>
 <body>
   <a class="ref-skip" href="#main-content">本文へ移動</a>
@@ -179,7 +180,7 @@
     <header class="edu-header">
       <div class="edu-container edu-header-inner">
         <a class="edu-brand" href="#">edu-effects<small>EDUCATION UI CSS</small></a>
-        <span class="edu-badge edu-badge-primary">13 CSS FILES · COPY READY</span>
+        <span class="edu-badge edu-badge-primary">15+ CSS FILES · COPY READY</span>
         <button class="ref-motion-switch" id="motion-switch" type="button" aria-pressed="false">動きを止める</button>
       </div>
     </header>
@@ -232,6 +233,36 @@
       </div>
     </div>
 
+
+    <section class="ref-home-hub" aria-labelledby="home-hub-title">
+      <div class="edu-container ref-home-hub-inner">
+        <div class="ref-home-hub-copy">
+          <span class="ref-kicker">START HERE · MATERIAL SHOWROOM</span>
+          <h2 id="home-hub-title">教材に使う素材を、迷わず選ぶ。</h2>
+          <p>まず目的を選び、見本を試し、気に入ったクラスのコードをコピー。今ある素材を「見つける・試す・使う」の順に並べ直しました。</p>
+          <div class="ref-home-hub-actions">
+            <a class="edu-btn edu-btn-primary" href="#showcase">演出を試す</a>
+            <a class="edu-btn edu-btn-secondary" href="#find">目的から探す</a>
+          </div>
+          <div class="ref-home-hub-links" aria-label="目的別ショートカット">
+            <a class="ref-home-hub-link" href="#learning"><strong>問題・選択肢</strong><small>答える画面を作る →</small></a>
+            <a class="ref-home-hub-link" href="#effects-library"><strong>正解・達成</strong><small>反応とごほうびを見る →</small></a>
+            <a class="ref-home-hub-link" href="#learning-composer"><strong>画面を組み立てる</strong><small>部品を組み合わせる →</small></a>
+            <a class="ref-home-hub-link" href="#interaction-materials"><strong>状態・注釈</strong><small>見直しや待機を伝える →</small></a>
+          </div>
+        </div>
+        <div class="ref-home-hub-preview" aria-label="既存素材の組み合わせ見本">
+          <span>LIVE PREVIEW · 既存素材を組み合わせ</span>
+          <button class="edu-choice is-selected" type="button"><span class="edu-choice-mark">✓</span><span><strong>条件をそろえる</strong><small>タップできる選択肢</small></span></button>
+          <div class="ref-home-hub-preview-grid">
+            <div><span class="ref-home-hub-label">状態</span><div class="edu-state-orb is-success">完了</div><span class="edu-state-orb-label">成功を伝える</span></div>
+            <div><span class="ref-home-hub-label">ヒント</span><div class="edu-panel-context"><span class="edu-panel-label">HINT</span>資料を確認しよう。</div></div>
+          </div>
+          <p class="ref-home-hub-note">それぞれの素材は単体でも、組み合わせても使えます。</p>
+        </div>
+      </div>
+    </section>
+
     <main id="main-content" class="edu-main">
       <section id="showcase" class="edu-container ref-showcase">
         <div class="ref-showcase-head">
@@ -280,7 +311,7 @@
             <span class="edu-help">CSS変数でサイトに合わせて調整できます。</span>
           </div>
           <details class="ref-copy-all">
-            <summary>すべての素材を使う場合（13ファイル）</summary>
+            <summary>すべての素材を使う場合（15+ファイル）</summary>
             <div class="ref-code">
               <button class="ref-copy" data-copy-target="install-all-code">13行をまとめてコピー</button>
               <pre id="install-all-code">&lt;link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-effects.css"&gt;
