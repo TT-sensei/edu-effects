@@ -278,3 +278,14 @@ TT-senseiの複数教材で繰り返し使っている画面構造を、`edu-eff
 ~~~
 
 既存教材の保存処理、問題ロジック、バッジ処理は変更せず、HTML構造にクラスを足して使います。画面幅820px以下では活動ナビが横スクロール型に変わります。
+
+
+## 学習パネルの選び方
+
+- `edu-panel-context`：問題の資料やヒント
+- `edu-panel-insight`：理科の考察や国語の気づき
+- `edu-panel-recommendation`：次の練習や復習の提案
+- `edu-panel-approval`：答え合わせ、提出前の確認
+- `edu-panel-processing`：採点・保存・処理中の状態
+- `edu-panel-stream`：結果や分析を段階的に表示
+
