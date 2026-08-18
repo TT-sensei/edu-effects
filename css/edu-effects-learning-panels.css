@@ -1,0 +1,17 @@
+/*
+ * edu-effects-learning-panels.css
+ * AI-native UI ideas translated into classroom-friendly learning panels.
+ */
+.edu-panel-context,.edu-panel-insight,.edu-panel-recommendation,.edu-panel-approval{padding:16px;border:1px solid var(--edu-line,#dbe3ee);border-radius:14px;background:var(--edu-surface,#fff);box-shadow:var(--edu-shadow-sm,0 4px 14px rgb(31 41 55 / 8%));}
+.edu-panel-context{border-left:4px solid #64748b;background:#f8fafc;}
+.edu-panel-insight{border-left:4px solid #7c3aed;background:#faf7ff;}
+.edu-panel-recommendation{border-left:4px solid #2563eb;background:#f4f8ff;}
+.edu-panel-approval{border-left:4px solid #177d69;background:#f2fbf7;}
+.edu-panel-label{display:block;margin-bottom:5px;color:var(--edu-muted,#667085);font-size:.72rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase;}
+.edu-panel-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+.edu-panel-processing{display:inline-flex;align-items:center;gap:9px;padding:10px 13px;border-radius:999px;color:var(--edu-muted,#667085);background:#f8fafc;font-size:.84rem;}
+.edu-panel-processing::before{content:"";width:10px;height:10px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:edu-panel-spin .7s linear infinite;}
+.edu-panel-stream>*{opacity:0;animation:edu-panel-appear .35s ease-out both;}
+.edu-panel-stream>*:nth-child(2){animation-delay:90ms}.edu-panel-stream>*:nth-child(3){animation-delay:180ms}.edu-panel-stream>*:nth-child(4){animation-delay:270ms}
+@keyframes edu-panel-spin{to{transform:rotate(360deg)}}@keyframes edu-panel-appear{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.edu-panel-processing::before,.edu-panel-stream>*{animation:none!important}.edu-panel-stream>*{opacity:1}}
