@@ -350,3 +350,20 @@ edu-decorations-advanced.cssには、教材のテーマをはっきり分ける�
 - `edu-shell-result-ring`：結果の割合表示
 - `edu-shell-settings`：設定ダイアログ
 
+
+
+## 学習パネル素材
+
+beautifului.devのContext / Insight / Recommendation / Approvalパターンを、教材画面用に整理した追加素材です。
+
+~~~html
+<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-effects-learning-panels.css">
+~~~
+
+- `edu-panel-context`：資料、前提、ヒント
+- `edu-panel-insight`：考察、発見、気づき
+- `edu-panel-recommendation`：次に取り組むおすすめ
+- `edu-panel-approval`：提出、答え、確認
+- `edu-panel-processing`：採点中、生成中、保存中
+- `edu-panel-stream`：結果を順番に見せる
+
