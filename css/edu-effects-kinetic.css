@@ -1,0 +1,169 @@
+/*
+ * edu-effects-kinetic.css
+ * Tactile, spring-like motion for learning interfaces.
+ * Pure CSS, no external libraries, images, or JavaScript required.
+ */
+
+/* Spring-like appearance --------------------------------------------- */
+.edu-kinetic-pop {
+  animation: edu-kinetic-pop 560ms cubic-bezier(.34,1.56,.64,1) both;
+}
+.edu-kinetic-pop-soft {
+  animation: edu-kinetic-pop-soft 460ms cubic-bezier(.2,.9,.25,1.2) both;
+}
+.edu-kinetic-slide-up {
+  animation: edu-kinetic-slide-up 520ms cubic-bezier(.34,1.56,.64,1) both;
+}
+.edu-kinetic-bounce {
+  animation: edu-kinetic-bounce 760ms cubic-bezier(.34,1.56,.64,1) both;
+}
+
+/* Numbers, scores, and progress ------------------------------------- */
+.edu-kinetic-number {
+  display: inline-block;
+  transform-origin: center bottom;
+  animation: edu-kinetic-number 460ms cubic-bezier(.34,1.56,.64,1) both;
+}
+.edu-kinetic-xp {
+  position: relative;
+  overflow: hidden;
+}
+.edu-kinetic-xp::after {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 100%;
+  background: rgb(255 255 255 / 48%);
+  transform: translateX(-110%) skewX(-18deg);
+  animation: edu-kinetic-xp-shine 720ms ease-out 180ms both;
+  pointer-events: none;
+}
+
+/* Expandable explanation / hint -------------------------------------- */
+.edu-kinetic-expand {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: .72;
+  transition: grid-template-rows 480ms cubic-bezier(.34,1.56,.64,1), opacity 220ms ease;
+}
+.edu-kinetic-expand > * { min-height: 0; overflow: hidden; }
+.edu-kinetic-expand.is-open,
+.edu-kinetic-expand[open] {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+/* Tactile controls ---------------------------------------------------- */
+.edu-kinetic-button {
+  position: relative;
+  isolation: isolate;
+  transform: translateY(0);
+  transition: transform 120ms ease, box-shadow 120ms ease, filter 120ms ease;
+}
+.edu-kinetic-button::after {
+  content: "";
+  position: absolute;
+  inset: 50%;
+  z-index: -1;
+  width: 16px;
+  height: 16px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(.3);
+  pointer-events: none;
+}
+.edu-kinetic-button:hover,
+.edu-kinetic-button:focus-visible {
+  transform: translateY(-3px);
+  filter: brightness(1.03);
+}
+.edu-kinetic-button:active {
+  transform: translateY(2px) scale(.98);
+  box-shadow: none;
+}
+.edu-kinetic-button:active::after {
+  animation: edu-kinetic-ripple 520ms ease-out both;
+}
+
+/* Status / live feedback --------------------------------------------- */
+.edu-kinetic-dot {
+  position: relative;
+  display: inline-block;
+  width: .72em;
+  height: .72em;
+  border-radius: 50%;
+  background: var(--edu-kinetic-color, #2563eb);
+}
+.edu-kinetic-dot::after {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border: 2px solid currentColor;
+  border-radius: inherit;
+  opacity: 0;
+  animation: edu-kinetic-dot-pulse 1.6s ease-out infinite;
+}
+.edu-kinetic-toast {
+  animation: edu-kinetic-toast 520ms cubic-bezier(.34,1.56,.64,1) both;
+}
+
+/* Keyframes ----------------------------------------------------------- */
+@keyframes edu-kinetic-pop {
+  0% { opacity: 0; transform: scale(.72) translateY(12px); }
+  65% { opacity: 1; transform: scale(1.06) translateY(-3px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes edu-kinetic-pop-soft {
+  0% { opacity: 0; transform: scale(.92) translateY(7px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes edu-kinetic-slide-up {
+  0% { opacity: 0; transform: translateY(24px); }
+  72% { opacity: 1; transform: translateY(-4px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes edu-kinetic-bounce {
+  0% { transform: translateY(0); }
+  35% { transform: translateY(-10px); }
+  58% { transform: translateY(2px); }
+  78% { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
+}
+@keyframes edu-kinetic-number {
+  0% { opacity: .4; transform: scale(.72) translateY(8px); }
+  68% { opacity: 1; transform: scale(1.18) translateY(-4px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes edu-kinetic-xp-shine {
+  from { transform: translateX(-110%) skewX(-18deg); }
+  to { transform: translateX(240%) skewX(-18deg); }
+}
+@keyframes edu-kinetic-ripple {
+  0% { opacity: .7; width: 16px; height: 16px; }
+  100% { opacity: 0; width: 180px; height: 180px; }
+}
+@keyframes edu-kinetic-dot-pulse {
+  0% { opacity: .65; transform: scale(.65); }
+  70%, 100% { opacity: 0; transform: scale(1.6); }
+}
+@keyframes edu-kinetic-toast {
+  0% { opacity: 0; transform: translateY(18px) scale(.92); }
+  65% { opacity: 1; transform: translateY(-4px) scale(1.03); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .edu-kinetic-pop,
+  .edu-kinetic-pop-soft,
+  .edu-kinetic-slide-up,
+  .edu-kinetic-bounce,
+  .edu-kinetic-number,
+  .edu-kinetic-toast,
+  .edu-kinetic-xp::after,
+  .edu-kinetic-dot::after { animation: none !important; }
+  .edu-kinetic-expand { transition: none; }
+  .edu-kinetic-expand.is-open,
+  .edu-kinetic-expand[open] { display: block; }
+  .edu-kinetic-button { transition: none; }
+}
