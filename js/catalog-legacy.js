@@ -5,8 +5,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "feedback",
     "file": "edu-effects-library.css",
     "tags": "正解：ポン .effect-correct-pop effects-library",
-    "preview": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">正解：ポン</h3><span class=\"edu-badge edu-badge-success\">CORRECT</span></div>\n            <div class=\"ref-effect-stage\"><span class=\"ref-effect-demo effect-correct-pop\" data-demo-key=\"correct-pop\" data-demo-class=\"effect-correct-pop\">○</span></div>\n            \n            <div class=\"ref-demo-actions\"><button class=\"ref-copy\" data-copy-text='<span class=\"effect-correct-pop\">○</span>'>コード</button></div>",
-    "copy": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">正解：ポン</h3><span class=\"edu-badge edu-badge-success\">CORRECT</span></div>\n            <div class=\"ref-effect-stage\"><span class=\"ref-effect-demo effect-correct-pop\" data-demo-key=\"correct-pop\" data-demo-class=\"effect-correct-pop\">○</span></div>\n            \n            <div class=\"ref-demo-actions\"><button class=\"ref-copy\" data-copy-text='<span class=\"effect-correct-pop\">○</span>'>コード</button></div>"
+    "preview": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">正解：ポン</h3><span class=\"edu-badge edu-badge-success\">CORRECT</span></div> <span class=\"ref-effect-demo effect-correct-pop\" data-demo-key=\"correct-pop\" data-demo-class=\"effect-correct-pop\">○</span>",
+    "copy": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">正解：ポン</h3><span class=\"edu-badge edu-badge-success\">CORRECT</span></div> <span class=\"ref-effect-demo effect-correct-pop\" data-demo-key=\"correct-pop\" data-demo-class=\"effect-correct-pop\">○</span>"
   },
   {
     "title": "正解：キラキラ",
@@ -14,8 +14,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "feedback",
     "file": "edu-effects-library.css",
     "tags": "正解：キラキラ .effect-correct-sparkle effects-library",
-    "preview": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">正解：キラキラ</h3><span class=\"edu-badge edu-badge-success\">CORRECT</span></div>\n            <div class=\"ref-effect-stage\"><span class=\"ref-effect-demo effect-correct-sparkle\" data-demo-key=\"correct-sparkle\" data-demo-class=\"effect-correct-sparkle\">正解</span></div>\n            \n            <div class=\"ref-demo-actions\"><button class=\"ref-copy\" data-copy-text='<span class=\"effect-correct-sparkle\">正解</span>'>コード</button></div>",
-    "copy": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">正解：キラキラ</h3><span class=\"edu-badge edu-badge-success\">CORRECT</span></div>\n            <div class=\"ref-effect-stage\"><span class=\"ref-effect-demo effect-correct-sparkle\" data-demo-key=\"correct-sparkle\" data-demo-class=\"effect-correct-sparkle\">正解</span></div>\n            \n            <div class=\"ref-demo-actions\"><button class=\"ref-copy\" data-copy-text='<span class=\"effect-correct-sparkle\">正解</span>'>コード</button></div>"
+    "preview": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">正解：キラキラ</h3><span class=\"edu-badge edu-badge-success\">CORRECT</span></div> <span class=\"ref-effect-demo effect-correct-sparkle\" data-demo-key=\"correct-sparkle\" data-demo-class=\"effect-correct-sparkle\">正解</span>",
+    "copy": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">正解：キラキラ</h3><span class=\"edu-badge edu-badge-success\">CORRECT</span></div> <span class=\"ref-effect-demo effect-correct-sparkle\" data-demo-key=\"correct-sparkle\" data-demo-class=\"effect-correct-sparkle\">正解</span>"
   },
   {
     "title": "不正解：シェイク",
@@ -23,8 +23,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "feedback",
     "file": "edu-effects-library.css",
     "tags": "不正解：シェイク .effect-wrong-shake effects-library",
-    "preview": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">不正解：シェイク</h3><span class=\"edu-badge edu-badge-danger\">WRONG</span></div>\n            <div class=\"ref-effect-stage\"><span class=\"ref-effect-demo effect-wrong-shake\" data-demo-key=\"wrong-shake\" data-demo-class=\"effect-wrong-shake\">もう一度</span></div>\n            \n            <div class=\"ref-demo-actions\"><button class=\"ref-copy\" data-copy-text='<span class=\"effect-wrong-shake\">もう一度</span>'>コード</button></div>",
-    "copy": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">不正解：シェイク</h3><span class=\"edu-badge edu-badge-danger\">WRONG</span></div>\n            <div class=\"ref-effect-stage\"><span class=\"ref-effect-demo effect-wrong-shake\" data-demo-key=\"wrong-shake\" data-demo-class=\"effect-wrong-shake\">もう一度</span></div>\n            \n            <div class=\"ref-demo-actions\"><button class=\"ref-copy\" data-copy-text='<span class=\"effect-wrong-shake\">もう一度</span>'>コード</button></div>"
+    "preview": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">不正解：シェイク</h3><span class=\"edu-badge edu-badge-danger\">WRONG</span></div> <span class=\"ref-effect-demo effect-wrong-shake\" data-demo-key=\"wrong-shake\" data-demo-class=\"effect-wrong-shake\">もう一度</span>",
+    "copy": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">不正解：シェイク</h3><span class=\"edu-badge edu-badge-danger\">WRONG</span></div> <span class=\"ref-effect-demo effect-wrong-shake\" data-demo-key=\"wrong-shake\" data-demo-class=\"effect-wrong-shake\">もう一度</span>"
   },
   {
     "title": "不正解：×",
@@ -32,8 +32,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "feedback",
     "file": "edu-effects-library.css",
     "tags": "不正解：× .effect-wrong-cross effects-library",
-    "preview": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">不正解：×</h3><span class=\"edu-badge edu-badge-danger\">WRONG</span></div>\n            <div class=\"ref-effect-stage\"><span class=\"ref-effect-demo effect-wrong-cross\" data-demo-key=\"wrong-cross\" data-demo-class=\"effect-wrong-cross\">確認</span></div>\n            \n            <div class=\"ref-demo-actions\"><button class=\"ref-copy\" data-copy-text='<span class=\"effect-wrong-cross\">確認</span>'>コード</button></div>",
-    "copy": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">不正解：×</h3><span class=\"edu-badge edu-badge-danger\">WRONG</span></div>\n            <div class=\"ref-effect-stage\"><span class=\"ref-effect-demo effect-wrong-cross\" data-demo-key=\"wrong-cross\" data-demo-class=\"effect-wrong-cross\">確認</span></div>\n            \n            <div class=\"ref-demo-actions\"><button class=\"ref-copy\" data-copy-text='<span class=\"effect-wrong-cross\">確認</span>'>コード</button></div>"
+    "preview": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">不正解：×</h3><span class=\"edu-badge edu-badge-danger\">WRONG</span></div> <span class=\"ref-effect-demo effect-wrong-cross\" data-demo-key=\"wrong-cross\" data-demo-class=\"effect-wrong-cross\">確認</span>",
+    "copy": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">不正解：×</h3><span class=\"edu-badge edu-badge-danger\">WRONG</span></div> <span class=\"ref-effect-demo effect-wrong-cross\" data-demo-key=\"wrong-cross\" data-demo-class=\"effect-wrong-cross\">確認</span>"
   },
   {
     "title": "不正解：ぷるぷる",
@@ -41,8 +41,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "feedback",
     "file": "edu-effects-library.css",
     "tags": "不正解：ぷるぷる .effect-wrong-wobble effects-library",
-    "preview": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">不正解：ぷるぷる</h3><span class=\"edu-badge edu-badge-danger\">WRONG</span></div>\n            <div class=\"ref-effect-stage\"><span class=\"ref-effect-demo effect-wrong-wobble\" data-demo-key=\"wrong-wobble\" data-demo-class=\"effect-wrong-wobble\">見直そう</span></div>\n            \n            <div class=\"ref-demo-actions\"><button class=\"ref-copy\" data-copy-text='<span class=\"effect-wrong-wobble\">見直そう</span>'>コード</button></div>",
-    "copy": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">不正解：ぷるぷる</h3><span class=\"edu-badge edu-badge-danger\">WRONG</span></div>\n            <div class=\"ref-effect-stage\"><span class=\"ref-effect-demo effect-wrong-wobble\" data-demo-key=\"wrong-wobble\" data-demo-class=\"effect-wrong-wobble\">見直そう</span></div>\n            \n            <div class=\"ref-demo-actions\"><button class=\"ref-copy\" data-copy-text='<span class=\"effect-wrong-wobble\">見直そう</span>'>コード</button></div>"
+    "preview": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">不正解：ぷるぷる</h3><span class=\"edu-badge edu-badge-danger\">WRONG</span></div> <span class=\"ref-effect-demo effect-wrong-wobble\" data-demo-key=\"wrong-wobble\" data-demo-class=\"effect-wrong-wobble\">見直そう</span>",
+    "copy": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">不正解：ぷるぷる</h3><span class=\"edu-badge edu-badge-danger\">WRONG</span></div> <span class=\"ref-effect-demo effect-wrong-wobble\" data-demo-key=\"wrong-wobble\" data-demo-class=\"effect-wrong-wobble\">見直そう</span>"
   },
   {
     "title": "達成：発光",
@@ -50,8 +50,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "feedback",
     "file": "edu-effects-library.css",
     "tags": "達成：発光 .effect-achievement-glow effects-library",
-    "preview": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">達成：発光</h3><span class=\"edu-badge edu-badge-warning\">ACHIEVEMENT</span></div>\n            <div class=\"ref-effect-stage\"><span class=\"ref-effect-demo effect-achievement-glow\" data-demo-key=\"achievement-glow\" data-demo-class=\"effect-achievement-glow\">COMPLETE</span></div>\n            \n            <div class=\"ref-demo-actions\"><button class=\"ref-copy\" data-copy-text='<span class=\"effect-achievement-glow\">COMPLETE</span>'>コード</button></div>",
-    "copy": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">達成：発光</h3><span class=\"edu-badge edu-badge-warning\">ACHIEVEMENT</span></div>\n            <div class=\"ref-effect-stage\"><span class=\"ref-effect-demo effect-achievement-glow\" data-demo-key=\"achievement-glow\" data-demo-class=\"effect-achievement-glow\">COMPLETE</span></div>\n            \n            <div class=\"ref-demo-actions\"><button class=\"ref-copy\" data-copy-text='<span class=\"effect-achievement-glow\">COMPLETE</span>'>コード</button></div>"
+    "preview": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">達成：発光</h3><span class=\"edu-badge edu-badge-warning\">ACHIEVEMENT</span></div> <span class=\"ref-effect-demo effect-achievement-glow\" data-demo-key=\"achievement-glow\" data-demo-class=\"effect-achievement-glow\">COMPLETE</span>",
+    "copy": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">達成：発光</h3><span class=\"edu-badge edu-badge-warning\">ACHIEVEMENT</span></div> <span class=\"ref-effect-demo effect-achievement-glow\" data-demo-key=\"achievement-glow\" data-demo-class=\"effect-achievement-glow\">COMPLETE</span>"
   },
   {
     "title": "達成：紙吹雪",
@@ -59,8 +59,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "feedback",
     "file": "edu-effects-library.css",
     "tags": "達成：紙吹雪 .effect-confetti effects-library",
-    "preview": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">達成：紙吹雪</h3><span class=\"edu-badge edu-badge-warning\">ACHIEVEMENT</span></div>\n            <div class=\"ref-effect-stage effect-confetti\" data-confetti-stage><span class=\"ref-effect-demo\">達成！</span></div>\n            \n            <div class=\"ref-demo-actions\"><button class=\"ref-copy\" data-copy-text='<div class=\"effect-confetti\"><span>達成！</span></div>'>コード</button></div>",
-    "copy": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">達成：紙吹雪</h3><span class=\"edu-badge edu-badge-warning\">ACHIEVEMENT</span></div>\n            <div class=\"ref-effect-stage effect-confetti\" data-confetti-stage><span class=\"ref-effect-demo\">達成！</span></div>\n            \n            <div class=\"ref-demo-actions\"><button class=\"ref-copy\" data-copy-text='<div class=\"effect-confetti\"><span>達成！</span></div>'>コード</button></div>"
+    "preview": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">達成：紙吹雪</h3><span class=\"edu-badge edu-badge-warning\">ACHIEVEMENT</span></div> <div class=\"ref-effect-stage effect-confetti\" data-confetti-stage><span class=\"ref-effect-demo\">達成！</span></div> '>コード</button></div>",
+    "copy": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">達成：紙吹雪</h3><span class=\"edu-badge edu-badge-warning\">ACHIEVEMENT</span></div> <div class=\"ref-effect-stage effect-confetti\" data-confetti-stage><span class=\"ref-effect-demo\">達成！</span></div> '>コード</button></div>"
   },
   {
     "title": "レベルアップ",
@@ -68,8 +68,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "feedback",
     "file": "edu-effects-library.css",
     "tags": "レベルアップ .effect-level-up effects-library",
-    "preview": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">レベルアップ</h3><span class=\"edu-badge edu-badge-primary\">LEVEL</span></div>\n            <div class=\"ref-effect-stage\"><span class=\"ref-effect-demo effect-level-up\" data-demo-key=\"level-up\" data-demo-class=\"effect-level-up\">LEVEL 3</span></div>\n            \n            <div class=\"ref-demo-actions\"><button class=\"ref-copy\" data-copy-text='<span class=\"effect-level-up\">LEVEL 3</span>'>コード</button></div>",
-    "copy": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">レベルアップ</h3><span class=\"edu-badge edu-badge-primary\">LEVEL</span></div>\n            <div class=\"ref-effect-stage\"><span class=\"ref-effect-demo effect-level-up\" data-demo-key=\"level-up\" data-demo-class=\"effect-level-up\">LEVEL 3</span></div>\n            \n            <div class=\"ref-demo-actions\"><button class=\"ref-copy\" data-copy-text='<span class=\"effect-level-up\">LEVEL 3</span>'>コード</button></div>"
+    "preview": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">レベルアップ</h3><span class=\"edu-badge edu-badge-primary\">LEVEL</span></div> <span class=\"ref-effect-demo effect-level-up\" data-demo-key=\"level-up\" data-demo-class=\"effect-level-up\">LEVEL 3</span>",
+    "copy": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">レベルアップ</h3><span class=\"edu-badge edu-badge-primary\">LEVEL</span></div> <span class=\"ref-effect-demo effect-level-up\" data-demo-key=\"level-up\" data-demo-class=\"effect-level-up\">LEVEL 3</span>"
   },
   {
     "title": "コンボ",
@@ -77,8 +77,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "feedback",
     "file": "edu-effects-library.css",
     "tags": "コンボ .effect-combo-fire effects-library",
-    "preview": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">コンボ</h3><span class=\"edu-badge edu-badge-warning\">COMBO</span></div>\n            <div class=\"ref-effect-stage\"><span class=\"ref-effect-demo effect-combo-fire\" data-demo-key=\"combo-fire\" data-demo-class=\"effect-combo-fire\"><strong class=\"effect-combo-number\">×5</strong></span></div>\n            \n            <div class=\"ref-demo-actions\"><button class=\"ref-copy\" data-copy-text='<span class=\"effect-combo-fire\"><strong class=\"effect-combo-number\">×5</strong></span>'>コード</button></div>",
-    "copy": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">コンボ</h3><span class=\"edu-badge edu-badge-warning\">COMBO</span></div>\n            <div class=\"ref-effect-stage\"><span class=\"ref-effect-demo effect-combo-fire\" data-demo-key=\"combo-fire\" data-demo-class=\"effect-combo-fire\"><strong class=\"effect-combo-number\">×5</strong></span></div>\n            \n            <div class=\"ref-demo-actions\"><button class=\"ref-copy\" data-copy-text='<span class=\"effect-combo-fire\"><strong class=\"effect-combo-number\">×5</strong></span>'>コード</button></div>"
+    "preview": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">コンボ</h3><span class=\"edu-badge edu-badge-warning\">COMBO</span></div> <span class=\"ref-effect-demo effect-combo-fire\" data-demo-key=\"combo-fire\" data-demo-class=\"effect-combo-fire\"><strong class=\"effect-combo-number\">×5</strong></span>",
+    "copy": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">コンボ</h3><span class=\"edu-badge edu-badge-warning\">COMBO</span></div> <span class=\"ref-effect-demo effect-combo-fire\" data-demo-key=\"combo-fire\" data-demo-class=\"effect-combo-fire\"><strong class=\"effect-combo-number\">×5</strong></span>"
   },
   {
     "title": "カード",
@@ -86,8 +86,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "feedback",
     "file": "edu-effects-library.css",
     "tags": "カード .effect-card-lift effects-library",
-    "preview": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">カード</h3><span class=\"edu-badge edu-badge-neutral\">CARD</span></div>\n            <div class=\"ref-effect-stage\"><div class=\"ref-card-demo effect-card-lift\" data-demo-key=\"card-lift\" data-demo-class=\"effect-card-lift\">カード登場</div></div>\n            \n            <div class=\"ref-demo-actions\"><button class=\"ref-copy\" data-copy-text='<div class=\"effect-card-lift\">カード登場</div>'>コード</button></div>",
-    "copy": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">カード</h3><span class=\"edu-badge edu-badge-neutral\">CARD</span></div>\n            <div class=\"ref-effect-stage\"><div class=\"ref-card-demo effect-card-lift\" data-demo-key=\"card-lift\" data-demo-class=\"effect-card-lift\">カード登場</div></div>\n            \n            <div class=\"ref-demo-actions\"><button class=\"ref-copy\" data-copy-text='<div class=\"effect-card-lift\">カード登場</div>'>コード</button></div>"
+    "preview": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">カード</h3><span class=\"edu-badge edu-badge-neutral\">CARD</span></div> <div class=\"ref-card-demo effect-card-lift\" data-demo-key=\"card-lift\" data-demo-class=\"effect-card-lift\">カード登場</div> '>コード</button></div>",
+    "copy": "<div class=\"edu-row-between\"><h3 class=\"edu-card-title\">カード</h3><span class=\"edu-badge edu-badge-neutral\">CARD</span></div> <div class=\"ref-card-demo effect-card-lift\" data-demo-key=\"card-lift\" data-demo-class=\"effect-card-lift\">カード登場</div> '>コード</button></div>"
   },
   {
     "title": "立体",
@@ -95,8 +95,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "question",
     "file": "edu-ui-variants.css",
     "tags": "立体 .edu-btn-3d expanded-ui",
-    "preview": "<h3 class=\"edu-card-title\">立体</h3><div class=\"ref-ui-demo\"><button class=\"edu-btn edu-btn-primary edu-btn-3d\">決定する</button></div>",
-    "copy": "<h3 class=\"edu-card-title\">立体</h3><div class=\"ref-ui-demo\"><button class=\"edu-btn edu-btn-primary edu-btn-3d\">決定する</button></div>"
+    "preview": "<h3 class=\"edu-card-title\">立体</h3><button class=\"edu-btn edu-btn-primary edu-btn-3d\">決定する</button>",
+    "copy": "<h3 class=\"edu-card-title\">立体</h3><button class=\"edu-btn edu-btn-primary edu-btn-3d\">決定する</button>"
   },
   {
     "title": "ゲーム",
@@ -104,8 +104,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "question",
     "file": "edu-ui-variants.css",
     "tags": "ゲーム .edu-btn-game expanded-ui",
-    "preview": "<h3 class=\"edu-card-title\">ゲーム</h3><div class=\"ref-ui-demo\"><button class=\"edu-btn edu-btn-game\">START</button></div>",
-    "copy": "<h3 class=\"edu-card-title\">ゲーム</h3><div class=\"ref-ui-demo\"><button class=\"edu-btn edu-btn-game\">START</button></div>"
+    "preview": "<h3 class=\"edu-card-title\">ゲーム</h3><button class=\"edu-btn edu-btn-game\">START</button>",
+    "copy": "<h3 class=\"edu-card-title\">ゲーム</h3><button class=\"edu-btn edu-btn-game\">START</button>"
   },
   {
     "title": "丸型・アイコン",
@@ -113,8 +113,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "question",
     "file": "edu-ui-variants.css",
     "tags": "丸型・アイコン .edu-btn-round expanded-ui",
-    "preview": "<h3 class=\"edu-card-title\">丸型・アイコン</h3><div class=\"ref-ui-demo\"><button class=\"edu-btn edu-btn-icon edu-btn-round\" aria-label=\"次へ\">→</button><button class=\"edu-btn edu-btn-icon\" aria-label=\"ヒント\">?</button></div>",
-    "copy": "<h3 class=\"edu-card-title\">丸型・アイコン</h3><div class=\"ref-ui-demo\"><button class=\"edu-btn edu-btn-icon edu-btn-round\" aria-label=\"次へ\">→</button><button class=\"edu-btn edu-btn-icon\" aria-label=\"ヒント\">?</button></div>"
+    "preview": "<h3 class=\"edu-card-title\">丸型・アイコン</h3><button class=\"edu-btn edu-btn-icon edu-btn-round\" aria-label=\"次へ\">→</button><button class=\"edu-btn edu-btn-icon\" aria-label=\"ヒント\">?</button>",
+    "copy": "<h3 class=\"edu-card-title\">丸型・アイコン</h3><button class=\"edu-btn edu-btn-icon edu-btn-round\" aria-label=\"次へ\">→</button><button class=\"edu-btn edu-btn-icon\" aria-label=\"ヒント\">?</button>"
   },
   {
     "title": "戻る・次へ",
@@ -122,8 +122,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "question",
     "file": "edu-ui-variants.css",
     "tags": "戻る・次へ .edu-btn-back expanded-ui",
-    "preview": "<h3 class=\"edu-card-title\">戻る・次へ</h3><div class=\"ref-ui-demo\"><button class=\"edu-btn edu-btn-secondary edu-btn-back\">戻る</button><button class=\"edu-btn edu-btn-primary edu-btn-next\">次へ</button></div>",
-    "copy": "<h3 class=\"edu-card-title\">戻る・次へ</h3><div class=\"ref-ui-demo\"><button class=\"edu-btn edu-btn-secondary edu-btn-back\">戻る</button><button class=\"edu-btn edu-btn-primary edu-btn-next\">次へ</button></div>"
+    "preview": "<h3 class=\"edu-card-title\">戻る・次へ</h3><button class=\"edu-btn edu-btn-secondary edu-btn-back\">戻る</button><button class=\"edu-btn edu-btn-primary edu-btn-next\">次へ</button>",
+    "copy": "<h3 class=\"edu-card-title\">戻る・次へ</h3><button class=\"edu-btn edu-btn-secondary edu-btn-back\">戻る</button><button class=\"edu-btn edu-btn-primary edu-btn-next\">次へ</button>"
   },
   {
     "title": "大きな開始",
@@ -131,8 +131,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "question",
     "file": "edu-ui-variants.css",
     "tags": "大きな開始 .edu-btn-xl expanded-ui",
-    "preview": "<h3 class=\"edu-card-title\">大きな開始</h3><div class=\"ref-ui-demo\"><button class=\"edu-btn edu-btn-primary edu-btn-xl\">学習を始める</button></div>",
-    "copy": "<h3 class=\"edu-card-title\">大きな開始</h3><div class=\"ref-ui-demo\"><button class=\"edu-btn edu-btn-primary edu-btn-xl\">学習を始める</button></div>"
+    "preview": "<h3 class=\"edu-card-title\">大きな開始</h3><button class=\"edu-btn edu-btn-primary edu-btn-xl\">学習を始める</button>",
+    "copy": "<h3 class=\"edu-card-title\">大きな開始</h3><button class=\"edu-btn edu-btn-primary edu-btn-xl\">学習を始める</button>"
   },
   {
     "title": "カード選択",
@@ -194,8 +194,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "question",
     "file": "edu-ui-variants.css",
     "tags": "ステージ・残機 .edu-stage expanded-ui",
-    "preview": "<h3 class=\"edu-card-title\">ステージ・残機</h3><div class=\"ref-ui-demo\"><span class=\"edu-stage\">03</span><span class=\"edu-lives\">♥ ♥ <span class=\"is-lost\">♥</span></span></div>",
-    "copy": "<h3 class=\"edu-card-title\">ステージ・残機</h3><div class=\"ref-ui-demo\"><span class=\"edu-stage\">03</span><span class=\"edu-lives\">♥ ♥ <span class=\"is-lost\">♥</span></span></div>"
+    "preview": "<h3 class=\"edu-card-title\">ステージ・残機</h3><span class=\"edu-stage\">03</span><span class=\"edu-lives\">♥ ♥ <span class=\"is-lost\">♥</span></span>",
+    "copy": "<h3 class=\"edu-card-title\">ステージ・残機</h3><span class=\"edu-stage\">03</span><span class=\"edu-lives\">♥ ♥ <span class=\"is-lost\">♥</span></span>"
   },
   {
     "title": "ミッション",
@@ -266,8 +266,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "motion",
     "file": "edu-effects-advanced.css",
     "tags": "波紋 .effect-ripple advanced-effects",
-    "preview": "<h3 class=\"edu-card-title\">波紋</h3><div class=\"ref-effect-stage\"><span class=\"ref-effect-demo effect-ripple\" data-demo-key=\"ripple\" data-demo-class=\"effect-ripple\">✓</span></div>",
-    "copy": "<h3 class=\"edu-card-title\">波紋</h3><div class=\"ref-effect-stage\"><span class=\"ref-effect-demo effect-ripple\" data-demo-key=\"ripple\" data-demo-class=\"effect-ripple\">✓</span></div>"
+    "preview": "<h3 class=\"edu-card-title\">波紋</h3><span class=\"ref-effect-demo effect-ripple\" data-demo-key=\"ripple\" data-demo-class=\"effect-ripple\">✓</span>",
+    "copy": "<h3 class=\"edu-card-title\">波紋</h3><span class=\"ref-effect-demo effect-ripple\" data-demo-key=\"ripple\" data-demo-class=\"effect-ripple\">✓</span>"
   },
   {
     "title": "衝撃・振動",
@@ -275,8 +275,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "motion",
     "file": "edu-effects-advanced.css",
     "tags": "衝撃・振動 .effect-screen-shake advanced-effects",
-    "preview": "<h3 class=\"edu-card-title\">衝撃・振動</h3><div class=\"ref-effect-stage\"><span class=\"ref-effect-demo effect-screen-shake\" data-demo-key=\"screen-shake\" data-demo-class=\"effect-screen-shake\">MISS</span></div>",
-    "copy": "<h3 class=\"edu-card-title\">衝撃・振動</h3><div class=\"ref-effect-stage\"><span class=\"ref-effect-demo effect-screen-shake\" data-demo-key=\"screen-shake\" data-demo-class=\"effect-screen-shake\">MISS</span></div>"
+    "preview": "<h3 class=\"edu-card-title\">衝撃・振動</h3><span class=\"ref-effect-demo effect-screen-shake\" data-demo-key=\"screen-shake\" data-demo-class=\"effect-screen-shake\">MISS</span>",
+    "copy": "<h3 class=\"edu-card-title\">衝撃・振動</h3><span class=\"ref-effect-demo effect-screen-shake\" data-demo-key=\"screen-shake\" data-demo-class=\"effect-screen-shake\">MISS</span>"
   },
   {
     "title": "スタンプ",
@@ -284,8 +284,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "motion",
     "file": "edu-effects-advanced.css",
     "tags": "スタンプ .effect-stamp advanced-effects",
-    "preview": "<h3 class=\"edu-card-title\">スタンプ</h3><div class=\"ref-effect-stage\"><span class=\"ref-effect-demo effect-stamp\" data-demo-key=\"stamp\" data-demo-class=\"effect-stamp\">CLEAR</span></div>",
-    "copy": "<h3 class=\"edu-card-title\">スタンプ</h3><div class=\"ref-effect-stage\"><span class=\"ref-effect-demo effect-stamp\" data-demo-key=\"stamp\" data-demo-class=\"effect-stamp\">CLEAR</span></div>"
+    "preview": "<h3 class=\"edu-card-title\">スタンプ</h3><span class=\"ref-effect-demo effect-stamp\" data-demo-key=\"stamp\" data-demo-class=\"effect-stamp\">CLEAR</span>",
+    "copy": "<h3 class=\"edu-card-title\">スタンプ</h3><span class=\"ref-effect-demo effect-stamp\" data-demo-key=\"stamp\" data-demo-class=\"effect-stamp\">CLEAR</span>"
   },
   {
     "title": "アンロック",
@@ -293,8 +293,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "motion",
     "file": "edu-effects-advanced.css",
     "tags": "アンロック .effect-unlock advanced-effects",
-    "preview": "<h3 class=\"edu-card-title\">アンロック</h3><div class=\"ref-effect-stage\"><span class=\"ref-effect-demo effect-unlock\" data-demo-key=\"unlock\" data-demo-class=\"effect-unlock\">新しい単元</span></div>",
-    "copy": "<h3 class=\"edu-card-title\">アンロック</h3><div class=\"ref-effect-stage\"><span class=\"ref-effect-demo effect-unlock\" data-demo-key=\"unlock\" data-demo-class=\"effect-unlock\">新しい単元</span></div>"
+    "preview": "<h3 class=\"edu-card-title\">アンロック</h3><span class=\"ref-effect-demo effect-unlock\" data-demo-key=\"unlock\" data-demo-class=\"effect-unlock\">新しい単元</span>",
+    "copy": "<h3 class=\"edu-card-title\">アンロック</h3><span class=\"ref-effect-demo effect-unlock\" data-demo-key=\"unlock\" data-demo-class=\"effect-unlock\">新しい単元</span>"
   },
   {
     "title": "数字が飛ぶ",
@@ -302,8 +302,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "motion",
     "file": "edu-effects-advanced.css",
     "tags": "数字が飛ぶ .effect-number-fly advanced-effects",
-    "preview": "<h3 class=\"edu-card-title\">数字が飛ぶ</h3><div class=\"ref-effect-stage\"><span class=\"ref-effect-demo effect-number-fly\" data-demo-key=\"number-fly\" data-demo-class=\"effect-number-fly\">+120 XP</span></div>",
-    "copy": "<h3 class=\"edu-card-title\">数字が飛ぶ</h3><div class=\"ref-effect-stage\"><span class=\"ref-effect-demo effect-number-fly\" data-demo-key=\"number-fly\" data-demo-class=\"effect-number-fly\">+120 XP</span></div>"
+    "preview": "<h3 class=\"edu-card-title\">数字が飛ぶ</h3><span class=\"ref-effect-demo effect-number-fly\" data-demo-key=\"number-fly\" data-demo-class=\"effect-number-fly\">+120 XP</span>",
+    "copy": "<h3 class=\"edu-card-title\">数字が飛ぶ</h3><span class=\"ref-effect-demo effect-number-fly\" data-demo-key=\"number-fly\" data-demo-class=\"effect-number-fly\">+120 XP</span>"
   },
   {
     "title": "チェックを描く",
@@ -311,8 +311,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "motion",
     "file": "edu-effects-advanced.css",
     "tags": "チェックを描く .effect-check-draw advanced-effects",
-    "preview": "<h3 class=\"edu-card-title\">チェックを描く</h3><div class=\"ref-effect-stage\"><span class=\"ref-effect-demo effect-check-draw\" data-demo-key=\"check-draw\" data-demo-class=\"effect-check-draw\">正解</span></div>",
-    "copy": "<h3 class=\"edu-card-title\">チェックを描く</h3><div class=\"ref-effect-stage\"><span class=\"ref-effect-demo effect-check-draw\" data-demo-key=\"check-draw\" data-demo-class=\"effect-check-draw\">正解</span></div>"
+    "preview": "<h3 class=\"edu-card-title\">チェックを描く</h3><span class=\"ref-effect-demo effect-check-draw\" data-demo-key=\"check-draw\" data-demo-class=\"effect-check-draw\">正解</span>",
+    "copy": "<h3 class=\"edu-card-title\">チェックを描く</h3><span class=\"ref-effect-demo effect-check-draw\" data-demo-key=\"check-draw\" data-demo-class=\"effect-check-draw\">正解</span>"
   },
   {
     "title": "方眼",
@@ -320,8 +320,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "decoration",
     "file": "edu-decorations-advanced.css",
     "tags": "方眼 .deco-grid decorations",
-    "preview": "<h3 class=\"edu-card-title\">方眼</h3><div class=\"ref-deco-swatch deco-surface deco-grid deco-science\"></div>\n            <button class=\"ref-copy ref-copy-inline\" data-copy-text='<div class=\"deco-surface deco-grid\">...</div>'>コードをコピー</button>",
-    "copy": "<h3 class=\"edu-card-title\">方眼</h3><div class=\"ref-deco-swatch deco-surface deco-grid deco-science\"></div>\n            <button class=\"ref-copy ref-copy-inline\" data-copy-text='<div class=\"deco-surface deco-grid\">...</div>'>コードをコピー</button>"
+    "preview": "<h3 class=\"edu-card-title\">方眼</h3><div class=\"ref-deco-swatch deco-surface deco-grid deco-science\"></div>",
+    "copy": "<h3 class=\"edu-card-title\">方眼</h3><div class=\"ref-deco-swatch deco-surface deco-grid deco-science\"></div>"
   },
   {
     "title": "ドット",
@@ -329,8 +329,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "decoration",
     "file": "edu-decorations-advanced.css",
     "tags": "ドット .deco-dots decorations",
-    "preview": "<h3 class=\"edu-card-title\">ドット</h3><div class=\"ref-deco-swatch deco-surface deco-dots deco-digital\"></div>\n            <button class=\"ref-copy ref-copy-inline\" data-copy-text='<div class=\"deco-surface deco-dots\">...</div>'>コードをコピー</button>",
-    "copy": "<h3 class=\"edu-card-title\">ドット</h3><div class=\"ref-deco-swatch deco-surface deco-dots deco-digital\"></div>\n            <button class=\"ref-copy ref-copy-inline\" data-copy-text='<div class=\"deco-surface deco-dots\">...</div>'>コードをコピー</button>"
+    "preview": "<h3 class=\"edu-card-title\">ドット</h3><div class=\"ref-deco-swatch deco-surface deco-dots deco-digital\"></div>",
+    "copy": "<h3 class=\"edu-card-title\">ドット</h3><div class=\"ref-deco-swatch deco-surface deco-dots deco-digital\"></div>"
   },
   {
     "title": "ハーフトーン",
@@ -338,8 +338,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "decoration",
     "file": "edu-decorations-advanced.css",
     "tags": "ハーフトーン .deco-halftone decorations",
-    "preview": "<h3 class=\"edu-card-title\">ハーフトーン</h3><div class=\"ref-deco-swatch deco-surface deco-halftone deco-retro\"></div>\n            <button class=\"ref-copy ref-copy-inline\" data-copy-text='<div class=\"deco-surface deco-halftone\">...</div>'>コードをコピー</button>",
-    "copy": "<h3 class=\"edu-card-title\">ハーフトーン</h3><div class=\"ref-deco-swatch deco-surface deco-halftone deco-retro\"></div>\n            <button class=\"ref-copy ref-copy-inline\" data-copy-text='<div class=\"deco-surface deco-halftone\">...</div>'>コードをコピー</button>"
+    "preview": "<h3 class=\"edu-card-title\">ハーフトーン</h3><div class=\"ref-deco-swatch deco-surface deco-halftone deco-retro\"></div>",
+    "copy": "<h3 class=\"edu-card-title\">ハーフトーン</h3><div class=\"ref-deco-swatch deco-surface deco-halftone deco-retro\"></div>"
   },
   {
     "title": "波",
@@ -347,8 +347,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "decoration",
     "file": "edu-decorations-advanced.css",
     "tags": "波 .deco-wave decorations",
-    "preview": "<h3 class=\"edu-card-title\">波</h3><div class=\"ref-deco-swatch deco-surface deco-wave deco-retro\"></div>\n            <button class=\"ref-copy ref-copy-inline\" data-copy-text='<div class=\"deco-surface deco-wave\">...</div>'>コードをコピー</button>",
-    "copy": "<h3 class=\"edu-card-title\">波</h3><div class=\"ref-deco-swatch deco-surface deco-wave deco-retro\"></div>\n            <button class=\"ref-copy ref-copy-inline\" data-copy-text='<div class=\"deco-surface deco-wave\">...</div>'>コードをコピー</button>"
+    "preview": "<h3 class=\"edu-card-title\">波</h3><div class=\"ref-deco-swatch deco-surface deco-wave deco-retro\"></div>",
+    "copy": "<h3 class=\"edu-card-title\">波</h3><div class=\"ref-deco-swatch deco-surface deco-wave deco-retro\"></div>"
   },
   {
     "title": "回路",
@@ -356,8 +356,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "decoration",
     "file": "edu-decorations-advanced.css",
     "tags": "回路 .deco-circuit decorations",
-    "preview": "<h3 class=\"edu-card-title\">回路</h3><div class=\"ref-deco-swatch deco-surface deco-circuit deco-science\"></div>\n            <button class=\"ref-copy ref-copy-inline\" data-copy-text='<div class=\"deco-surface deco-circuit\">...</div>'>コードをコピー</button>",
-    "copy": "<h3 class=\"edu-card-title\">回路</h3><div class=\"ref-deco-swatch deco-surface deco-circuit deco-science\"></div>\n            <button class=\"ref-copy ref-copy-inline\" data-copy-text='<div class=\"deco-surface deco-circuit\">...</div>'>コードをコピー</button>"
+    "preview": "<h3 class=\"edu-card-title\">回路</h3><div class=\"ref-deco-swatch deco-surface deco-circuit deco-science\"></div>",
+    "copy": "<h3 class=\"edu-card-title\">回路</h3><div class=\"ref-deco-swatch deco-surface deco-circuit deco-science\"></div>"
   },
   {
     "title": "集中線",
@@ -365,8 +365,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "decoration",
     "file": "edu-decorations-advanced.css",
     "tags": "集中線 .deco-rays decorations",
-    "preview": "<h3 class=\"edu-card-title\">集中線</h3><div class=\"ref-deco-swatch deco-surface deco-rays deco-pop\"></div>\n            <button class=\"ref-copy ref-copy-inline\" data-copy-text='<div class=\"deco-surface deco-rays\">...</div>'>コードをコピー</button>",
-    "copy": "<h3 class=\"edu-card-title\">集中線</h3><div class=\"ref-deco-swatch deco-surface deco-rays deco-pop\"></div>\n            <button class=\"ref-copy ref-copy-inline\" data-copy-text='<div class=\"deco-surface deco-rays\">...</div>'>コードをコピー</button>"
+    "preview": "<h3 class=\"edu-card-title\">集中線</h3><div class=\"ref-deco-swatch deco-surface deco-rays deco-pop\"></div>",
+    "copy": "<h3 class=\"edu-card-title\">集中線</h3><div class=\"ref-deco-swatch deco-surface deco-rays deco-pop\"></div>"
   },
   {
     "title": "キラキラ",
@@ -374,8 +374,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "decoration",
     "file": "edu-decorations-advanced.css",
     "tags": "キラキラ .deco-sparkles decorations",
-    "preview": "<h3 class=\"edu-card-title\">キラキラ</h3><div class=\"ref-deco-swatch deco-surface deco-sparkles deco-fantasy\"></div>\n            <button class=\"ref-copy ref-copy-inline\" data-copy-text='<div class=\"deco-surface deco-sparkles\">...</div>'>コードをコピー</button>",
-    "copy": "<h3 class=\"edu-card-title\">キラキラ</h3><div class=\"ref-deco-swatch deco-surface deco-sparkles deco-fantasy\"></div>\n            <button class=\"ref-copy ref-copy-inline\" data-copy-text='<div class=\"deco-surface deco-sparkles\">...</div>'>コードをコピー</button>"
+    "preview": "<h3 class=\"edu-card-title\">キラキラ</h3><div class=\"ref-deco-swatch deco-surface deco-sparkles deco-fantasy\"></div>",
+    "copy": "<h3 class=\"edu-card-title\">キラキラ</h3><div class=\"ref-deco-swatch deco-surface deco-sparkles deco-fantasy\"></div>"
   },
   {
     "title": "手描き線",
@@ -383,8 +383,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "decoration",
     "file": "edu-decorations-advanced.css",
     "tags": "手描き線 .deco-sketch decorations",
-    "preview": "<h3 class=\"edu-card-title\">手描き線</h3><div class=\"ref-deco-swatch deco-surface deco-sketch deco-note\"></div>\n            <button class=\"ref-copy ref-copy-inline\" data-copy-text='<div class=\"deco-surface deco-sketch\">...</div>'>コードをコピー</button>",
-    "copy": "<h3 class=\"edu-card-title\">手描き線</h3><div class=\"ref-deco-swatch deco-surface deco-sketch deco-note\"></div>\n            <button class=\"ref-copy ref-copy-inline\" data-copy-text='<div class=\"deco-surface deco-sketch\">...</div>'>コードをコピー</button>"
+    "preview": "<h3 class=\"edu-card-title\">手描き線</h3><div class=\"ref-deco-swatch deco-surface deco-sketch deco-note\"></div>",
+    "copy": "<h3 class=\"edu-card-title\">手描き線</h3><div class=\"ref-deco-swatch deco-surface deco-sketch deco-note\"></div>"
   },
   {
     "title": "枠・吹き出し",
@@ -392,8 +392,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "decoration",
     "file": "edu-decorations-advanced.css",
     "tags": "枠・吹き出し .deco-frame decorations",
-    "preview": "<h3 class=\"edu-card-title\">枠・吹き出し</h3><div class=\"ref-deco-swatch ref-deco-frame-sample deco-surface deco-frame deco-note\"></div>\n            <button class=\"ref-copy ref-copy-inline\" data-copy-text='<div class=\"deco-surface deco-frame\">...</div>'>コードをコピー</button>",
-    "copy": "<h3 class=\"edu-card-title\">枠・吹き出し</h3><div class=\"ref-deco-swatch ref-deco-frame-sample deco-surface deco-frame deco-note\"></div>\n            <button class=\"ref-copy ref-copy-inline\" data-copy-text='<div class=\"deco-surface deco-frame\">...</div>'>コードをコピー</button>"
+    "preview": "<h3 class=\"edu-card-title\">枠・吹き出し</h3><div class=\"ref-deco-swatch ref-deco-frame-sample deco-surface deco-frame deco-note\"></div>",
+    "copy": "<h3 class=\"edu-card-title\">枠・吹き出し</h3><div class=\"ref-deco-swatch ref-deco-frame-sample deco-surface deco-frame deco-note\"></div>"
   },
   {
     "title": "区切り線",
@@ -401,8 +401,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "decoration",
     "file": "edu-decorations-advanced.css",
     "tags": "区切り線 .deco-divider decorations",
-    "preview": "<h3 class=\"edu-card-title\">区切り線</h3><div class=\"ref-deco-divider-sample deco-divider deco-minimal\"><span>SECTION</span></div>\n            <button class=\"ref-copy ref-copy-inline\" data-copy-text='<div class=\"deco-divider deco-minimal\"><span>SECTION</span></div>'>コードをコピー</button>",
-    "copy": "<h3 class=\"edu-card-title\">区切り線</h3><div class=\"ref-deco-divider-sample deco-divider deco-minimal\"><span>SECTION</span></div>\n            <button class=\"ref-copy ref-copy-inline\" data-copy-text='<div class=\"deco-divider deco-minimal\"><span>SECTION</span></div>'>コードをコピー</button>"
+    "preview": "<h3 class=\"edu-card-title\">区切り線</h3><div class=\"ref-deco-divider-sample deco-divider deco-minimal\"><span>SECTION</span></div>",
+    "copy": "<h3 class=\"edu-card-title\">区切り線</h3><div class=\"ref-deco-divider-sample deco-divider deco-minimal\"><span>SECTION</span></div>"
   },
   {
     "title": "幾何学シェイプ",
@@ -410,8 +410,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "decoration",
     "file": "edu-decorations-advanced.css",
     "tags": "幾何学シェイプ .deco-shape-circle decorations",
-    "preview": "<h3 class=\"edu-card-title\">幾何学シェイプ</h3><div class=\"ref-deco-swatch deco-surface deco-shape-circle deco-fantasy\"></div>\n            <button class=\"ref-copy ref-copy-inline\" data-copy-text='<div class=\"deco-surface deco-shape-circle\">...</div>'>コードをコピー</button>",
-    "copy": "<h3 class=\"edu-card-title\">幾何学シェイプ</h3><div class=\"ref-deco-swatch deco-surface deco-shape-circle deco-fantasy\"></div>\n            <button class=\"ref-copy ref-copy-inline\" data-copy-text='<div class=\"deco-surface deco-shape-circle\">...</div>'>コードをコピー</button>"
+    "preview": "<h3 class=\"edu-card-title\">幾何学シェイプ</h3><div class=\"ref-deco-swatch deco-surface deco-shape-circle deco-fantasy\"></div>",
+    "copy": "<h3 class=\"edu-card-title\">幾何学シェイプ</h3><div class=\"ref-deco-swatch deco-surface deco-shape-circle deco-fantasy\"></div>"
   },
   {
     "title": "デジタル",
@@ -464,8 +464,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "motion",
     "file": "edu-effects-learning-motion.css",
     "tags": "注目を集める .edu-focus-ring learning-motion",
-    "preview": "<h3>注目を集める</h3>\n            <div class=\"edu-focus-ring ref-demo-panel\"><strong>いま見る問題</strong></div>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<div class=\"edu-focus-ring\">...</div>'>コードをコピー</button>",
-    "copy": "<h3>注目を集める</h3>\n            <div class=\"edu-focus-ring ref-demo-panel\"><strong>いま見る問題</strong></div>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<div class=\"edu-focus-ring\">...</div>'>コードをコピー</button>"
+    "preview": "<h3>注目を集める</h3> <div class=\"edu-focus-ring ref-demo-panel\"><strong>いま見る問題</strong></div>",
+    "copy": "<h3>注目を集める</h3> <div class=\"edu-focus-ring ref-demo-panel\"><strong>いま見る問題</strong></div>"
   },
   {
     "title": "開始カウント",
@@ -473,8 +473,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "motion",
     "file": "edu-effects-learning-motion.css",
     "tags": "開始カウント .edu-count-in learning-motion",
-    "preview": "<h3>開始カウント</h3>\n            <div class=\"edu-count-in ref-demo-panel\"><strong>3</strong><strong>2</strong><strong>1</strong><strong>START</strong></div>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<div class=\"edu-count-in\"><strong>3</strong><strong>2</strong><strong>1</strong><strong>START</strong></div>'>コードをコピー</button>",
-    "copy": "<h3>開始カウント</h3>\n            <div class=\"edu-count-in ref-demo-panel\"><strong>3</strong><strong>2</strong><strong>1</strong><strong>START</strong></div>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<div class=\"edu-count-in\"><strong>3</strong><strong>2</strong><strong>1</strong><strong>START</strong></div>'>コードをコピー</button>"
+    "preview": "<h3>開始カウント</h3> <div class=\"edu-count-in ref-demo-panel\"><strong>3</strong><strong>2</strong><strong>1</strong><strong>START</strong></div>",
+    "copy": "<h3>開始カウント</h3> <div class=\"edu-count-in ref-demo-panel\"><strong>3</strong><strong>2</strong><strong>1</strong><strong>START</strong></div>"
   },
   {
     "title": "マーカーを引く",
@@ -482,8 +482,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "motion",
     "file": "edu-effects-learning-motion.css",
     "tags": "マーカーを引く .edu-sweep-marker learning-motion",
-    "preview": "<h3>マーカーを引く</h3>\n            <p class=\"ref-demo-panel\"><span class=\"edu-sweep-marker\">大切なことば</span></p>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<span class=\"edu-sweep-marker\">大切なことば</span>'>コードをコピー</button>",
-    "copy": "<h3>マーカーを引く</h3>\n            <p class=\"ref-demo-panel\"><span class=\"edu-sweep-marker\">大切なことば</span></p>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<span class=\"edu-sweep-marker\">大切なことば</span>'>コードをコピー</button>"
+    "preview": "<h3>マーカーを引く</h3> <p class=\"ref-demo-panel\"><span class=\"edu-sweep-marker\">大切なことば</span></p>",
+    "copy": "<h3>マーカーを引く</h3> <p class=\"ref-demo-panel\"><span class=\"edu-sweep-marker\">大切なことば</span></p>"
   },
   {
     "title": "タップの反応",
@@ -491,8 +491,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "motion",
     "file": "edu-effects-learning-motion.css",
     "tags": "タップの反応 .edu-hover-lift learning-motion",
-    "preview": "<h3>タップの反応</h3>\n            <button class=\"edu-btn edu-btn-primary edu-hover-lift edu-press ref-demo-panel\">押せる教材部品</button>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<button class=\"edu-hover-lift edu-press\">...</button>'>コードをコピー</button>",
-    "copy": "<h3>タップの反応</h3>\n            <button class=\"edu-btn edu-btn-primary edu-hover-lift edu-press ref-demo-panel\">押せる教材部品</button>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<button class=\"edu-hover-lift edu-press\">...</button>'>コードをコピー</button>"
+    "preview": "<h3>タップの反応</h3> <button class=\"edu-btn edu-btn-primary edu-hover-lift edu-press ref-demo-panel\">押せる教材部品</button> '>コードをコピー</button>",
+    "copy": "<h3>タップの反応</h3> <button class=\"edu-btn edu-btn-primary edu-hover-lift edu-press ref-demo-panel\">押せる教材部品</button> '>コードをコピー</button>"
   },
   {
     "title": "得点・XPの更新",
@@ -500,8 +500,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "motion",
     "file": "edu-effects-kinetic.css",
     "tags": "得点・XPの更新 .edu-kinetic-number kinetic-motion",
-    "preview": "<h3>得点・XPの更新</h3>\n            <div class=\"ref-demo-panel\"><strong class=\"edu-kinetic-number\">+120 XP</strong></div>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<strong class=\"edu-kinetic-number\">+120 XP</strong>'>コードをコピー</button>",
-    "copy": "<h3>得点・XPの更新</h3>\n            <div class=\"ref-demo-panel\"><strong class=\"edu-kinetic-number\">+120 XP</strong></div>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<strong class=\"edu-kinetic-number\">+120 XP</strong>'>コードをコピー</button>"
+    "preview": "<h3>得点・XPの更新</h3> <div class=\"ref-demo-panel\"><strong class=\"edu-kinetic-number\">+120 XP</strong></div>",
+    "copy": "<h3>得点・XPの更新</h3> <div class=\"ref-demo-panel\"><strong class=\"edu-kinetic-number\">+120 XP</strong></div>"
   },
   {
     "title": "ヒントを開く",
@@ -509,8 +509,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "motion",
     "file": "edu-effects-kinetic.css",
     "tags": "ヒントを開く .edu-kinetic-expand is-open kinetic-motion",
-    "preview": "<h3>ヒントを開く</h3>\n            <div class=\"edu-kinetic-expand is-open ref-demo-panel\"><div><strong>ヒント</strong><small>まず図をよく見てみよう</small></div></div>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<div class=\"edu-kinetic-expand is-open\"><div>...</div></div>'>コードをコピー</button>",
-    "copy": "<h3>ヒントを開く</h3>\n            <div class=\"edu-kinetic-expand is-open ref-demo-panel\"><div><strong>ヒント</strong><small>まず図をよく見てみよう</small></div></div>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<div class=\"edu-kinetic-expand is-open\"><div>...</div></div>'>コードをコピー</button>"
+    "preview": "<h3>ヒントを開く</h3> <div class=\"edu-kinetic-expand is-open ref-demo-panel\"><div><strong>ヒント</strong><small>まず図をよく見てみよう</small></div></div>",
+    "copy": "<h3>ヒントを開く</h3> <div class=\"edu-kinetic-expand is-open ref-demo-panel\"><div><strong>ヒント</strong><small>まず図をよく見てみよう</small></div></div>"
   },
   {
     "title": "押した感覚",
@@ -518,8 +518,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "motion",
     "file": "edu-effects-kinetic.css",
     "tags": "押した感覚 .edu-kinetic-button kinetic-motion",
-    "preview": "<h3>押した感覚</h3>\n            <button class=\"edu-btn edu-btn-primary edu-kinetic-button ref-demo-panel\">タップしてみる</button>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<button class=\"edu-kinetic-button\">...</button>'>コードをコピー</button>",
-    "copy": "<h3>押した感覚</h3>\n            <button class=\"edu-btn edu-btn-primary edu-kinetic-button ref-demo-panel\">タップしてみる</button>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<button class=\"edu-kinetic-button\">...</button>'>コードをコピー</button>"
+    "preview": "<h3>押した感覚</h3> <button class=\"edu-btn edu-btn-primary edu-kinetic-button ref-demo-panel\">タップしてみる</button> '>コードをコピー</button>",
+    "copy": "<h3>押した感覚</h3> <button class=\"edu-btn edu-btn-primary edu-kinetic-button ref-demo-panel\">タップしてみる</button> '>コードをコピー</button>"
   },
   {
     "title": "進捗バーの光",
@@ -527,8 +527,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "motion",
     "file": "edu-effects-kinetic.css",
     "tags": "進捗バーの光 .edu-kinetic-xp kinetic-motion",
-    "preview": "<h3>進捗バーの光</h3>\n            <div class=\"edu-progress edu-kinetic-xp ref-demo-panel\"><span style=\"width:72%\"></span></div>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<div class=\"edu-progress edu-kinetic-xp\">...</div>'>コードをコピー</button>",
-    "copy": "<h3>進捗バーの光</h3>\n            <div class=\"edu-progress edu-kinetic-xp ref-demo-panel\"><span style=\"width:72%\"></span></div>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<div class=\"edu-progress edu-kinetic-xp\">...</div>'>コードをコピー</button>"
+    "preview": "<h3>進捗バーの光</h3> <div class=\"edu-progress edu-kinetic-xp ref-demo-panel\"><span style=\"width:72%\"></span></div>",
+    "copy": "<h3>進捗バーの光</h3> <div class=\"edu-progress edu-kinetic-xp ref-demo-panel\"><span style=\"width:72%\"></span></div>"
   },
   {
     "title": "保存・処理中",
@@ -536,8 +536,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "motion",
     "file": "edu-effects-kinetic.css",
     "tags": "保存・処理中 .edu-kinetic-dot kinetic-motion",
-    "preview": "<h3>保存・処理中</h3>\n            <p class=\"ref-demo-panel\"><span class=\"edu-kinetic-dot\" aria-label=\"処理中\"></span> 保存しています…</p>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<span class=\"edu-kinetic-dot\" aria-label=\"処理中\"></span>'>コードをコピー</button>",
-    "copy": "<h3>保存・処理中</h3>\n            <p class=\"ref-demo-panel\"><span class=\"edu-kinetic-dot\" aria-label=\"処理中\"></span> 保存しています…</p>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<span class=\"edu-kinetic-dot\" aria-label=\"処理中\"></span>'>コードをコピー</button>"
+    "preview": "<h3>保存・処理中</h3> <p class=\"ref-demo-panel\"><span class=\"edu-kinetic-dot\" aria-label=\"処理中\"></span> 保存しています…</p>",
+    "copy": "<h3>保存・処理中</h3> <p class=\"ref-demo-panel\"><span class=\"edu-kinetic-dot\" aria-label=\"処理中\"></span> 保存しています…</p>"
   },
   {
     "title": "SPECIAL REWARD",
@@ -545,8 +545,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "decoration",
     "file": "edu-effects-creative.css",
     "tags": "SPECIAL REWARD .edu-creative-shimmer creative-materials",
-    "preview": "<h3 class=\"edu-creative-shimmer\">SPECIAL REWARD</h3>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<h2 class=\"edu-creative-shimmer\">SPECIAL REWARD</h2>'>コードをコピー</button>",
-    "copy": "<h3 class=\"edu-creative-shimmer\">SPECIAL REWARD</h3>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<h2 class=\"edu-creative-shimmer\">SPECIAL REWARD</h2>'>コードをコピー</button>"
+    "preview": "<h3 class=\"edu-creative-shimmer\">SPECIAL REWARD</h3>",
+    "copy": "<h3 class=\"edu-creative-shimmer\">SPECIAL REWARD</h3>"
   },
   {
     "title": "大切なことば",
@@ -554,8 +554,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "decoration",
     "file": "edu-effects-creative.css",
     "tags": "大切なことば .edu-creative-highlight creative-materials",
-    "preview": "<h3 class=\"edu-creative-highlight\">大切なことば</h3>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<span class=\"edu-creative-highlight\">大切なことば</span>'>コードをコピー</button>",
-    "copy": "<h3 class=\"edu-creative-highlight\">大切なことば</h3>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<span class=\"edu-creative-highlight\">大切なことば</span>'>コードをコピー</button>"
+    "preview": "<h3 class=\"edu-creative-highlight\">大切なことば</h3>",
+    "copy": "<h3 class=\"edu-creative-highlight\">大切なことば</h3>"
   },
   {
     "title": "図鑑カード",
@@ -563,8 +563,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "decoration",
     "file": "edu-effects-creative.css",
     "tags": "図鑑カード .edu-creative-tilt creative-materials",
-    "preview": "<h3>図鑑カード</h3>\n            <p>見つけたものをカードで見せる</p>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<article class=\"edu-creative-tilt\">...",
-    "copy": "<h3>図鑑カード</h3>\n            <p>見つけたものをカードで見せる</p>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<article class=\"edu-creative-tilt\">..."
+    "preview": "<h3>図鑑カード</h3> <p>見つけたものをカードで見せる</p> <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<article class=\"edu-creative-tilt\">...",
+    "copy": "<h3>図鑑カード</h3> <p>見つけたものをカードで見せる</p> <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<article class=\"edu-creative-tilt\">..."
   },
   {
     "title": "選択中のカード",
@@ -572,8 +572,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "decoration",
     "file": "edu-effects-creative.css",
     "tags": "選択中のカード .edu-creative-glow-border is-active creative-materials",
-    "preview": "<h3>選択中のカード</h3>\n            <p>is-active で選択状態を表現</p>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<article class=\"edu-creative-glow-border is-active\">...",
-    "copy": "<h3>選択中のカード</h3>\n            <p>is-active で選択状態を表現</p>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<article class=\"edu-creative-glow-border is-active\">..."
+    "preview": "<h3>選択中のカード</h3> <p>is-active で選択状態を表現</p> <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<article class=\"edu-creative-glow-border is-active\">...",
+    "copy": "<h3>選択中のカード</h3> <p>is-active で選択状態を表現</p> <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<article class=\"edu-creative-glow-border is-active\">..."
   },
   {
     "title": "理科ラボへようこそ",
@@ -581,8 +581,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "question",
     "file": "edu-effects-learning-shell.css",
     "tags": "理科ラボへようこそ .edu-shell-hero learning-shell-materials",
-    "preview": "<div class=\"edu-shell-hero\"><h3>理科ラボへようこそ</h3><p>観察して、考えて、確かめよう。</p><div class=\"edu-shell-flow\"><span>知識</span><span>予想</span><span>考察</span></div></div>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<section class=\"edu-shell-hero\">...</section>'>コードをコピー</button>",
-    "copy": "<div class=\"edu-shell-hero\"><h3>理科ラボへようこそ</h3><p>観察して、考えて、確かめよう。</p><div class=\"edu-shell-flow\"><span>知識</span><span>予想</span><span>考察</span></div></div>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<section class=\"edu-shell-hero\">...</section>'>コードをコピー</button>"
+    "preview": "<div class=\"edu-shell-hero\"><h3>理科ラボへようこそ</h3><p>観察して、考えて、確かめよう。</p><div class=\"edu-shell-flow\"><span>知識</span><span>予想</span><span>考察</span></div></div>",
+    "copy": "<div class=\"edu-shell-hero\"><h3>理科ラボへようこそ</h3><p>観察して、考えて、確かめよう。</p><div class=\"edu-shell-flow\"><span>知識</span><span>予想</span><span>考察</span></div></div>"
   },
   {
     "title": "素材",
@@ -590,8 +590,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "question",
     "file": "edu-effects-learning-shell.css",
     "tags": "素材 .edu-shell-unit-card learning-shell-materials",
-    "preview": "<a class=\"edu-shell-unit-card\" href=\"#learning-shell-materials\"><strong>01 · 植物の成長</strong><p>発芽の条件を調べよう。</p><span class=\"edu-shell-mini-progress\"><span><i style=\"--edu-progress:68%\"></i></span>68%</span></a>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<a class=\"edu-shell-unit-card\" href=\"#\">...</a>'>コードをコピー</button>",
-    "copy": "<a class=\"edu-shell-unit-card\" href=\"#learning-shell-materials\"><strong>01 · 植物の成長</strong><p>発芽の条件を調べよう。</p><span class=\"edu-shell-mini-progress\"><span><i style=\"--edu-progress:68%\"></i></span>68%</span></a>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<a class=\"edu-shell-unit-card\" href=\"#\">...</a>'>コードをコピー</button>"
+    "preview": "<a class=\"edu-shell-unit-card\" href=\"#learning-shell-materials\"><strong>01 · 植物の成長</strong><p>発芽の条件を調べよう。</p><span class=\"edu-shell-mini-progress\"><span><i style=\"--edu-progress:68%\"></i></span>68%</span></a>",
+    "copy": "<a class=\"edu-shell-unit-card\" href=\"#learning-shell-materials\"><strong>01 · 植物の成長</strong><p>発芽の条件を調べよう。</p><span class=\"edu-shell-mini-progress\"><span><i style=\"--edu-progress:68%\"></i></span>68%</span></a>"
   },
   {
     "title": "素材",
@@ -599,8 +599,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "question",
     "file": "edu-effects-learning-shell.css",
     "tags": "素材 .edu-shell-evidence learning-shell-materials",
-    "preview": "<div class=\"edu-shell-evidence\"><strong>根拠</strong>日なたの方がよく育った。</div>\n            <div class=\"edu-shell-prediction\"><strong>予想</strong>水が多い方が育つと思う。</div>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<div class=\"edu-shell-evidence\">...</div>'>コードをコピー</button>",
-    "copy": "<div class=\"edu-shell-evidence\"><strong>根拠</strong>日なたの方がよく育った。</div>\n            <div class=\"edu-shell-prediction\"><strong>予想</strong>水が多い方が育つと思う。</div>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<div class=\"edu-shell-evidence\">...</div>'>コードをコピー</button>"
+    "preview": "<div class=\"edu-shell-evidence\"><strong>根拠</strong>日なたの方がよく育った。</div> <div class=\"edu-shell-prediction\"><strong>予想</strong>水が多い方が育つと思う。</div>",
+    "copy": "<div class=\"edu-shell-evidence\"><strong>根拠</strong>日なたの方がよく育った。</div> <div class=\"edu-shell-prediction\"><strong>予想</strong>水が多い方が育つと思う。</div>"
   },
   {
     "title": "素材",
@@ -608,8 +608,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "question",
     "file": "edu-effects-learning-shell.css",
     "tags": "素材 .edu-shell-workspace learning-shell-materials",
-    "preview": "<div class=\"edu-shell-workspace\"><nav class=\"edu-shell-activity-nav\"><button aria-current=\"step\">観察</button><button>予想</button></nav><div class=\"edu-shell-activity-card\"><strong>活動カード</strong><p>今取り組む内容を表示します。</p></div></div>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<div class=\"edu-shell-workspace\">...</div>'>コードをコピー</button>",
-    "copy": "<div class=\"edu-shell-workspace\"><nav class=\"edu-shell-activity-nav\"><button aria-current=\"step\">観察</button><button>予想</button></nav><div class=\"edu-shell-activity-card\"><strong>活動カード</strong><p>今取り組む内容を表示します。</p></div></div>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<div class=\"edu-shell-workspace\">...</div>'>コードをコピー</button>"
+    "preview": "<div class=\"edu-shell-workspace\"><nav class=\"edu-shell-activity-nav\"><button aria-current=\"step\">観察</button><button>予想</button></nav><div class=\"edu-shell-activity-card\"><strong>活動カード</strong><p>今取り組む内容を表示します。</p></div></div>",
+    "copy": "<div class=\"edu-shell-workspace\"><nav class=\"edu-shell-activity-nav\"><button aria-current=\"step\">観察</button><button>予想</button></nav><div class=\"edu-shell-activity-card\"><strong>活動カード</strong><p>今取り組む内容を表示します。</p></div></div>"
   },
   {
     "title": "素材",
@@ -617,8 +617,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "question",
     "file": "edu-effects-learning-shell.css",
     "tags": "素材 .edu-shell-discovery-card learning-shell-materials",
-    "preview": "<div class=\"edu-shell-discovery-grid\"><div class=\"edu-shell-discovery-card\"><strong>発芽</strong><small>見つけた！</small></div><div class=\"edu-shell-discovery-card is-hidden\"><strong>？？？</strong><small>まだ未発見</small></div></div>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<div class=\"edu-shell-discovery-card\">...</div>'>コードをコピー</button>",
-    "copy": "<div class=\"edu-shell-discovery-grid\"><div class=\"edu-shell-discovery-card\"><strong>発芽</strong><small>見つけた！</small></div><div class=\"edu-shell-discovery-card is-hidden\"><strong>？？？</strong><small>まだ未発見</small></div></div>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<div class=\"edu-shell-discovery-card\">...</div>'>コードをコピー</button>"
+    "preview": "<div class=\"edu-shell-discovery-grid\"><div class=\"edu-shell-discovery-card\"><strong>発芽</strong><small>見つけた！</small></div><div class=\"edu-shell-discovery-card is-hidden\"><strong>？？？</strong><small>まだ未発見</small></div></div>",
+    "copy": "<div class=\"edu-shell-discovery-grid\"><div class=\"edu-shell-discovery-card\"><strong>発芽</strong><small>見つけた！</small></div><div class=\"edu-shell-discovery-card is-hidden\"><strong>？？？</strong><small>まだ未発見</small></div></div>"
   },
   {
     "title": "素材",
@@ -626,8 +626,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "question",
     "file": "edu-effects-learning-shell.css",
     "tags": "素材 .edu-shell-result-ring learning-shell-materials",
-    "preview": "<div class=\"edu-shell-result-ring\" style=\"--edu-score:78%\"><b>78%</b></div>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<div class=\"edu-shell-result-ring\" style=\"--edu-score:78%\"><b>78%</b></div>'>コードをコピー</button>",
-    "copy": "<div class=\"edu-shell-result-ring\" style=\"--edu-score:78%\"><b>78%</b></div>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<div class=\"edu-shell-result-ring\" style=\"--edu-score:78%\"><b>78%</b></div>'>コードをコピー</button>"
+    "preview": "<div class=\"edu-shell-result-ring\" style=\"--edu-score:78%\"><b>78%</b></div>",
+    "copy": "<div class=\"edu-shell-result-ring\" style=\"--edu-score:78%\"><b>78%</b></div>"
   },
   {
     "title": "素材",
@@ -635,8 +635,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "feedback",
     "file": "edu-effects-learning-panels.css",
     "tags": "素材 .edu-panel-recommendation learning-panels",
-    "preview": "<div class=\"edu-panel-recommendation\"><span class=\"edu-panel-label\">NEXT</span>次は似た問題を解いてみよう。</div><button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<div class=\"edu-panel-recommendation\">...</div>'>コードをコピー</button>",
-    "copy": "<div class=\"edu-panel-recommendation\"><span class=\"edu-panel-label\">NEXT</span>次は似た問題を解いてみよう。</div><button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<div class=\"edu-panel-recommendation\">...</div>'>コードをコピー</button>"
+    "preview": "<div class=\"edu-panel-recommendation\"><span class=\"edu-panel-label\">NEXT</span>次は似た問題を解いてみよう。</div>",
+    "copy": "<div class=\"edu-panel-recommendation\"><span class=\"edu-panel-label\">NEXT</span>次は似た問題を解いてみよう。</div>"
   },
   {
     "title": "素材",
@@ -644,8 +644,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "feedback",
     "file": "edu-effects-learning-panels.css",
     "tags": "素材 .edu-panel-approval learning-panels",
-    "preview": "<div class=\"edu-panel-approval\"><span class=\"edu-panel-label\">CHECK</span>この答えで提出しますか？<div class=\"edu-panel-actions\"><button class=\"edu-btn edu-btn-primary\">提出する</button></div></div><button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<div class=\"edu-panel-approval\">...</div>'>コードをコピー</button>",
-    "copy": "<div class=\"edu-panel-approval\"><span class=\"edu-panel-label\">CHECK</span>この答えで提出しますか？<div class=\"edu-panel-actions\"><button class=\"edu-btn edu-btn-primary\">提出する</button></div></div><button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<div class=\"edu-panel-approval\">...</div>'>コードをコピー</button>"
+    "preview": "<div class=\"edu-panel-approval\"><span class=\"edu-panel-label\">CHECK</span>この答えで提出しますか？<div class=\"edu-panel-actions\"><button class=\"edu-btn edu-btn-primary\">提出する</button></div></div>",
+    "copy": "<div class=\"edu-panel-approval\"><span class=\"edu-panel-label\">CHECK</span>この答えで提出しますか？<div class=\"edu-panel-actions\"><button class=\"edu-btn edu-btn-primary\">提出する</button></div></div>"
   },
   {
     "title": "素材",
@@ -653,8 +653,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "feedback",
     "file": "edu-effects-learning-panels.css",
     "tags": "素材 .edu-panel-processing learning-panels",
-    "preview": "<div class=\"edu-panel-processing\">採点しています…</div><button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<div class=\"edu-panel-processing\">採点しています…</div>'>コードをコピー</button>",
-    "copy": "<div class=\"edu-panel-processing\">採点しています…</div><button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<div class=\"edu-panel-processing\">採点しています…</div>'>コードをコピー</button>"
+    "preview": "<div class=\"edu-panel-processing\">採点しています…</div>",
+    "copy": "<div class=\"edu-panel-processing\">採点しています…</div>"
   },
   {
     "title": "素材",
@@ -662,8 +662,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "feedback",
     "file": "edu-effects-learning-panels.css",
     "tags": "素材 .edu-panel-stream learning-panels",
-    "preview": "<div class=\"edu-panel-stream\"><strong>正答率を計算中</strong><span>苦手な問題を確認中</span><span>復習コースを準備しました</span></div><button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<div class=\"edu-panel-stream\"><p>...</p></div>'>コードをコピー</button>",
-    "copy": "<div class=\"edu-panel-stream\"><strong>正答率を計算中</strong><span>苦手な問題を確認中</span><span>復習コースを準備しました</span></div><button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<div class=\"edu-panel-stream\"><p>...</p></div>'>コードをコピー</button>"
+    "preview": "<div class=\"edu-panel-stream\"><strong>正答率を計算中</strong><span>苦手な問題を確認中</span><span>復習コースを準備しました</span></div>",
+    "copy": "<div class=\"edu-panel-stream\"><strong>正答率を計算中</strong><span>苦手な問題を確認中</span><span>復習コースを準備しました</span></div>"
   },
   {
     "title": "素材",
@@ -671,8 +671,8 @@ window.EduEffectsLegacyMaterials = [
     "category": "feedback",
     "file": "edu-effects-interaction-kit.css",
     "tags": "素材 .edu-annotation-target interaction-materials",
-    "preview": "<div class=\"edu-annotation-board\"><div class=\"edu-annotation-target\"><strong>この資料から分かること</strong><p>数字の変化に注目しよう。</p></div><div class=\"edu-annotation-note\"><strong>先生のメモ</strong>根拠になる部分に線を引こう。</div></div>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<div class=\"edu-annotation-note\">...</div>'>コードをコピー</button>",
-    "copy": "<div class=\"edu-annotation-board\"><div class=\"edu-annotation-target\"><strong>この資料から分かること</strong><p>数字の変化に注目しよう。</p></div><div class=\"edu-annotation-note\"><strong>先生のメモ</strong>根拠になる部分に線を引こう。</div></div>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<div class=\"edu-annotation-note\">...</div>'>コードをコピー</button>"
+    "preview": "<div class=\"edu-annotation-board\"><div class=\"edu-annotation-target\"><strong>この資料から分かること</strong><p>数字の変化に注目しよう。</p></div><div class=\"edu-annotation-note\"><strong>先生のメモ</strong>根拠になる部分に線を引こう。</div></div>",
+    "copy": "<div class=\"edu-annotation-board\"><div class=\"edu-annotation-target\"><strong>この資料から分かること</strong><p>数字の変化に注目しよう。</p></div><div class=\"edu-annotation-note\"><strong>先生のメモ</strong>根拠になる部分に線を引こう。</div></div>"
   },
   {
     "title": "問いカード",
@@ -689,8 +689,7 @@ window.EduEffectsLegacyMaterials = [
     "category": "feedback",
     "file": "edu-effects-interaction-kit.css",
     "tags": "ヒントを確認 .edu-sheet interaction-materials",
-    "preview": "<div class=\"edu-sheet\"><div class=\"edu-sheet-handle\"></div><h3>ヒントを確認</h3><p>必要なときだけ開く、タブレット向け下部パネル。</p></div>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<aside class=\"edu-sheet\">...</aside>'>コードをコピー</button>",
-    "copy": "<div class=\"edu-sheet\"><div class=\"edu-sheet-handle\"></div><h3>ヒントを確認</h3><p>必要なときだけ開く、タブレット向け下部パネル。</p></div>\n            \n            <button class=\"edu-btn edu-btn-secondary ref-copy-inline\" data-copy-text='<aside class=\"edu-sheet\">...</aside>'>コードをコピー</button>"
+    "preview": "<div class=\"edu-sheet\"><div class=\"edu-sheet-handle\"></div><h3>ヒントを確認</h3><p>必要なときだけ開く、タブレット向け下部パネル。</p></div>",
+    "copy": "<div class=\"edu-sheet\"><div class=\"edu-sheet-handle\"></div><h3>ヒントを確認</h3><p>必要なときだけ開く、タブレット向け下部パネル。</p></div>"
   }
 ];
-
