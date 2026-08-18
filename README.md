@@ -329,3 +329,24 @@ edu-decorations-advanced.cssには、教材のテーマをはっきり分ける�
 - `edu-creative-stack`：カードを重ねた見た目
 - `edu-creative-aurora` / `edu-creative-orbit`：教材背景の雰囲気づくり
 
+
+
+## 学習アプリの共通シェル素材
+
+`edu-effects-learning-shell.css` は、複数の教材で使い回せる学習アプリの骨格です。理科ラボや算数ゲームのような、単元一覧 → 活動 → 結果・図鑑という構成に向いています。
+
+~~~html
+<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-effects-learning-shell.css">
+~~~
+
+主なクラス：
+
+- `edu-shell-header` / `edu-shell-brand`：教材ヘッダー
+- `edu-shell-hero` / `edu-shell-flow`：導入・学習の流れ
+- `edu-shell-unit-grid` / `edu-shell-unit-card`：単元一覧
+- `edu-shell-workspace` / `edu-shell-activity-nav` / `edu-shell-activity-card`：活動画面
+- `edu-shell-evidence` / `edu-shell-prediction` / `edu-shell-feedback`：根拠・予想・フィードバック
+- `edu-shell-discovery-grid` / `edu-shell-discovery-card`：発見図鑑
+- `edu-shell-result-ring`：結果の割合表示
+- `edu-shell-settings`：設定ダイアログ
+
