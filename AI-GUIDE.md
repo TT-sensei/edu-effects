@@ -219,3 +219,24 @@ Decorationのテーマを使う場合は、edu-decorations-advanced.cssを追加
 <link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-effects-learning-motion.css">
 ~~~
 
+
+
+## キネティック素材の選び方
+
+`edu-effects-kinetic.css` は、Kineticsのような「触ったときの重さ・反発」を教材向けに整理した素材です。見た目の派手さではなく、操作や状態の変化を伝えるために使います。
+
+- `edu-kinetic-pop`：結果カード、バッジ、画面切替
+- `edu-kinetic-number`：得点、XP、コンボ、記録更新
+- `edu-kinetic-expand`：ヒントや説明の開閉。JSで is-open を切り替える
+- `edu-kinetic-button`：押せるボタンの浮き上がりと押下反応
+- `edu-kinetic-xp`：進捗バーの更新時の光
+- `edu-kinetic-dot`：保存中、処理中、待機中
+- `edu-kinetic-toast`：保存完了などの短い通知
+
+毎問すべてに強い反発を付けず、結果更新、開始、ヒント開示、保存完了など意味のある場面に限定します。
+読み込み：
+
+~~~html
+<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-effects-kinetic.css">
+~~~
+
