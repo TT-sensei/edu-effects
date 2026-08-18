@@ -52,7 +52,7 @@
   max-width: 760px;
   margin: 18px 0 18px;
   color: var(--show-ink);
-  font-size: clamp(3.15rem, 7.4vw, 6.8rem);
+  font-size: clamp(2.6rem, 5.8vw, 5.2rem);
   line-height: .91;
   letter-spacing: -.075em;
 }
@@ -347,7 +347,7 @@
   .edu-header-inner > .edu-badge { display: none; }
   .ref-motion-switch { margin-left: auto; }
   .ref-hero { padding: 50px 0 46px; }
-  .ref-hero h1 { font-size: clamp(3rem, 16vw, 5rem); }
+  .ref-hero h1 { font-size: clamp(2.7rem, 13vw, 4.4rem); }
   .ref-hero-grid { gap: 30px; }
   .ref-playground { min-height: 310px; }
   .ref-playground-board { min-height: 292px; border-radius: 24px; }
