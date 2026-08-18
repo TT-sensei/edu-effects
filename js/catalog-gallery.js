@@ -207,6 +207,19 @@
     return composition;
   }
 
+
+  const materialPresets = {
+    science: { classes: [".edu-panel-context", ".edu-panel-insight", ".edu-card-collection", ".edu-xp", ".deco-theme-science", ".deco-theme-space", ".edu-reveal"] },
+    language: { classes: [".edu-choice", ".edu-question", ".edu-sort-board", ".edu-stagger", ".deco-theme-note", ".edu-reveal"] },
+    game: { classes: [".edu-choice", ".edu-rank-card", ".edu-streak", ".edu-kinetic-pop", ".effect-impact", ".deco-theme-arcade"] },
+    reward: { classes: [".effect-correct-ring", ".edu-complete", ".edu-rank-card", ".edu-xp", ".effect-badge-unlock", ".effect-level-up"] },
+    quiet: { classes: [".edu-question", ".edu-panel-context", ".edu-annotation-note", ".deco-theme-note", ".deco-theme-chalk", ".edu-focus-ring"] }
+  };
+
+  const matchingPresets = material => Object.entries(materialPresets)
+    .filter(([, preset]) => preset.classes.includes(material.className))
+    .map(([id]) => id);
+
   const labels = {
     question: "ANSWER / 答える",
     feedback: "FEEDBACK / 伝える",
@@ -225,6 +238,7 @@
   const motionToggle = document.getElementById("motion-toggle");
   const cssFileCount = document.getElementById("css-file-count");
   let activeCategory = "all";
+  let activePreset = "";
   let toastTimer;
   if (cssFileCount) {
     cssFileCount.textContent = String(Array.from(document.querySelectorAll("link[rel=stylesheet]")).filter(link => !link.href.includes("catalog-gallery.css")).length);
@@ -239,7 +253,7 @@
 
   function renderCards() {
     grid.innerHTML = allMaterials.map((material, index) => `
-      <article class="material-card" data-index="${index}" data-category="${material.category}" data-search="${escapeHtml(`${material.title} ${material.className} ${material.file} ${material.tags}`.toLowerCase())}">
+      <article class="material-card" data-index="${index}" data-category="${material.category}" data-presets="${matchingPresets(material).join(" ")}" data-search="${escapeHtml(`${material.title} ${material.className} ${material.file} ${material.tags}`.toLowerCase())}">
         <div class="material-preview ${material.stage || ""}" data-preview>${material.preview}</div>
         <button class="material-replay" type="button" data-replay aria-label="${material.title}を再生">↻</button>
         <div class="material-info">
@@ -255,7 +269,7 @@
     const query = search.value.trim().toLowerCase();
     let count = 0;
     document.querySelectorAll(".material-card").forEach(card => {
-      const visible = (activeCategory === "all" || card.dataset.category === activeCategory) && (!query || card.dataset.search.includes(query));
+      const visible = (activeCategory === "all" || card.dataset.category === activeCategory) && (!activePreset || card.dataset.presets.split(" ").includes(activePreset)) && (!query || card.dataset.search.includes(query));
       card.classList.toggle("catalog-hidden", !visible);
       if (visible) count += 1;
     });
@@ -265,6 +279,7 @@
 
   function selectCategory(category, shouldScroll = false) {
     activeCategory = category;
+    activePreset = "";
     document.querySelectorAll("[data-category]").forEach(button => {
       if (!button.matches("button")) return;
       button.classList.toggle("is-active", button.dataset.category === category);
@@ -321,6 +336,19 @@
   document.querySelectorAll("button[data-category]").forEach(button => {
     button.addEventListener("click", () => selectCategory(button.dataset.category, button.closest(".gallery-collections") !== null));
   });
+
+  document.querySelectorAll("[data-preset]").forEach(button => {
+    button.addEventListener("click", () => {
+      activePreset = button.dataset.preset;
+      activeCategory = "all";
+      search.value = "";
+      document.querySelectorAll("[data-category]").forEach(item => item.classList.toggle("is-active", item.dataset.category === "all"));
+      document.querySelectorAll("[data-preset-card]").forEach(item => item.classList.toggle("is-active", item.dataset.presetCard === activePreset));
+      filterCards();
+      document.getElementById("catalog").scrollIntoView({ behavior: document.body.classList.contains("motion-off") ? "auto" : "smooth" });
+    });
+  });
+
   search.addEventListener("input", filterCards);
   clear.addEventListener("click", () => { search.value = ""; search.focus(); filterCards(); });
   document.querySelectorAll("[data-copy]").forEach(button => button.addEventListener("click", () => copyText(document.getElementById(button.dataset.copy).textContent)));
