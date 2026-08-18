@@ -240,3 +240,21 @@ Decorationのテーマを使う場合は、edu-decorations-advanced.cssを追加
 <link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-effects-kinetic.css">
 ~~~
 
+
+
+## クリエイティブ素材の選び方
+
+`edu-effects-creative.css` は、React Bitsのような「テキスト・UI・背景を部品として個別に試す」考え方を、教材向けのCSS素材にしたものです。
+
+- 見出しや報酬：`edu-creative-shimmer`、`edu-creative-blur-in`
+- 大切な語句：`edu-creative-highlight`
+- コレクションや選択カード：`edu-creative-tilt`、`edu-creative-glow-border`、`edu-creative-stack`
+- 理科・宇宙・探究背景：`edu-creative-aurora`、`edu-creative-orbit`
+
+背景素材は文字の読みやすさを優先し、重ねすぎないようにします。選択状態には is-active、開閉状態には既存の状態クラスを使います。
+読み込み：
+
+~~~html
+<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-effects-creative.css">
+~~~
+
