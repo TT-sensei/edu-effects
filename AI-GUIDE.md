@@ -199,3 +199,23 @@ Decorationは完成した画面ではなく、背景や線を組み合わせる�
 - バッジ獲得：effect-unlock、effect-badge-unlock、deco-theme-fantasy
 
 Decorationのテーマを使う場合は、edu-decorations-advanced.cssを追加します。テーマは1つを土台にし、必要な場合だけdeco-tape、deco-border-corner、deco-sparklesなどを重ねます。背景を重ねすぎて文字が読みにくくならないようにします。
+
+
+## 学習画面向けモーション素材
+
+`edu-effects-learning-motion.css` を追加すると、問題や説明を「見せる順番」まで含めて演出できます。
+
+- `edu-reveal` / `edu-reveal-up`：答え・ヒント・説明の開示
+- `edu-focus-ring`：現在の問題や選択箇所を一度だけ強調
+- `edu-focus-line`：見出しや重要語句への視線誘導
+- `edu-count-in`：ゲーム開始前のカウント
+- `edu-stagger`：選択肢やカードを順番に表示
+- `edu-hover-lift` / `edu-press`：タップ可能な部品の反応
+- `edu-sweep-marker`：重要語句のマーカー表示
+
+毎問の正誤演出とは役割が違うため、問題開始、ヒント開示、画面切替などの節目に使います。読み込み例：
+
+~~~html
+<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-effects-learning-motion.css">
+~~~
+

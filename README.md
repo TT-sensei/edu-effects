@@ -268,3 +268,25 @@ edu-decorations-advanced.cssには、教材のテーマをはっきり分ける�
 - edu-mark-circle：丸囲み
 - edu-mark-stamp：採点スタンプ
 - edu-mark-pencil：先生の手書きチェック風
+
+
+## 学習画面向けモーション素材
+
+`edu-effects-learning-motion.css` は、CSSアニメーションの小さな実験を教材向けに整理した追加素材です。問題の登場、答えの開示、注目箇所の強調、開始カウント、段階的な表示に使えます。
+
+読み込み：
+
+~~~html
+<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-effects-learning-motion.css">
+~~~
+
+主なクラス：
+
+- `edu-reveal` / `edu-reveal-up`：答えや説明を覆いから開く
+- `edu-focus-ring` / `edu-focus-line`：今見る場所を短く強調
+- `edu-count-in`：開始前のカウント表示
+- `edu-stagger`：選択肢や手順を順番に表示
+- `edu-hover-lift` / `edu-press`：押せる部品の軽い反応
+- `edu-sweep-marker`：重要語句にマーカーを引く
+
+`prefers-reduced-motion` に対応し、動きを止めても内容が読めるようにしています。

@@ -1,0 +1,132 @@
+/*
+ * edu-effects-learning-motion.css
+ * Small, reusable motion patterns for learning screens.
+ * Inspired by the joy of CSS animation experiments; designed for教材 UI.
+ * Add a class, then remove it to replay where applicable.
+ */
+
+/* Reveal / answer ----------------------------------------------------- */
+.edu-reveal { position: relative; overflow: hidden; isolation: isolate; }
+.edu-reveal::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: var(--edu-reveal-cover, #e8eef5);
+  transform: translateX(0);
+  transition: transform 620ms cubic-bezier(.76,0,.24,1);
+  pointer-events: none;
+}
+.edu-reveal.is-visible::after,
+.edu-reveal.is-revealed::after { transform: translateX(101%); }
+.edu-reveal-up::after { transform: translateY(0); }
+.edu-reveal-up.is-visible::after,
+.edu-reveal-up.is-revealed::after { transform: translateY(-101%); }
+
+/* Focus / attention --------------------------------------------------- */
+.edu-focus-ring { position: relative; isolation: isolate; }
+.edu-focus-ring::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border: 2px solid var(--edu-focus-color, #2563eb);
+  border-radius: inherit;
+  opacity: 0;
+  transform: scale(.94);
+  pointer-events: none;
+  animation: edu-focus-ring 900ms ease-out both;
+}
+.edu-focus-line { position: relative; overflow: hidden; }
+.edu-focus-line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 42%;
+  height: 3px;
+  border-radius: 99px;
+  background: var(--edu-focus-color, #2563eb);
+  transform: translateX(-120%);
+  animation: edu-focus-line 760ms cubic-bezier(.2,.8,.2,1) both;
+}
+
+/* Start / count-in ---------------------------------------------------- */
+.edu-count-in { display: inline-grid; place-items: center; min-width: 3em; min-height: 3em; }
+.edu-count-in > * { grid-area: 1 / 1; opacity: 0; transform: scale(.35); animation: edu-count-in 2.4s steps(1,end) both; }
+.edu-count-in > :nth-child(2) { animation-delay: 800ms; }
+.edu-count-in > :nth-child(3) { animation-delay: 1600ms; }
+.edu-count-in > :nth-child(4) { animation-delay: 2400ms; }
+
+/* Staged entrance ----------------------------------------------------- */
+.edu-stagger > * {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: edu-stagger-in 480ms cubic-bezier(.2,.8,.2,1) both;
+}
+.edu-stagger > :nth-child(2) { animation-delay: 70ms; }
+.edu-stagger > :nth-child(3) { animation-delay: 140ms; }
+.edu-stagger > :nth-child(4) { animation-delay: 210ms; }
+.edu-stagger > :nth-child(5) { animation-delay: 280ms; }
+.edu-stagger > :nth-child(6) { animation-delay: 350ms; }
+
+/* Gentle interaction feedback ---------------------------------------- */
+.edu-hover-lift { transition: transform 180ms ease, box-shadow 180ms ease; }
+.edu-hover-lift:hover,
+.edu-hover-lift:focus-visible { transform: translateY(-5px); box-shadow: 0 12px 24px rgb(31 41 55 / 14%); }
+.edu-press { transition: transform 100ms ease, filter 100ms ease; }
+.edu-press:active { transform: translateY(2px) scale(.98); filter: brightness(.96); }
+
+/* Marker / trail ------------------------------------------------------ */
+.edu-sweep-marker { position: relative; display: inline; isolation: isolate; }
+.edu-sweep-marker::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: -2%;
+  right: -2%;
+  bottom: .08em;
+  height: .45em;
+  border-radius: 3px;
+  background: var(--edu-marker-color, rgb(245 212 76 / 72%));
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: edu-sweep-marker 520ms cubic-bezier(.2,.8,.2,1) 120ms both;
+}
+
+/* Keyframes ----------------------------------------------------------- */
+@keyframes edu-focus-ring {
+  0% { opacity: 0; transform: scale(.94); }
+  22% { opacity: .85; }
+  100% { opacity: 0; transform: scale(1.04); }
+}
+@keyframes edu-focus-line {
+  from { transform: translateX(-120%); }
+  to { transform: translateX(260%); }
+}
+@keyframes edu-count-in {
+  0%, 28% { opacity: 0; transform: scale(.35); }
+  34%, 58% { opacity: 1; transform: scale(1); }
+  66%, 100% { opacity: 0; transform: scale(1.18); }
+}
+@keyframes edu-stagger-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes edu-sweep-marker {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .edu-reveal::after { transition: none; }
+  .edu-focus-ring::after,
+  .edu-focus-line::after,
+  .edu-count-in > *,
+  .edu-stagger > *,
+  .edu-sweep-marker::after { animation: none !important; }
+  .edu-stagger > * { opacity: 1; transform: none; }
+  .edu-reveal::after { transform: translateX(101%); }
+  .edu-reveal-up::after { transform: translateY(-101%); }
+  .edu-hover-lift,
+  .edu-press { transition: none; }
+}

@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/edu-interactive.css">
   <link rel="stylesheet" href="css/edu-effects-extra.css">
   <link rel="stylesheet" href="css/edu-effects-library.css">
+  <link rel="stylesheet" href="css/edu-effects-learning-motion.css">
   <link rel="stylesheet" href="css/edu-decorations.css">
   <link rel="stylesheet" href="css/edu-ui-variants.css">
   <link rel="stylesheet" href="css/edu-effects-advanced.css">
@@ -1092,6 +1093,55 @@
           <article class="edu-card edu-card-pad deco-theme-pop" data-catalog-card><h3>ポップ</h3><p>低学年・導入・達成</p><code>deco-theme-pop</code></article>
           <article class="edu-card edu-card-pad deco-theme-fantasy" data-catalog-card><h3>ファンタジー</h3><p>報酬・冒険・図鑑</p><code>deco-theme-fantasy</code></article>
         </div>
+
+      <section id="learning-motion" class="edu-container ref-section">
+        <div class="ref-section-head">
+          <span class="ref-kicker">NEW · LEARNING MOTION</span>
+          <h2>学習画面向けモーション</h2>
+          <p>問題を見せる、答えを開く、注目させる、順番に出す。教材の流れを整える小さな動きです。</p>
+        </div>
+        <div class="edu-grid edu-grid-3 ref-catalog-grid">
+          <article class="edu-card edu-card-pad" data-catalog-card>
+            <h3>答えを開く</h3>
+            <div class="edu-reveal ref-demo-panel" data-demo-motion>
+              <strong>ヒント・答え</strong><small>is-visible を付けて表示</small>
+            </div>
+            <p class="edu-card-meta"><code>edu-reveal</code></p>
+            <button class="edu-btn edu-btn-secondary ref-copy-inline" data-copy-text='<div class="edu-reveal is-visible">...</div>'>コードをコピー</button>
+          </article>
+          <article class="edu-card edu-card-pad" data-catalog-card>
+            <h3>注目を集める</h3>
+            <div class="edu-focus-ring ref-demo-panel"><strong>いま見る問題</strong></div>
+            <p class="edu-card-meta"><code>edu-focus-ring</code></p>
+            <button class="edu-btn edu-btn-secondary ref-copy-inline" data-copy-text='<div class="edu-focus-ring">...</div>'>コードをコピー</button>
+          </article>
+          <article class="edu-card edu-card-pad" data-catalog-card>
+            <h3>順番に表示</h3>
+            <div class="edu-stagger ref-demo-panel"><span>① 問題</span><span>② 選択肢</span><span>③ 次へ</span></div>
+            <p class="edu-card-meta"><code>edu-stagger</code></p>
+            <button class="edu-btn edu-btn-secondary ref-copy-inline" data-copy-text='<div class="edu-stagger"><div>...</div></div>'>コードをコピー</button>
+          </article>
+          <article class="edu-card edu-card-pad" data-catalog-card>
+            <h3>開始カウント</h3>
+            <div class="edu-count-in ref-demo-panel"><strong>3</strong><strong>2</strong><strong>1</strong><strong>START</strong></div>
+            <p class="edu-card-meta"><code>edu-count-in</code></p>
+            <button class="edu-btn edu-btn-secondary ref-copy-inline" data-copy-text='<div class="edu-count-in"><strong>3</strong><strong>2</strong><strong>1</strong><strong>START</strong></div>'>コードをコピー</button>
+          </article>
+          <article class="edu-card edu-card-pad" data-catalog-card>
+            <h3>マーカーを引く</h3>
+            <p class="ref-demo-panel"><span class="edu-sweep-marker">大切なことば</span></p>
+            <p class="edu-card-meta"><code>edu-sweep-marker</code></p>
+            <button class="edu-btn edu-btn-secondary ref-copy-inline" data-copy-text='<span class="edu-sweep-marker">大切なことば</span>'>コードをコピー</button>
+          </article>
+          <article class="edu-card edu-card-pad" data-catalog-card>
+            <h3>タップの反応</h3>
+            <button class="edu-btn edu-btn-primary edu-hover-lift edu-press ref-demo-panel">押せる教材部品</button>
+            <p class="edu-card-meta"><code>edu-hover-lift</code> · <code>edu-press</code></p>
+            <button class="edu-btn edu-btn-secondary ref-copy-inline" data-copy-text='<button class="edu-hover-lift edu-press">...</button>'>コードをコピー</button>
+          </article>
+        </div>
+      </section>
+
       <section id="reference" class="edu-container ref-section">
         <div class="ref-section-head">
           <h2>クラス一覧</h2>
