@@ -50,6 +50,7 @@
 | 背景、枠、線、基本装飾 | edu-decorations.css |
 | 理科、宇宙、ノート、黒板などのテーマ装飾 | edu-decorations-advanced.css |
 | 3Dカード、キューブ、カルーセル、カバーフロー | edu-effects-3d.css |
+| 画像の白黒、ぼかし、開示、ズーム、比較 | edu-effects-filters.css |
 | 紙吹雪などの任意ヘルパー | js/edu-effects.js |
 
 ### 同じ役割の演出を選ぶとき
@@ -193,6 +194,28 @@ Decorationは完成した画面ではなく、背景や線を組み合わせる�
 - 動きが止まっても内容が理解できるようにする。
 - reduced-motionではアニメーションなしでも状態が伝わるようにする。
 - localStorageなど既存の保存方式を優先し、外部DBを追加しない。
+
+## 画像フィルター・開示素材の選び方
+
+`edu-effects-filters.css` は画像そのものを変更せず、見せ方だけを変えるCSS素材です。
+
+- `edu-image-grayscale`：未クリア・未解放を白黒で示す。
+- `edu-image-blur`：ヒントや答えをぼかし、ホバー・フォーカスで開示する。
+- `edu-image-sepia`：歴史資料や昔の道具を落ち着いて見せる。
+- `edu-image-color-reveal`：発見前は白黒、注目時にカラーへ戻す。
+- `edu-image-mask` / `edu-image-reveal`：資料やヒントを順番に開示する。
+- `edu-image-lock`：未解放画像をロック表示する。解放時は `is-unlocked` を付け替える。
+- `edu-image-zoom`：観察写真や地図の細部に注目させる。
+- `edu-image-compare`：変化や前後比較を見せる。
+
+画像フィルターは内容を隠してしまう場合があるため、代替テキストと「ヒント」「未解放」などの文字を添えます。`prefers-reduced-motion`では開示済み・静止状態でも内容が確認できるようにしています。
+
+読み込み例：
+
+~~~html
+<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-effects-filters.css">
+~~~
+
 
 ## 3D・カルーセル素材の選び方
 
