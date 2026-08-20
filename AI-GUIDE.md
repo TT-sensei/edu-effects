@@ -49,6 +49,8 @@
 | 教材ヘッダー、単元カード、活動、結果の骨格 | edu-effects-learning-shell.css |
 | 背景、枠、線、基本装飾 | edu-decorations.css |
 | 理科、宇宙、ノート、黒板などのテーマ装飾 | edu-decorations-advanced.css |
+| 3Dカード、キューブ、カルーセル、カバーフロー | edu-effects-3d.css |
+| 画像の白黒、ぼかし、開示、ズーム、比較 | edu-effects-filters.css |
 | 紙吹雪などの任意ヘルパー | js/edu-effects.js |
 
 ### 同じ役割の演出を選ぶとき
@@ -192,6 +194,48 @@ Decorationは完成した画面ではなく、背景や線を組み合わせる�
 - 動きが止まっても内容が理解できるようにする。
 - reduced-motionではアニメーションなしでも状態が伝わるようにする。
 - localStorageなど既存の保存方式を優先し、外部DBを追加しない。
+
+## 画像フィルター・開示素材の選び方
+
+`edu-effects-filters.css` は画像そのものを変更せず、見せ方だけを変えるCSS素材です。
+
+- `edu-image-grayscale`：未クリア・未解放を白黒で示す。
+- `edu-image-blur`：ヒントや答えをぼかし、ホバー・フォーカスで開示する。
+- `edu-image-sepia`：歴史資料や昔の道具を落ち着いて見せる。
+- `edu-image-color-reveal`：発見前は白黒、注目時にカラーへ戻す。
+- `edu-image-mask` / `edu-image-reveal`：資料やヒントを順番に開示する。
+- `edu-image-lock`：未解放画像をロック表示する。解放時は `is-unlocked` を付け替える。
+- `edu-image-zoom`：観察写真や地図の細部に注目させる。
+- `edu-image-compare`：変化や前後比較を見せる。
+
+画像フィルターは内容を隠してしまう場合があるため、代替テキストと「ヒント」「未解放」などの文字を添えます。`prefers-reduced-motion`では開示済み・静止状態でも内容が確認できるようにしています。
+
+読み込み例：
+
+~~~html
+<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-effects-filters.css">
+~~~
+
+
+## 3D・カルーセル素材の選び方
+
+`edu-effects-3d.css` は、カードや発見・資料を立体的に見せるためのCSS-only素材です。
+
+- `edu-3d-flip-card`：表に問題、裏にヒントや説明を置く。
+- `edu-3d-cube`：6面の分類、単元、観察対象を回転表示する。
+- `edu-3d-carousel`：複数の学習カードを円周状に見せる。
+- `edu-coverflow`：中央のカードを選び、左右の候補を奥行き付きで見せる。ラジオボタンでCSSだけで切り替える。
+- `edu-auto-carousel`：短い項目を横に流す。重要な本文や答えには使わない。
+- `edu-3d-tilt`：カードを少し浮かせ、タップ可能なことを示す。
+
+立体演出は、問題の意味や選択状態を補助するために使います。毎問の正誤判定や長文本文には使わず、タブレットで押しやすい大きさを保ってください。`prefers-reduced-motion`では回転や自動移動を止め、内容が読める状態を残します。
+
+読み込み例：
+
+~~~html
+<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-effects-3d.css">
+~~~
+
 
 ## 新しいCSSを追加する前の確認
 

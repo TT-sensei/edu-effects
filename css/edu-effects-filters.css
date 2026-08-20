@@ -1,0 +1,48 @@
+/* edu-effects image filters and reveal materials
+   Apply these classes to an image or a small image wrapper.
+   No external assets or JavaScript are required.
+*/
+.edu-image-filter{display:block;max-width:100%;border-radius:16px;transition:filter .35s ease,transform .35s ease,opacity .35s ease}
+.edu-image-grayscale{filter:grayscale(1);opacity:.58}
+.edu-image-sepia{filter:sepia(.82) saturate(.78) contrast(.96)}
+.edu-image-dim{filter:brightness(.42) saturate(.65);opacity:.8}
+.edu-image-blur{filter:blur(8px);transform:scale(1.04)}
+.edu-image-blur:hover,.edu-image-blur:focus-visible{filter:blur(0);transform:scale(1)}
+.edu-image-color-reveal{filter:grayscale(1) contrast(.92);transition:filter .55s ease}
+.edu-image-color-reveal:hover,.edu-image-color-reveal:focus-visible{filter:none}
+.edu-image-spotlight{filter:brightness(.62) contrast(.9);transition:filter .35s ease,transform .35s ease}
+.edu-image-spotlight:hover,.edu-image-spotlight:focus-visible{filter:brightness(1.08) contrast(1.06);transform:scale(1.025)}
+.edu-image-duotone{filter:grayscale(1) contrast(1.18);position:relative}
+.edu-image-mask{position:relative;overflow:hidden;border-radius:16px;isolation:isolate}
+.edu-image-mask::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,#182338 0 48%,transparent 49%);transform:translateX(0);transition:transform .7s cubic-bezier(.2,.75,.25,1);z-index:1}
+.edu-image-mask:hover::after,.edu-image-mask:focus-within::after{transform:translateX(105%)}
+.edu-image-reveal{position:relative;overflow:hidden;border-radius:16px;isolation:isolate}
+.edu-image-reveal::before{content:"HINT";position:absolute;z-index:2;inset:0;display:grid;place-items:center;background:#172033e8;color:#fff;font-size:.78rem;font-weight:800;letter-spacing:.18em;transition:opacity .45s ease}
+.edu-image-reveal:hover::before,.edu-image-reveal:focus-within::before{opacity:0;pointer-events:none}
+.edu-image-lock{position:relative;display:grid;place-items:center;overflow:hidden;border-radius:16px;background:#172033;color:#fff}
+.edu-image-lock::after{content:"🔒";position:absolute;inset:0;display:grid;place-items:center;font-size:2rem;background:#172033b8;backdrop-filter:blur(3px);transition:opacity .3s ease}
+.edu-image-lock.is-unlocked::after{opacity:0;pointer-events:none}
+.edu-image-lock img{width:100%;filter:grayscale(1) brightness(.52);transition:filter .35s ease}
+.edu-image-lock.is-unlocked img{filter:none}
+.edu-image-zoom{position:relative;overflow:hidden;border-radius:16px}
+.edu-image-zoom img,.edu-image-zoom__visual{display:block;width:100%;transition:transform .55s cubic-bezier(.2,.75,.25,1)}
+.edu-image-zoom:hover img,.edu-image-zoom:focus-within img,.edu-image-zoom:hover .edu-image-zoom__visual,.edu-image-zoom:focus-within .edu-image-zoom__visual{transform:scale(1.14)}
+.edu-image-glass{position:relative;overflow:hidden;border-radius:18px;padding:1rem;background:#ffffff36;border:1px solid #ffffff8c;box-shadow:0 12px 30px #17203324;backdrop-filter:blur(10px)}
+.edu-image-glass::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,#fff8,transparent 42%);pointer-events:none}
+.edu-image-compare{position:relative;overflow:hidden;border-radius:16px;background:#dce5f5}
+.edu-image-compare__after,.edu-image-compare__before{display:block;width:100%;height:150px;background-size:cover;background-position:center}
+.edu-image-compare__before{background:linear-gradient(135deg,#40577b,#b3c9d5)}
+.edu-image-compare__after{position:absolute;inset:0 auto 0 0;width:52%;background:linear-gradient(135deg,#f3b35f,#6f86e8);border-right:3px solid #fff}
+.edu-image-caption{display:block;margin-top:.55rem;font-size:.78rem;font-weight:700;letter-spacing:.04em}
+@media (max-width:700px){.edu-image-mask::after{background:linear-gradient(105deg,#182338 0 42%,transparent 43%)}.edu-image-zoom:hover img,.edu-image-zoom:focus-within img{transform:scale(1.06)}}
+@media (prefers-reduced-motion:reduce){.edu-image-filter,.edu-image-mask::after,.edu-image-reveal::before,.edu-image-lock::after,.edu-image-zoom img,.edu-image-zoom__visual{transition:none}.edu-image-blur,.edu-image-blur:hover,.edu-image-blur:focus-visible{transform:none}.edu-image-mask::after{transform:translateX(105%)}.edu-image-reveal::before{opacity:0}.edu-image-zoom:hover img,.edu-image-zoom:focus-within img,.edu-image-zoom:hover .edu-image-zoom__visual,.edu-image-zoom:focus-within .edu-image-zoom__visual{transform:none}}
+
+/* Catalog-only neutral visuals so the gallery remains self-contained. */
+.edu-filter-demo-visual{height:150px;border-radius:14px;background:linear-gradient(135deg,#8ed7e7,#5265ba);position:relative;overflow:hidden}
+.edu-filter-demo-mountain{background:linear-gradient(160deg,#173252 0 35%,#6bb4c9 36% 57%,#e7b66a 58%);filter:grayscale(1)}
+.edu-filter-demo-map{background:linear-gradient(30deg,#8abf9b 0 28%,#e9d28e 29% 48%,#779bd0 49% 68%,#e2a7a7 69%)}
+.edu-filter-demo-paper{height:150px;border-radius:14px;background:repeating-linear-gradient(0deg,#f2d6a5 0 3px,#d3a56e 4px 6px),linear-gradient(90deg,#714628,#e6c48c);position:relative}
+.edu-filter-demo-color{background:conic-gradient(from 45deg,#ee7b73,#f2c14e,#71c58c,#63a6e6,#ee7b73)}
+.edu-filter-demo-chart{background:linear-gradient(145deg,#27365c 0 45%,transparent 46%),repeating-linear-gradient(90deg,#fff2 0 1px,transparent 1px 24px),repeating-linear-gradient(0deg,#fff2 0 1px,transparent 1px 24px),#445d9c}
+.edu-filter-demo-leaf{background:radial-gradient(ellipse at 35% 50%,#b9ec93 0 16%,transparent 17%),linear-gradient(140deg,#173b32,#67aa72 48%,#d4d17e 49% 100%)}
+.edu-image-compare img{object-fit:cover}

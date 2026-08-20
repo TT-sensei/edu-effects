@@ -24,6 +24,18 @@ CSSクラスの再生補助が必要な場合だけ、次も読み込みます�
 
 利用できるファイルとクラスは [AI-GUIDE.md](AI-GUIDE.md) と [公開カタログ](https://tt-sensei.github.io/edu-effects/) で確認してください。存在しないクラスを推測せず、必要なファイルだけを読み込みます。
 
+### 画像フィルター・開示素材
+
+画像の見せ方には `edu-effects-filters.css` を追加します。白黒、ぼかし、セピア、カラー開示、マスク開示、ロック表示、ズーム、前後比較を収録しています。未クリアのバッジ、ヒント画像、歴史資料、理科の観察写真など、役割に合わせて使い分けます。
+
+```html
+<link rel="stylesheet" href="https://tt-sensei.github.io/edu-effects/css/edu-effects-filters.css">
+```
+
+### 3D・カルーセル素材
+
+3D演出やカードの切り替えには `edu-effects-3d.css` を追加します。`.edu-3d-flip-card`、`.edu-3d-cube`、`.edu-3d-carousel`、`.edu-coverflow`、`.edu-auto-carousel`、`.edu-3d-tilt` を収録しています。カバーフローはラジオボタンとCSSだけで切り替わり、JavaScriptは不要です。教材では問題選択や発見カードなど、意味のある切り替えに限定して使ってください。
+
 ## 教材制作共通基盤
 
 | プロジェクト | 担当 | GitHub | Pages |
